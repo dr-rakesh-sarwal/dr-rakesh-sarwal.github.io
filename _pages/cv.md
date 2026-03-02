@@ -19,14 +19,14 @@ Education
 
 Work experience
 ======
-Adjunct Professor – Community Medicine & Integrated Health, ESIC Medical College, Faridabad (2023 – Present)
+- Adjunct Professor – Community Medicine & Integrated Health, ESIC Medical College, Faridabad (2023 – Present)
     • Teach and develop courses on community-based wellness, health education, and integrative public health
     • Supervise student projects and mentor in yoga-based interventions and primary care innovation
 Promoter & Consultant, Wellness Program Design, Sutra Health Clinic / EQUAL Society, Faridabad (2022 – Present)
     • Designed integrative wellness education modules for urban and rural populations (www.lifequality.org.in) 
     • Facilitated training on behavior change, pranayama, and lifestyle-based prevention strategies
 
-Senior Public Health Leader & Policy Advisor, Govt. of India – Health Ministries / NITI Aayog (2010 – 2022)
+- Senior Public Health Leader & Policy Advisor, Govt. of India – Health Ministries / NITI Aayog (2010 – 2022)
     • Directed national health policy design for AYUSH and preventive health
     • Supervised health promotion strategies across states with focus on wellness and primary care access
     • Led digital health transformation and health system planning for pandemic preparedness
