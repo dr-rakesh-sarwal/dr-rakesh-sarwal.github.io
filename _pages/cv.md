@@ -31,9 +31,6 @@ Senior Public Health Leader & Policy Advisor, Govt. of India – Health Ministri
     • Supervised health promotion strategies across states with focus on wellness and primary care access
     • Led digital health transformation and health system planning for pandemic preparedness
 
-Global Health Associate, World Bank, Johns Hopkins CCP, UN Assignments 
-    • Contributed to communication strategy and health literacy interventions in cross-cultural settings
-    • Developed capacity-building content for public health education in low-resource environments
 Skills
 ======
 CORE COMPETENCIES
