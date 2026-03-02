@@ -11,54 +11,35 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+    • Certified Therapeutic Yoga Consultant – Yoga Certification Board, India. (2024)
+    • Doctor of Public Health (DrPH), Johns Hopkins University, USA. (2005)
+    • Master of Public Health (MPH) , Johns Hopkins University, USA. (2003)
+    • MBBS (Bachelor of Medicine & Surgery), India (1986)
+    • Essentials of Palliative Care Certificate, AIIMS, Delhi (2023)
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+Adjunct Professor – Community Medicine & Integrated Health, ESIC Medical College, Faridabad (2023 – Present)
+    • Teach and develop courses on community-based wellness, health education, and integrative public health
+    • Supervise student projects and mentor in yoga-based interventions and primary care innovation
+Promoter & Consultant, Wellness Program Design, Sutra Health Clinic / EQUAL Society, Faridabad (2022 – Present)
+    • Designed integrative wellness education modules for urban and rural populations (www.lifequality.org.in) 
+    • Facilitated training on behavior change, pranayama, and lifestyle-based prevention strategies
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Senior Public Health Leader & Policy Advisor, Govt. of India – Health Ministries / NITI Aayog (2010 – 2022)
+    • Directed national health policy design for AYUSH and preventive health
+    • Supervised health promotion strategies across states with focus on wellness and primary care access
+    • Led digital health transformation and health system planning for pandemic preparedness
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+Global Health Associate, World Bank, Johns Hopkins CCP, UN Assignments 
+    • Contributed to communication strategy and health literacy interventions in cross-cultural settings
+    • Developed capacity-building content for public health education in low-resource environments
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+CORE COMPETENCIES
+    • Yoga, diet and lifestyle based Wellness Interventions
+    • Community & Integrative Health Programming
+    • Strategic Health Policy & Leadership
+    • Program Planning, Implementation & Evaluation
+    • Global Health & Development Administration
+    • Academic Teaching & Capacity Building
