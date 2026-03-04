@@ -48,29 +48,6 @@ author:
   scopus           : # URL
   zotero           : # URL
 
-links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:sarwalr@gmail.com"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/dr-rakesh-sarwal"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/dr-rakesh-sarwal"
-    - label: "Google Scholar"
-      icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
-    - label: "ORCID"
-      icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org/0000-0001-8345-2640"
-    - label: "PubMed"
-      icon: "fas fa-fw fa-book-medical"
-      url: "https://www.ncbi.nlm.nih.gov/pubmed/?term=Rakesh+Sarwal"
-    - label: "ResearchGate"
-      icon: "fab fa-fw fa-researchgate"
-      url: "https://www.researchgate.net/profile/Rakesh-Sarwal"
-
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
