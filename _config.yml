@@ -19,11 +19,15 @@ repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
+  name: "Dr. Rakesh Sarwal"
+  position: "Professor of Community Medicine"
+  bio: "Head of Integrative Health Clinic at ESIC Medical College & Hospital. Expertise in health systems, integrative health, and public policy implementation."
+  location: "Faridabad, India"
+  employer: "ESIC Medical College & Hospital, Faridabad"
+  email: "sarwalr@gmail.com"
+  
   avatar           : "profile.png"
   name             : "Dr.Rakesh Sarwal"
-  pronouns         : # example: "she/her"  
-  bio: "Professor of Community Medicine, Head of Integrative Health Clinic at ESIC Medical College & Hospital. Expertise in health systems, integrative health, and public policy implementation."
-  location         : "Faridabad, India"
   employer         : "ESIC Medical College & Hospital, Faridabad"
   uri              : # URL
   email            : "sarwalr@gmail.com" 
