@@ -149,7 +149,7 @@ social:
 analytics:
   provider               : "google-gtag"
   google:
-    tracking_id          : "G-4HZK86LDQ9" 
+    tracking_id          : "G-4HZK86LDQ9"
 
 
 # Reading Files
