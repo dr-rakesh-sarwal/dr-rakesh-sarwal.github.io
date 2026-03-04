@@ -25,9 +25,11 @@ author:
   name             : "Dr. Rakesh Sarwal" 
   avatar           : "/images/profile.png"
   pronouns         : # example: "she/her"  
+  position         : "Professor, Community Medicine and Head, Integrated Health Clinic (IHC)"  # ← add this
   bio              : "Health systems, Integrative health and Public policy implementation"
   location         : "Faridabad, India"
   employer         : "ESIC Medical College & Hospital, Faridabad"
+  
   uri              : # URL
   email            : "sarwalr@gmail.com" 
 
