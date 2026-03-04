@@ -43,7 +43,7 @@ author:
   semantic         : # URL
   ssrn             : # URL
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Rakesh+Sarwal"
-  researchgate     : "Rakesh-Sarwal" # "https://www.researchgate.net/profile/Rakesh-Sarwal" 
+  researchgate     : "https://www.researchgate.net/profile/Rakesh-Sarwal" 
   scopus           : # URL
   zotero           : # URL
 
