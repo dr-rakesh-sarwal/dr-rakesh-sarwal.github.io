@@ -18,11 +18,11 @@ repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
+  avatar: "profile.png"
   name: "Dr. Rakesh Sarwal"
   employer: "ESIC Medical College & Hospital, Faridabad"
-  avatar: "profile.png"
   email: "sarwalr@gmail.com"
-  bio: "Professor of Community Medicine and Head of Integrative Health Clinic. Expertise in health systems, integrative health, and public policy implementation."
+  bio: "Professor of Community Medicine and Head of Integrative Health Clinic. E."
   expertise:
     - "Health systems"
     - "Integrative health"
