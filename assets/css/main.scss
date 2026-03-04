@@ -1,15 +1,35 @@
 ---
 ---
-
 /*
  * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
-
 @import
-   /* Social icon colors */
+    "vendor/breakpoint/breakpoint",
+    "themes",
+    "theme/default_light",
+    "theme/default_dark",
+    "include/mixins",
+    "vendor/susy/susy",
+    "layout/reset",
+    "layout/base",
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
+    "layout/forms",
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar",
+    "layout/json_cv",
+    "vendor/font-awesome/fontawesome",
+    "vendor/font-awesome/solid",
+    "vendor/font-awesome/brands"
+;
+
 .author__urls li a i.fa-envelope { color: #D44638; }
 .author__urls li a i.fa-graduation-cap { color: #4285F4; }
 .author__urls li a i.fa-orcid { color: #A6CE39; }
@@ -18,14 +38,5 @@
 .author__urls li a i.fa-flask { color: #E87722; }
 .author__urls li a i.fa-github { color: #333333; }
 .author__urls li a i.fa-linkedin { color: #0077B5; }
-
-/* Location and employer icons */
 .author__urls li i.fa-location-dot { color: #E74C3C; }
 .author__urls li i.fa-building-columns { color: #2E75B6; }
-```
-
-Also — I noticed two other issues in the page source worth fixing:
-
-**1. Double path in image URLs:**
-```
-/images//images/profile.png  ← double path, broken
