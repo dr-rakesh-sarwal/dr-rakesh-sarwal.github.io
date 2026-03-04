@@ -1,4 +1,5 @@
-# Welcome to JekyllG
+
+# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -9,7 +10,11 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-url                      : https://dr-rakesh-sarwal.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+title                    : "Your Name / Site Title"
+title_separator          : "-"
+name                     : &name "Your Name"
+description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
@@ -17,20 +22,17 @@ repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
-
 author:
-  name: "Dr. Rakesh Sarwal"
-  avatar: "profile.png" 
-  position: "Professor of Community Medicine and Head of Integrative Health Clinic."
-  employer: "ESIC Medical College & Hospital, Faridabad"
-  expertise:
-    - "Health systems"
-    - "Integrative health"
-    - "Public policy implementation"
-  email: "sarwalr@gmail.com"
-  
+  # Biographic information
+  avatar           : "profile.png"
+  name             : "Dr. Rakesh Sarwal" 
+  pronouns         : # example: "she/her"  
+  bio              : "Health systems, Integrative health and Public policy implementation"
+  location         : "Faridabad, India"
+  employer         : "ESIC Medical College & Hospital, Faridabad"
+  uri              : # URL
+  email            : "sarwalr@gmail.com" 
 
-  # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
@@ -87,6 +89,44 @@ publication_category:
     title: 'Articles'
   conferences:
     title: 'Conference Papers'
+  
+  # Academic websites
+  academia         : # URL
+  arxiv            : # URL - Update with the correct link to your profile
+  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  inspire-hep      : # URL
+  impactstory      : # URL
+  orcid            : "https://orcid.org/yourorcidurl"
+  semantic         : # URL
+  ssrn             : # URL
+  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  researchgate     : # URL
+  scopus           : # URL
+  zotero           : # URL
+
+
+  # Repositories and software development
+  bitbucket        : # Username - Update with your username on the site
+  codepen          : # Username
+  dribbble         : # Username
+  github           : "academicpages"
+  kaggle           : # Username  
+  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+
+  # Social media
+  artstation       : # Username
+  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  facebook         : # Username
+  flickr           : # Username
+  foursquare       : # Username
+  goodreads        : # Username
+  google_plus      : # Username
+  keybase          : # Username
+  instagram        : # Username
+  lastfm           : # Username
+  linkedin         : # Username
+  mastodon         : # URL
+
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -135,7 +175,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : Rakesh_Sarwal
+  username               : &twitter
 facebook:
   username               :
   app_id                 :
@@ -152,7 +192,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  false # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
 
@@ -278,7 +318,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: true
+      comment: true
   # _talks
   - scope:
       path: ""
@@ -299,7 +339,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Asia/Kolkata # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
