@@ -9,55 +9,23 @@
  */
 
 @import
-    "vendor/breakpoint/breakpoint",
+   /* Social icon colors */
+.author__urls li a i.fa-envelope { color: #D44638; }
+.author__urls li a i.fa-graduation-cap { color: #4285F4; }
+.author__urls li a i.fa-orcid { color: #A6CE39; }
+.author__urls li a i.fa-book-medical { color: #326599; }
+.author__urls li a i.fa-researchgate { color: #00CCBB; }
+.author__urls li a i.fa-flask { color: #E87722; }
+.author__urls li a i.fa-github { color: #333333; }
+.author__urls li a i.fa-linkedin { color: #0077B5; }
 
-    "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+/* Location and employer icons */
+.author__urls li i.fa-location-dot { color: #E74C3C; }
+.author__urls li i.fa-building-columns { color: #2E75B6; }
+```
 
-    "include/mixins",
-    "vendor/susy/susy",
+Also — I noticed two other issues in the page source worth fixing:
 
-    "layout/reset",
-    "layout/base",
-
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
-
-    "layout/forms",
-
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-    "layout/json_cv",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
-;
-.author__urls {
-  a[href*="google"] .svg-inline--fa,
-  a[href*="scholar"] .svg-inline--fa { color: #4285F4; }  /* Google blue */
-  
-  a[href*="linkedin"] .svg-inline--fa { color: #0077B5; }
-  
-  a[href*="twitter"] .svg-inline--fa,
-  a[href*="x.com"] .svg-inline--fa { color: #1DA1F2; }
-  
-  a[href*="github"] .svg-inline--fa { color: #333333; }
-  
-  a[href*="researchgate"] .svg-inline--fa { color: #00CCBB; }
-  
-  a[href*="orcid"] .svg-inline--fa { color: #A6CE39; }
-  
-  a[href*="pubmed"] .svg-inline--fa,
-  a[href*="ncbi"] .svg-inline--fa { color: #326599; }
-  
-  a[href*="researchgate"] .svg-inline--fa { color: #00CCBB; }
-}
+**1. Double path in image URLs:**
+```
+/images//images/profile.png  ← double path, broken
