@@ -153,7 +153,7 @@ description: "Public Health Physician and Policy Leader specializing in
               health systems, integrative health and NCD prevention. 
               Three decades of experience in Indian government health policy."
 
-google_site_verification : "abc123xyz456"  # from Google Search Console
+google_site_verification : "<meta name="google-site-verification" content="eUirYog6LXAZk3IMM--fn8UWSs-XL06dkZGeBuJdxss"  # from Google Search Console
 bing_site_verification   : "your-code-here"
 
 og_image                 : "/images/profile.png"  # shows when shared on social media
