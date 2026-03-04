@@ -11,7 +11,7 @@ repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 # Site Author
 author:
   name             : "Dr. Rakesh Sarwal" 
-  avatar           : "images/profile.png"
+  avatar           : "/images/profile.png"
   pronouns         :
   position         : "Professor, Community Medicine and Head, Integrated Health Clinic (IHC)"
   bio              : "Public health physician and policy leader with 30+ years in India. Researching lifestyle medicine, NCD prevention, and integrative health"
@@ -130,7 +130,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "https://dr-rakesh-sarwal.github.io/images/profile.png"
+og_image                 : "/images/profile.png"
 og_description           : "Dr. Rakesh Sarwal - Public Health Physician and Policy Leader"
 social:
   type                   : "Person"
