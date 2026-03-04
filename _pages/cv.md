@@ -22,7 +22,8 @@ Work experience
 - Adjunct Professor – Community Medicine & Integrated Health, ESIC Medical College, Faridabad (2023 – Present)
     • Teach and develop courses on community-based wellness, health education, and integrative public health
     • Supervise student projects and mentor in yoga-based interventions and primary care innovation
-Promoter & Consultant, Wellness Program Design, Sutra Health Clinic / EQUAL Society, Faridabad (2022 – Present)
+  
+- Promoter & Consultant, Wellness Program Design, Sutra Health Clinic / EQUAL Society, Faridabad (2022 – Present)
     • Designed integrative wellness education modules for urban and rural populations (www.lifequality.org.in) 
     • Facilitated training on behavior change, pranayama, and lifestyle-based prevention strategies
 
