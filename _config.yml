@@ -23,7 +23,7 @@ repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 author:
   # Biographic information
   name             : "Dr. Rakesh Sarwal" 
-  avatar           : "images/profile.png"
+  avatar           : "/images/profile.png"
   pronouns         : # example: "she/her"  
   bio              : "Health systems, Integrative health and Public policy implementation"
   location         : "Faridabad, India"
