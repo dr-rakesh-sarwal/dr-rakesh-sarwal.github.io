@@ -14,7 +14,7 @@ author:
   avatar           : "/images/profile.png"
   pronouns         :
   position         : "Professor, Community Medicine and Head, Integrated Health Clinic (IHC)"
-  bio              : ""Public health physician and policy leader with 30+ years in India. Professor of Community Medicine at ESIC Medical College, Faridabad. Researching lifestyle medicine, NCD prevention, and integrative health"
+  bio              : "Public health physician and policy leader with 30+ years in India. Professor of Community Medicine at ESIC Medical College, Faridabad. Researching lifestyle medicine, NCD prevention, and integrative health"
   location         : "Faridabad, India"
   employer         : "ESIC Medical College & Hospital, Faridabad"
   uri              :
@@ -136,7 +136,7 @@ social:
   type                   : "Person"
   name                   : "Dr. Rakesh Sarwal"
   links:
-     - "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
+    - "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
     - "https://orcid.org/0000-0001-8345-2640"
     - "https://www.ncbi.nlm.nih.gov/pubmed/?term=Rakesh+Sarwal"
     - "https://www.researchgate.net/profile/Rakesh-Sarwal"
@@ -149,7 +149,7 @@ social:
 analytics:
   provider               : "google-gtag"
   google:
-    tracking_id          : G-4HZK86LDQ9 
+    tracking_id          : "G-4HZK86LDQ9" 
 
 
 # Reading Files
