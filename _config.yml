@@ -3,10 +3,9 @@
 locale                   : "en-US"
 site_theme               : "default"
 title                    : "Dr. Rakesh Sarwal"
-title_separator          : "-"
-name                     : &name "Dr. Rakesh Sarwal"
-description              : &description "Public Health Physician and Policy Leader specializing in health systems, integrative health and NCD prevention. Three decades of experience in Indian government health policy."
-url                      : https://dr-rakesh-sarwal.github.io
+name                     : "Dr. Rakesh Sarwal"
+description              : "Public health physician and policy leader with over three decades of experience in India. Research interests in lifestyle therapies for chronic disease prevention and NCD management."
+url                      : "https://dr-rakesh-sarwal.github.io"
 baseurl                  : ""
 repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 
@@ -21,6 +20,13 @@ author:
   employer         : "ESIC Medical College & Hospital, Faridabad"
   uri              :
   email            : "sarwalr@gmail.com" 
+    googlescholar    : "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
+  orcid            : "https://orcid.org/0000-0001-8345-2640"
+  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Rakesh+Sarwal"
+  researchgate     : "https://www.researchgate.net/profile/Rakesh-Sarwal"
+  github           : "dr-rakesh-sarwal"
+  linkedin         : "dr-rakesh-sarwal"
+  email            : "sarwalr@gmail.com"
 
   # Academic websites
   academia         :
