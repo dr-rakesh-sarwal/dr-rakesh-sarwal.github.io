@@ -44,6 +44,7 @@ author:
   github           : "dr-rakesh-sarwal"
   kaggle           :
   stackoverflow    :
+  openalex         : "https://openalex.org/works?filter=authorships.author.id:a5055938207"
 
   # Social media
   artstation       :
