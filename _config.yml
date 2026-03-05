@@ -138,7 +138,7 @@ social:
   type                   : "Person"
   name                   : "Dr. Rakesh Sarwal"
   jobTitle               : "Professor, Community Medicine"
-  affiliation:           : "ESIC Medical College & Hospital"
+  affiliation            : "ESIC Medical College & Hospital"
   links:
     - "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
     - "https://orcid.org/0000-0001-8345-2640"
