@@ -36,7 +36,7 @@ author:
   scopus           : "https://www.scopus.com/authid/detail.uri?authorId=8454720000"
   zotero           :
   zenodo           : "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Sarwal%2C%20Rakesh%22&l=list&p=1&s=10&sort=bestmatch"
-
+  loop             : "https://loop.frontiersin.org/people/1511772"
   # Repositories and software development
   bitbucket        :
   codepen          :
