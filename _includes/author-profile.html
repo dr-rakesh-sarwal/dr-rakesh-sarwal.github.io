@@ -110,6 +110,11 @@
     </a>
   </li>
 {% endif %}
+      {% if author.openalex %}
+  <li><a href="{{ author.openalex }}" rel="nofollow noopener noreferrer">
+    <i class="fas fa-fw fa-database icon-pad-right" aria-hidden="true"></i>OpenAlex
+  </a></li>
+{% endif %}
 
       <!-- Developer / repository links -->
       {% if author.github %}
