@@ -97,6 +97,14 @@
         <li><a href="{{ author.inspire-hep }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-inspire icon-pad-right" aria-hidden="true"></i>InspireHEP</a></li>
       {% endif %}
 
+      {% if author.zenodo %}
+  <li>
+    <a href="{{ author.zenodo }}" itemprop="url">
+      <i class="ai ai-zenodo" aria-hidden="true"></i> Zenodo
+    </a>
+  </li>
+{% endif %}
+
       <!-- Developer / repository links -->
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
