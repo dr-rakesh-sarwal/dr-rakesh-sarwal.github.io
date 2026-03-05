@@ -28,13 +28,14 @@ author:
   inspire-hep      :
   SciProfiles      : "https://sciprofiles.com/profile/dr-rakesh-sarwal"
   impactstory      :
-  orcid            : "https://orcid.org/0000-0001-8345-2640"
+  orcid              : "https://orcid.org/0000-0001-8345-2640"
   semantic         :
   ssrn             :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Rakesh+Sarwal"
   researchgate     : "https://www.researchgate.net/profile/Rakesh-Sarwal" 
   scopus           :
   zotero           :
+  zenodo           : "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Sarwal%2C%20Rakesh%22&l=list&p=1&s=10&sort=bestmatch"
 
   # Repositories and software development
   bitbucket        :
