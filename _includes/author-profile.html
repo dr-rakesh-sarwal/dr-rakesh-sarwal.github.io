@@ -134,7 +134,14 @@
         <li><a href="https://linkedin.com/in/{{ author.linkedin }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
       {% endif %}
       {% if author.twitter %}
-        <li><a href="https://twitter.com/{{ author.twitter }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>Twitter / X</a></li>
+      <li><a href="https://twitter.com/{{ author.twitter }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>Twitter / X</a></li>
+
+## 📺 YouTube — Wrong URL Format
+
+Your current YouTube line builds:
+```
+https://youtube.com/sutra-health  ← doesn't exist
+      
       {% endif %}
       {% if author.bluesky %}
         <li><a href="https://bsky.app/profile/{{ author.bluesky }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>Bluesky</a></li>
