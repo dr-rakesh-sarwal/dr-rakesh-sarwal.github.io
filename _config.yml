@@ -70,9 +70,9 @@ author:
   weibo            :
   wikipedia        :
   xing             :
-  youtube          :
+  youtube          : "sutra-health"
   zhihu            :
-  zenodo_username  : dr-rakesh-sarwal
+  zenodo_username  : "dr-rakesh-sarwal"
 
 # Publication Category
 publication_category:
