@@ -41,6 +41,7 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
 
+      <!-- 1. Contact & Identity -->
       {% if author.location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
       {% endif %}
@@ -54,12 +55,12 @@
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
       {% endif %}
 
-      <!-- Academic links -->
-      {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
-      {% endif %}
+      <!-- 2. Primary Academic Identity -->
       {% if author.orcid %}
         <li><a href="{{ author.orcid }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
+      {% endif %}
+      {% if author.googlescholar %}
+        <li><a href="{{ author.googlescholar }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
       {% endif %}
       {% if author.pubmed %}
         <li><a href="{{ author.pubmed }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-book-medical icon-pad-right" aria-hidden="true"></i>PubMed</a></li>
@@ -67,17 +68,34 @@
       {% if author.researchgate %}
         <li><a href="{{ author.researchgate }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
       {% endif %}
+      {% if author.scopus %}
+        <li><a href="{{ author.scopus }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-scopus icon-pad-right" aria-hidden="true"></i>Scopus</a></li>
+      {% endif %}
+      {% if author.semantic %}
+        <li><a href="{{ author.semantic }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-semantic-scholar icon-pad-right" aria-hidden="true"></i>Semantic Scholar</a></li>
+      {% endif %}
 
+      <!-- 3. Secondary Academic Repositories -->
       {% if author.SciProfiles %}
-  <li><a href="{{ author.SciProfiles }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-flask icon-pad-right" aria-hidden="true"></i>SciProfiles</a></li>
-{% endif %}
-
+        <li><a href="{{ author.SciProfiles }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-flask icon-pad-right" aria-hidden="true"></i>SciProfiles</a></li>
+      {% endif %}
       {% if author.loop %}
-  <li><a href="{{ author.loop }}" rel="nofollow noopener noreferrer">
-    <i class="fas fa-fw fa-circle-nodes icon-pad-right" aria-hidden="true"></i>Loop
-  </a></li>
-{% endif %}
-      
+        <li><a href="{{ author.loop }}" rel="nofollow noopener noreferrer">
+          <i class="fas fa-fw fa-circle-nodes icon-pad-right" aria-hidden="true"></i>Loop
+        </a></li>
+      {% endif %}
+      {% if author.openalex %}
+        <li><a href="{{ author.openalex }}" rel="nofollow noopener noreferrer">
+          <i class="fas fa-fw fa-database icon-pad-right" aria-hidden="true"></i>OpenAlex
+        </a></li>
+      {% endif %}
+      {% if author.zenodo %}
+        <li>
+          <a href="{{ author.zenodo }}" itemprop="url">
+            <i class="ai ai-zenodo" aria-hidden="true"></i> Zenodo
+          </a>
+        </li>
+      {% endif %}
       {% if author.impactstory %}
         <li><a href="{{ author.impactstory }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-impactstory icon-pad-right" aria-hidden="true"></i>ImpactStory</a></li>
       {% endif %}
@@ -90,12 +108,6 @@
       {% if author.ssrn %}
         <li><a href="{{ author.ssrn }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-file-alt icon-pad-right" aria-hidden="true"></i>SSRN</a></li>
       {% endif %}
-      {% if author.scopus %}
-        <li><a href="{{ author.scopus }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-scopus icon-pad-right" aria-hidden="true"></i>Scopus</a></li>
-      {% endif %}
-      {% if author.semantic %}
-        <li><a href="{{ author.semantic }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-semantic-scholar icon-pad-right" aria-hidden="true"></i>Semantic Scholar</a></li>
-      {% endif %}
       {% if author.zotero %}
         <li><a href="{{ author.zotero }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-zotero icon-pad-right" aria-hidden="true"></i>Zotero</a></li>
       {% endif %}
@@ -103,20 +115,7 @@
         <li><a href="{{ author.inspire-hep }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-inspire icon-pad-right" aria-hidden="true"></i>InspireHEP</a></li>
       {% endif %}
 
-      {% if author.zenodo %}
-  <li>
-    <a href="{{ author.zenodo }}" itemprop="url">
-      <i class="ai ai-zenodo" aria-hidden="true"></i> Zenodo
-    </a>
-  </li>
-{% endif %}
-      {% if author.openalex %}
-  <li><a href="{{ author.openalex }}" rel="nofollow noopener noreferrer">
-    <i class="fas fa-fw fa-database icon-pad-right" aria-hidden="true"></i>OpenAlex
-  </a></li>
-{% endif %}
-
-      <!-- Developer / repository links -->
+      <!-- 4. Code & Developer -->
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
       {% endif %}
@@ -130,7 +129,7 @@
         <li><a href="https://kaggle.com/{{ author.kaggle }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
       {% endif %}
 
-      <!-- Social media links -->
+      <!-- 5. Social & Professional Networking -->
       {% if author.linkedin %}
         <li><a href="https://linkedin.com/in/{{ author.linkedin }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
       {% endif %}
