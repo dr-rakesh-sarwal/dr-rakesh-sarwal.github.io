@@ -1,152 +1,83 @@
-{% comment %}
-  Author Profile Include
-  Place this in _includes/author-profile.html
-{% endcomment %}
-{% if page.author and site.data.authors[page.author] %}
-  {% assign author = site.data.authors[page.author] %}
-{% else %}
-  {% assign author = site.author %}
+{% comment %} Author Profile Include Place this in _includes/author-profile.html {% endcomment %} {% if page.author and site.data.authors[page.author] %} {% assign author = site.data.authors[page.author] %} {% else %} {% assign author = site.author %} {% endif %}
+{% if author.avatar contains "://" %} {{ author.name }} {% else %} {{ author.name }} {% endif %}
+{% if author.position %}
+
+{{ author.position }}
+{% endif %} {% if author.bio %}
+
+{{ author.bio }}
+{% endif %} {% if author.expertise %}
+Expertise
+
+    {% for item in author.expertise %}
+    {{ item }}
+    {% endfor %} 
+
 {% endif %}
-<div itemscope itemtype="http://schema.org/Person" class="author-profile">
 
-  <!-- Avatar -->
-  <div class="author__avatar">
-    {% if author.avatar contains "://" %}
-      <img src="{{ author.avatar }}" alt="{{ author.name }}" fetchpriority="high" />
-    {% else %}
-      <img src="{{ author.avatar | prepend: "/" | prepend: base_path }}" alt="{{ author.name }}" fetchpriority="high" />
-    {% endif %}
-  </div>
+    {% if author.location %}
+    {{ author.location }}
+    {% endif %} {% if author.employer %}
+    {{ author.employer }}
+    {% endif %} {% if author.uri %}
+    Website
+    {% endif %} {% if author.email %}
+    Email
+    {% endif %} {% if author.orcid %}
+    ORCID
+    {% endif %} {% if author.googlescholar %}
+    Google Scholar
+    {% endif %} {% if author.pubmed %}
+    PubMed
+    {% endif %} {% if author.researchgate %}
+    ResearchGate
+    {% endif %} {% if author.scopus %}
+    Scopus
+    {% endif %} {% if author.semantic %}
+    Semantic Scholar
+    {% endif %} {% if author.SciProfiles %}
+    SciProfiles
+    {% endif %} {% if author.loop %}
+    Loop
+    {% endif %} {% if author.openalex %}
+    OpenAlex
+    {% endif %} {% if author.zenodo %}
+    Zenodo
+    {% endif %} {% if author.impactstory %}
+    ImpactStory
+    {% endif %} {% if author.academia %}
+    Academia.edu
+    {% endif %} {% if author.arxiv %}
+    arXiv
+    {% endif %} {% if author.ssrn %}
+    SSRN
+    {% endif %} {% if author.zotero %}
+    Zotero
+    {% endif %} {% if author.inspire-hep %}
+    InspireHEP
+    {% endif %} {% if author.github %}
+    GitHub
+    {% endif %} {% if author.bitbucket %}
+    Bitbucket
+    {% endif %} {% if author.stackoverflow %}
+    Stack Overflow
+    {% endif %} {% if author.kaggle %}
+    Kaggle
+    {% endif %} {% if author.linkedin %}
+    LinkedIn
+    {% endif %} {% if author.twitter %}
+    Twitter / X
+    {% endif %} {% if author.bluesky %}
+    Bluesky
+    {% endif %} {% if author.mastodon %}
+    Mastodon
+    {% endif %} {% if author.instagram %}
+    Instagram
+    {% endif %} {% if author.facebook %}
+    Facebook
+    {% endif %} {% if author.youtube %}
+    YouTube
+    {% endif %} {% if author.medium %}
+    Medium
+    {% endif %} 
 
-  <!-- Name, Position, Bio -->
-  <div class="author__content">
-    {% if author.position %}
-      <p class="author__position">{{ author.position }}</p>
-    {% endif %}
-    {% if author.bio %}
-      <p class="author__bio">{{ author.bio }}</p>
-    {% endif %}
-    {% if author.expertise %}
-      <h4>Expertise</h4>
-      <ul class="author__expertise">
-        {% for item in author.expertise %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  </div>
-
-  <!-- Links / Social URLs -->
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-
-      <!-- 1. Contact & Identity -->
-      {% if author.location %}
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
-      {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
-      {% endif %}
-      {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>Website</a></li>
-      {% endif %}
-      {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
-      {% endif %}
-
-      <!-- 2. Primary Academic Identity -->
-      {% if author.orcid %}
-        <li><a href="{{ author.orcid }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
-      {% endif %}
-      {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
-      {% endif %}
-      {% if author.pubmed %}
-        <li><a href="{{ author.pubmed }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-book-medical icon-pad-right" aria-hidden="true"></i>PubMed</a></li>
-      {% endif %}
-      {% if author.researchgate %}
-        <li><a href="{{ author.researchgate }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
-      {% endif %}
-      {% if author.scopus %}
-        <li><a href="{{ author.scopus }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-scopus icon-pad-right" aria-hidden="true"></i>Scopus</a></li>
-      {% endif %}
-      {% if author.semantic %}
-        <li><a href="{{ author.semantic }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-semantic-scholar icon-pad-right" aria-hidden="true"></i>Semantic Scholar</a></li>
-      {% endif %}
-
-      <!-- 3. Secondary Academic Repositories -->
-      {% if author.SciProfiles %}
-        <li><a href="{{ author.SciProfiles }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-flask icon-pad-right" aria-hidden="true"></i>SciProfiles</a></li>
-      {% endif %}
-      {% if author.loop %}
-        <li><a href="{{ author.loop }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-circle-nodes icon-pad-right" aria-hidden="true"></i>Loop</a></li>
-      {% endif %}
-      {% if author.openalex %}
-        <li><a href="{{ author.openalex }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-database icon-pad-right" aria-hidden="true"></i>OpenAlex</a></li>
-      {% endif %}
-      {% if author.zenodo %}
-        <li><a href="{{ author.zenodo }}" itemprop="url" rel="nofollow noopener noreferrer"><i class="ai ai-zenodo icon-pad-right" aria-hidden="true"></i>Zenodo</a></li>
-      {% endif %}
-      {% if author.impactstory %}
-        <li><a href="{{ author.impactstory }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-impactstory icon-pad-right" aria-hidden="true"></i>ImpactStory</a></li>
-      {% endif %}
-      {% if author.academia %}
-        <li><a href="{{ author.academia }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-academia icon-pad-right" aria-hidden="true"></i>Academia.edu</a></li>
-      {% endif %}
-      {% if author.arxiv %}
-        <li><a href="{{ author.arxiv }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-arxiv icon-pad-right" aria-hidden="true"></i>arXiv</a></li>
-      {% endif %}
-      {% if author.ssrn %}
-        <li><a href="{{ author.ssrn }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-file-alt icon-pad-right" aria-hidden="true"></i>SSRN</a></li>
-      {% endif %}
-      {% if author.zotero %}
-        <li><a href="{{ author.zotero }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-zotero icon-pad-right" aria-hidden="true"></i>Zotero</a></li>
-      {% endif %}
-      {% if author.inspire-hep %}
-        <li><a href="{{ author.inspire-hep }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-inspire icon-pad-right" aria-hidden="true"></i>InspireHEP</a></li>
-      {% endif %}
-
-      <!-- 4. Code & Developer -->
-      {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
-      {% endif %}
-      {% if author.bitbucket %}
-        <li><a href="https://bitbucket.org/{{ author.bitbucket }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bitbucket icon-pad-right" aria-hidden="true"></i>Bitbucket</a></li>
-      {% endif %}
-      {% if author.stackoverflow %}
-        <li><a href="https://stackoverflow.com/users/{{ author.stackoverflow }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stack Overflow</a></li>
-      {% endif %}
-      {% if author.kaggle %}
-        <li><a href="https://kaggle.com/{{ author.kaggle }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
-      {% endif %}
-
-      <!-- 5. Social & Professional Networking -->
-      {% if author.linkedin %}
-        <li><a href="https://linkedin.com/in/{{ author.linkedin }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
-      {% endif %}
-      {% if author.twitter %}
-        <li><a href="https://twitter.com/{{ author.twitter }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>Twitter / X</a></li>
-      {% endif %}
-      {% if author.bluesky %}
-        <li><a href="https://bsky.app/profile/{{ author.bluesky }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>Bluesky</a></li>
-      {% endif %}
-      {% if author.mastodon %}
-        <li><a href="{{ author.mastodon }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon icon-pad-right" aria-hidden="true"></i>Mastodon</a></li>
-      {% endif %}
-      {% if author.instagram %}
-        <li><a href="https://instagram.com/{{ author.instagram }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram icon-pad-right" aria-hidden="true"></i>Instagram</a></li>
-      {% endif %}
-      {% if author.facebook %}
-        <li><a href="https://facebook.com/{{ author.facebook }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook icon-pad-right" aria-hidden="true"></i>Facebook</a></li>
-      {% endif %}
-      {% if author.youtube %}
-        <li><a href="https://youtube.com/@{{ author.youtube }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
-      {% endif %}
-      {% if author.medium %}
-        <li><a href="https://medium.com/{{ author.medium }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-medium icon-pad-right" aria-hidden="true"></i>Medium</a></li>
-      {% endif %}
-
-    </ul>
-  </div>
-</div>
