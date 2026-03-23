@@ -80,21 +80,13 @@
         <li><a href="{{ author.SciProfiles }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-flask icon-pad-right" aria-hidden="true"></i>SciProfiles</a></li>
       {% endif %}
       {% if author.loop %}
-        <li><a href="{{ author.loop }}" rel="nofollow noopener noreferrer">
-          <i class="fas fa-fw fa-circle-nodes icon-pad-right" aria-hidden="true"></i>Loop
-        </a></li>
+        <li><a href="{{ author.loop }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-circle-nodes icon-pad-right" aria-hidden="true"></i>Loop</a></li>
       {% endif %}
       {% if author.openalex %}
-        <li><a href="{{ author.openalex }}" rel="nofollow noopener noreferrer">
-          <i class="fas fa-fw fa-database icon-pad-right" aria-hidden="true"></i>OpenAlex
-        </a></li>
+        <li><a href="{{ author.openalex }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-database icon-pad-right" aria-hidden="true"></i>OpenAlex</a></li>
       {% endif %}
       {% if author.zenodo %}
-        <li>
-          <a href="{{ author.zenodo }}" itemprop="url">
-            <i class="ai ai-zenodo" aria-hidden="true"></i> Zenodo
-          </a>
-        </li>
+        <li><a href="{{ author.zenodo }}" itemprop="url" rel="nofollow noopener noreferrer"><i class="ai ai-zenodo icon-pad-right" aria-hidden="true"></i>Zenodo</a></li>
       {% endif %}
       {% if author.impactstory %}
         <li><a href="{{ author.impactstory }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-impactstory icon-pad-right" aria-hidden="true"></i>ImpactStory</a></li>
@@ -134,14 +126,7 @@
         <li><a href="https://linkedin.com/in/{{ author.linkedin }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
       {% endif %}
       {% if author.twitter %}
-      <li><a href="https://twitter.com/{{ author.twitter }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>Twitter / X</a></li>
-
-## 📺 YouTube — Wrong URL Format
-
-Your current YouTube line builds:
-```
-https://youtube.com/sutra-health  ← doesn't exist
-      
+        <li><a href="https://twitter.com/{{ author.twitter }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>Twitter / X</a></li>
       {% endif %}
       {% if author.bluesky %}
         <li><a href="https://bsky.app/profile/{{ author.bluesky }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>Bluesky</a></li>
@@ -156,9 +141,7 @@ https://youtube.com/sutra-health  ← doesn't exist
         <li><a href="https://facebook.com/{{ author.facebook }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook icon-pad-right" aria-hidden="true"></i>Facebook</a></li>
       {% endif %}
       {% if author.youtube %}
-
-      <li><a href="https://youtube.com/@{{ author.youtube }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
-      
+        <li><a href="https://youtube.com/@{{ author.youtube }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
       {% endif %}
       {% if author.medium %}
         <li><a href="https://medium.com/{{ author.medium }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-medium icon-pad-right" aria-hidden="true"></i>Medium</a></li>
