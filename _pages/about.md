@@ -11,8 +11,7 @@ Public Health physician, Public Policy and Planning leader with over three decad
 
 Motivating and guiding lifestyle changes one person at a time, starting with the clinic, drawing policy lessons, and sharing it through policy briefs.
 
-**My research interests** 
-are in exploring the effectiveness of lifestyle therapies across a spectrum of chronic conditions.
+**My research interests** are in exploring the effectiveness of lifestyle therapies across a spectrum of chronic conditions.
 
  **Latest publications:**
 
