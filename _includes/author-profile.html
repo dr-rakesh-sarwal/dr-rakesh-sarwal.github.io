@@ -1,6 +1,5 @@
 {% comment %}
-  Author Profile Include
-  Place this in _includes/author-profile.html
+  Author Profile Include with Clickable Institution
 {% endcomment %}
 {% if page.author and site.data.authors[page.author] %}
   {% assign author = site.data.authors[page.author] %}
@@ -20,12 +19,31 @@
 
   <!-- Name, Position, Bio -->
   <div class="author__content">
+    <h3 itemprop="name">{{ author.name }}</h3>
+    
     {% if author.position %}
-      <p class="author__position">{{ author.position }}</p>
+      {% assign position_text = author.position %}
+      {% assign institution_name = "ESIC Medical College & Hospital, Faridabad, India" %}
+      
+      {% if position_text contains institution_name and author.institution_url %}
+        {% assign before_institution = position_text | split: institution_name | first %}
+        {% assign after_institution = position_text | split: institution_name | last %}
+        <p class="author__position">
+          {{ before_institution }}
+          <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer" class="institution-link">
+            {{ institution_name }}
+          </a>
+          {{ after_institution }}
+        </p>
+      {% else %}
+        <p class="author__position">{{ author.position }}</p>
+      {% endif %}
     {% endif %}
+    
     {% if author.bio %}
       <p class="author__bio">{{ author.bio }}</p>
     {% endif %}
+    
     {% if author.expertise %}
       <h4>Expertise</h4>
       <ul class="author__expertise">
@@ -40,6 +58,16 @@
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
+
+      <!-- Institution Link in Sidebar -->
+      {% if author.institution_url %}
+        <li>
+          <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-fw fa-university icon-pad-right" aria-hidden="true"></i>
+            ESIC Medical College & Hospital
+          </a>
+        </li>
+      {% endif %}
 
       <!-- 1. Contact & Identity -->
       {% if author.location %}
@@ -142,8 +170,8 @@
       {% endif %}
 
       {% if author.youtube %}
-  <li><a href="{{ author.youtube }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
-{% endif %}
+        <li><a href="{{ author.youtube }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
+      {% endif %}
       
       {% if author.medium %}
         <li><a href="https://medium.com/{{ author.medium }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-medium icon-pad-right" aria-hidden="true"></i>Medium</a></li>
