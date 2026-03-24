@@ -22,3 +22,8 @@ Motivating and guiding lifestyle changes one person at a time, starting with the
 [See all publications →](/publications/)
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en)
+<a href="https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en" target="_blank">
+  <img src="https://api.juleskreuer.eu/citation-badge.php?scholar=siSnZvMAAAAJ" 
+       alt="Google Scholar Citations"
+       referrerpolicy="no-referrer">
+</a>
