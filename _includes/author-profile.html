@@ -20,27 +20,21 @@
   <!-- Name, Position, Bio -->
   <div class="author__content">
     <h3 itemprop="name">{{ author.name }}</h3>
-    {% if author.position %}
-  <p class="author__position">
-    {% if author.institution_url %}
-      <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer" class="institution-link">{{ author.position }}</a>
-    {% else %}
-      {{ author.position }}
-    {% endif %}
-  </p>
-{% endif %}
 
-    
-        </p>
-      {% else %}
-        <p class="author__position">{{ author.position }}</p>
-      {% endif %}
+    {% if author.position %}
+      <p class="author__position">
+        {% if author.institution_url %}
+          <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer" class="institution-link">{{ author.position }}</a>
+        {% else %}
+          {{ author.position }}
+        {% endif %}
+      </p>
     {% endif %}
-    
+
     {% if author.bio %}
       <p class="author__bio">{{ author.bio }}</p>
     {% endif %}
-    
+
     {% if author.expertise %}
       <h4>Expertise</h4>
       <ul class="author__expertise">
@@ -56,12 +50,9 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
 
-      <!-- Contact & Identity -->
       {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
       {% endif %}
-
-      <!-- Primary Academic Identity -->
       {% if author.orcid %}
         <li><a href="{{ author.orcid }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
       {% endif %}
@@ -80,8 +71,6 @@
       {% if author.semantic %}
         <li><a href="{{ author.semantic }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-semantic-scholar icon-pad-right" aria-hidden="true"></i>Semantic Scholar</a></li>
       {% endif %}
-
-      <!-- Secondary Academic Repositories -->
       {% if author.SciProfiles %}
         <li><a href="{{ author.SciProfiles }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-flask icon-pad-right" aria-hidden="true"></i>SciProfiles</a></li>
       {% endif %}
@@ -94,13 +83,9 @@
       {% if author.zenodo %}
         <li><a href="{{ author.zenodo }}" itemprop="url" rel="nofollow noopener noreferrer"><i class="ai ai-zenodo icon-pad-right" aria-hidden="true"></i>Zenodo</a></li>
       {% endif %}
-
-      <!-- Code & Developer -->
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
       {% endif %}
-
-      <!-- Social & Professional Networking -->
       {% if author.linkedin %}
         <li><a href="https://linkedin.com/in/{{ author.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
       {% endif %}
