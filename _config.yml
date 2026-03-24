@@ -12,11 +12,9 @@ repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 author:
   name             : "Dr. Rakesh Sarwal" 
   avatar           : "/images/profile.png"
-  pronouns         :
   position         : "Professor, Community Medicine and Head, Integrated Health Clinic (IHC), ESIC Medical College & Hospital, Faridabad, India"
   bio              : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
   institution_url  : "https://mcfaridabad.esic.gov.in/"
-  uri              : ""
   email            : "sarwalr@gmail.com" 
   expertise:
         - "Nutrition"
@@ -155,8 +153,6 @@ social:
     - "https://linkedin.com/in/dr-rakesh-sarwal"
     - "https://twitter.com/Rakesh_Sarwal"
     - "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Sarwal%2C%20Rakesh%22&l=list&p=1&s=10&sort=bestmatch"
-    - "https://orcid.org/0000-0001-8345-2640"
-    - "https://scholar.google.com/citations?user=siSnZvMAAAAJ"
 # Analytics
 analytics:
   provider               : "google-gtag"
