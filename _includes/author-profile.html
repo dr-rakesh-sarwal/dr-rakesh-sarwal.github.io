@@ -20,20 +20,17 @@
   <!-- Name, Position, Bio -->
   <div class="author__content">
     <h3 itemprop="name">{{ author.name }}</h3>
-    
     {% if author.position %}
-      {% assign position_text = author.position %}
-      {% assign institution_name = "ESIC Medical College & Hospital, Faridabad, India" %}
-      
-      {% if position_text contains institution_name and author.institution_url %}
-        {% assign before_institution = position_text | split: institution_name | first %}
-        {% assign after_institution = position_text | split: institution_name | last %}
-        <p class="author__position">
-          {{ before_institution }}
-          <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer" class="institution-link">
-            {{ institution_name }}
-          </a>
-          {{ after_institution }}
+  <p class="author__position">
+    {% if author.institution_url %}
+      <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer" class="institution-link">{{ author.position }}</a>
+    {% else %}
+      {{ author.position }}
+    {% endif %}
+  </p>
+{% endif %}
+
+    
         </p>
       {% else %}
         <p class="author__position">{{ author.position }}</p>
