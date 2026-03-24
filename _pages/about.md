@@ -23,6 +23,6 @@ are in exploring the effectiveness of lifestyle therapies across a spectrum of c
 
 [See all publications →](/publications/)
 
-![Citations](https://api.juleskreuer.eu/citation-badge.php?scholar=siSnZvMAAAAJ)
-
- ![Citations](https://api.juleskreuer.eu/citation-badge.php?scholar=siSnZvMAAAAJ)
+<a href="https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en" target="_blank">
+  <img src="https://api.juleskreuer.eu/citation-badge.php?scholar=siSnZvMAAAAJ" alt="Google Scholar Citations">
+</a>
