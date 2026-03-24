@@ -13,7 +13,7 @@ author:
   name             : "Dr. Rakesh Sarwal" 
   avatar           : "/images/profile.png"
   position         : "Professor, Community Medicine and Head, Integrated Health Clinic"
-  bio              : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
+  bio              : # "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
   institution_url  : "https://mcfaridabad.esic.gov.in/"
   email            : "sarwalr@gmail.com" 
   expertise:
