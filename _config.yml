@@ -17,15 +17,15 @@ author:
   bio              : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
   location         : "Faridabad, India"
   employer         : "ESIC Medical College & Hospital, Faridabad"
-  uri              :
+  uri              : "https://mcfaridabad.esic.gov.in/"
   email            : "sarwalr@gmail.com" 
   expertise:
-    - "Nutrition"
-    - "Therapeutic Yoga"
-    - "Lifestyle Medicine"
-    - "Integrative Health"
-    - "Health Systems Strengthening"
-    - "Public Health Policy"
+        - "Nutrition"
+        - "Therapeutic Yoga"
+        - "Lifestyle Medicine"
+        - "Integrative Health"
+        - "Health Systems Strengthening"
+        - "Public Health Policy"
     
   # Academic websites
   academia         :
