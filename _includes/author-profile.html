@@ -52,15 +52,7 @@
         {% endfor %}
       </ul>
     {% endif %}
-  </div>
-
-  <!-- Links / Social URLs -->
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-
-      <!-- Institution Link in Sidebar -->
-      {% if author.institution_url %}
+  
         <li>
           <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-fw fa-university icon-pad-right" aria-hidden="true"></i>
