@@ -3,7 +3,7 @@
 locale                   : "en-US"
 title                    : "Dr. Rakesh Sarwal"
 name                     : "Dr. Rakesh Sarwal"
-description              : "Public health physician and policy leader with over three decades of experience in India. Research interests in lifestyle therapies for chronic disease prevention and NCD management."
+description  : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
 url                      : "https://dr-rakesh-sarwal.github.io"
 baseurl                  : ""
 repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
@@ -135,12 +135,12 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 : "/images/profile.png"
-og_description           : "Dr. Rakesh Sarwal - Public Health Physician and Policy Leader"
+og_description           : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
 social:
   type                   : "Person"
   name                   : "Dr. Rakesh Sarwal"
-  jobTitle               : ""
-  affiliation            : ""
+ jobTitle                : "Professor, Community Medicine"
+  affiliation            : "ESIC Medical College & Hospital, Faridabad, India"
   links:
     - "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
     - "https://orcid.org/0000-0001-8345-2640"
