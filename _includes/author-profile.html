@@ -22,14 +22,14 @@
     <h3 itemprop="name">{{ author.name }}</h3>
 
     {% if author.position %}
-      <p class="author__position">
-        {% if author.institution_url %}
-          <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer" class="institution-link">{{ author.position }}</a>
-        {% else %}
-          {{ author.position }}
-        {% endif %}
-      </p>
+  <p class="author__position">
+    {% if author.institution_url %}
+      {{ author.position | split: "ESIC Medical College & Hospital, Faridabad, India" | first }}<a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer" class="institution-link">ESIC Medical College & Hospital, Faridabad, India</a>{{ author.position | split: "ESIC Medical College & Hospital, Faridabad, India" | last }}
+    {% else %}
+      {{ author.position }}
     {% endif %}
+  </p>
+{% endif %}
 
     {% if author.bio %}
       <p class="author__bio">{{ author.bio }}</p>
