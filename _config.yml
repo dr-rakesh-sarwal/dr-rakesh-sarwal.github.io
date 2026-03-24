@@ -45,7 +45,7 @@ author:
   github           : 
   kaggle           :
   stackoverflow    :
-  openalex         : "https://openalex.org/authors/A5055938207"
+  openalex         : # "https://openalex.org/authors/A5055938207"
 
   # Social media
   artstation       :
