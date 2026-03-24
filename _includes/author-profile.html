@@ -52,14 +52,12 @@
         {% endfor %}
       </ul>
     {% endif %}
-  
-        <li>
-          <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-fw fa-university icon-pad-right" aria-hidden="true"></i>
-            ESIC Medical College & Hospital
-          </a>
-        </li>
-      {% endif %}
+  </div>
+
+  <!-- Links / Social URLs -->
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
 
       <!-- 1. Contact & Identity -->
       {% if author.location %}
