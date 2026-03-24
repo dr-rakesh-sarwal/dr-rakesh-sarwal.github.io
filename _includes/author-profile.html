@@ -59,21 +59,12 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
 
-      <!-- 1. Contact & Identity -->
-      {% if author.location %}
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
-      {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
-      {% endif %}
-      {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>Website</a></li>
-      {% endif %}
+      <!-- Contact & Identity -->
       {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
       {% endif %}
 
-      <!-- 2. Primary Academic Identity -->
+      <!-- Primary Academic Identity -->
       {% if author.orcid %}
         <li><a href="{{ author.orcid }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
       {% endif %}
@@ -93,7 +84,7 @@
         <li><a href="{{ author.semantic }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-semantic-scholar icon-pad-right" aria-hidden="true"></i>Semantic Scholar</a></li>
       {% endif %}
 
-      <!-- 3. Secondary Academic Repositories -->
+      <!-- Secondary Academic Repositories -->
       {% if author.SciProfiles %}
         <li><a href="{{ author.SciProfiles }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-flask icon-pad-right" aria-hidden="true"></i>SciProfiles</a></li>
       {% endif %}
@@ -106,63 +97,43 @@
       {% if author.zenodo %}
         <li><a href="{{ author.zenodo }}" itemprop="url" rel="nofollow noopener noreferrer"><i class="ai ai-zenodo icon-pad-right" aria-hidden="true"></i>Zenodo</a></li>
       {% endif %}
-      {% if author.impactstory %}
-        <li><a href="{{ author.impactstory }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-impactstory icon-pad-right" aria-hidden="true"></i>ImpactStory</a></li>
-      {% endif %}
-      {% if author.academia %}
-        <li><a href="{{ author.academia }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-academia icon-pad-right" aria-hidden="true"></i>Academia.edu</a></li>
-      {% endif %}
-      {% if author.arxiv %}
-        <li><a href="{{ author.arxiv }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-arxiv icon-pad-right" aria-hidden="true"></i>arXiv</a></li>
-      {% endif %}
-      {% if author.ssrn %}
-        <li><a href="{{ author.ssrn }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-file-alt icon-pad-right" aria-hidden="true"></i>SSRN</a></li>
-      {% endif %}
-      {% if author.zotero %}
-        <li><a href="{{ author.zotero }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-zotero icon-pad-right" aria-hidden="true"></i>Zotero</a></li>
-      {% endif %}
-      {% if author.inspire-hep %}
-        <li><a href="{{ author.inspire-hep }}" rel="nofollow noopener noreferrer"><i class="ai fa-fw ai-inspire icon-pad-right" aria-hidden="true"></i>InspireHEP</a></li>
-      {% endif %}
 
-      <!-- 4. Code & Developer -->
+      <!-- Code & Developer -->
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
       {% endif %}
-      {% if author.bitbucket %}
-        <li><a href="https://bitbucket.org/{{ author.bitbucket }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bitbucket icon-pad-right" aria-hidden="true"></i>Bitbucket</a></li>
-      {% endif %}
-      {% if author.stackoverflow %}
-        <li><a href="https://stackoverflow.com/users/{{ author.stackoverflow }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stack Overflow</a></li>
-      {% endif %}
-      {% if author.kaggle %}
-        <li><a href="https://kaggle.com/{{ author.kaggle }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
-      {% endif %}
 
-      <!-- 5. Social & Professional Networking -->
+      <!-- Social & Professional Networking -->
       {% if author.linkedin %}
         <li><a href="https://linkedin.com/in/{{ author.linkedin }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
       {% endif %}
       {% if author.twitter %}
         <li><a href="https://twitter.com/{{ author.twitter }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>Twitter / X</a></li>
       {% endif %}
-      {% if author.bluesky %}
-        <li><a href="https://bsky.app/profile/{{ author.bluesky }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>Bluesky</a></li>
-      {% endif %}
-      {% if author.mastodon %}
-        <li><a href="{{ author.mastodon }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-mastodon icon-pad-right" aria-hidden="true"></i>Mastodon</a></li>
-      {% endif %}
-      {% if author.instagram %}
-        <li><a href="https://instagram.com/{{ author.instagram }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram icon-pad-right" aria-hidden="true"></i>Instagram</a></li>
-      {% endif %}
-      {% if author.facebook %}
-        <li><a href="https://facebook.com/{{ author.facebook }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook icon-pad-right" aria-hidden="true"></i>Facebook</a></li>
+      {% if author.youtube %}
+        <li><a href="{{ author.youtube }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
       {% endif %}
 
-      {% if author.youtube %}
-        {% if author.youtube contains "://" %}
-          <li><a href="{{ author.youtube }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
-        {% else %}
-          <li><a href="https://youtube.com/@{{ author.youtube }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
-        {% endif %}
-      {% endif %}
+    </ul>
+  </div>
+</div>
+
+<style>
+/* Institution Link Styling */
+.institution-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dotted #0066cc;
+  transition: all 0.2s ease;
+}
+
+.institution-link:hover {
+  color: #004080;
+  border-bottom: 1px solid #004080;
+}
+
+/* Position Text Styling */
+.author__position {
+  font-size: 0.9em;
+  line-height:
