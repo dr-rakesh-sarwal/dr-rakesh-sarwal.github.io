@@ -23,10 +23,12 @@
 
     {% if author.position %}
   <p class="author__position">
-    {% if author.institution_url %}
-      {{ author.position | split: "ESIC Medical College & Hospital, Faridabad, India" | first }}<a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer" class="institution-link">ESIC Medical College & Hospital, Faridabad, India</a>{{ author.position | split: "ESIC Medical College & Hospital, Faridabad, India" | last }}
-    {% else %}
-      {{ author.position }}
+    {{ author.position }}{% if author.institution %}, 
+      {% if author.institution_url %}
+        <a href="{{ author.institution_url }}" target="_blank" rel="noopener noreferrer" class="institution-link">{{ author.institution }}</a>
+      {% else %}
+        {{ author.institution }}
+      {% endif %}
     {% endif %}
   </p>
 {% endif %}
