@@ -10,7 +10,7 @@ repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 
 # Site Author
 author:
-  name               : "Dr. Rakesh Sarwal, "MBBS, MPH, DrPH (Johns Hopkins), Yoga Consultant"
+  name               : "Dr. Rakesh Sarwal, <span class='author__degrees'>MBBS, MPH, DrPH (Johns Hopkins), Yoga Consultant</span>"
   bio                : 
   avatar             : "/images/profile.png"
   position          : "Professor, Community Medicine, Head, Integrated Health Clinic"
