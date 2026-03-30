@@ -10,7 +10,7 @@ repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 
 # Site Author
 author:
-  name               : "Dr. Rakesh Sarwal, MBBS,MPH, DrPH, Yoga Consultant" 
+  name               : "Dr. Rakesh Sarwal <span style='font-weight: normal;'>M.B.B.S., M.P.H.</span>"
   avatar             : "/images/profile.png"
   position          : "Professor, Community Medicine, Head, Integrated Health Clinic"
   institution       : "ESIC Medical College & Hospital, Faridabad, India"
