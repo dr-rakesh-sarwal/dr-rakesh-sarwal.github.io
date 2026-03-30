@@ -101,21 +101,3 @@ $vimeo-color                : #1ab7ea;
 $vine-color                 : #00bf8f;
 $youtube-color              : #bb0000;
 $xing-color                 : #006567;
-
-/* ==========================================================================
-   AUTHOR PROFILE - SMOOTHER LAYOUT WITH FLEXBOX
-   ========================================================================== */
-
-/* Author profile container */
-.author__content {
-  display: flex;
-  flex-direction: column;  /* Ensure elements stack vertically */
-  gap: 0;  /* Remove any gaps between bio and position */
-  align-items: flex-start;  /* Align items to the left */
-}
-
-/* Bio and Position Styling */
-.author__bio, .author__position {
-  margin: 0;  /* Reset any default margins */
-}
-   
