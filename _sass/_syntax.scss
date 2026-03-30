@@ -122,3 +122,8 @@ div.highlighter-rouge, figure.highlight {
 .highlight .vg { color: #22b3eb } /* Name.Variable.Global */
 .highlight .vi { color: #22b3eb } /* Name.Variable.Instance */
 .highlight .il { color: #2aa198 } /* Literal.Number.Integer.Long */
+
+/* Unbold the degrees after name */
+.author__degrees {
+  font-weight: normal; /* Remove bold from degrees */
+}
