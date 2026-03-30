@@ -11,11 +11,11 @@ repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 # Site Author
 author:
   name               : "Dr. Rakesh Sarwal <span style='font-weight: normal;'>MBBS, MPH, DrPH (Johns Hopkins), Therapeutic Yoga Consultant</span>"
+  bio                : "MBBS, MPH, DrPH, Yoga Consultant"
   avatar             : "/images/profile.png"
   position          : "Professor, Community Medicine, Head, Integrated Health Clinic"
   institution       : "ESIC Medical College & Hospital, Faridabad, India"
   institution_url   : "https://mcfaridabad.esic.gov.in/"
-  bio                : "MBBS, MPH, DrPH, Yoga Consultant"
   email             : "sarwalr@gmail.com" 
   expertise:
         - "Lifestyle Medicine, Nutrition, Yoga"
