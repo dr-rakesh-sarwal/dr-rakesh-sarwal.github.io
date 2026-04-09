@@ -25,11 +25,11 @@ author:
   # Academic websites
   academia         :
   arxiv            :
-  googlescholar    : siSnZvMAAAAJ&hl=en
+  googlescholar    : siSnZvMAAAAJ
   inspire-hep      :
   SciProfiles      : "https://sciprofiles.com/profile/dr-rakesh-sarwal"
   impactstory      :
-  orcid            : 0000-0001-8345-2640"
+  orcid            : 0000-0001-8345-2640
   semantic         : "https://www.semanticscholar.org/author/R.-Sarwal/50683270"
   ssrn             :
   pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=Rakesh+Sarwal%5BAuthor%5D&sort=date"
@@ -66,7 +66,9 @@ author:
   steam            :
   telegram         :
   tumblr           :
-  twitter          : Rakesh_Sarwal
+  twitter          : 
+    username: Rakesh_Sarwal
+    card: summary_large_image
   vine             :
   weibo            :
   wikipedia        :
@@ -90,15 +92,6 @@ future                   : true
 read_more                : "disabled"
 talkmap_link             : false
 comments                 : false
-  provider               :
-  disqus:
-    shortname            :
-  discourse:
-    server               :
-  facebook:
-    appid                :
-    num_posts            :
-    colorscheme          :
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages"
@@ -129,6 +122,7 @@ keywords                 : "Public Health, Lifestyle Medicine, NCD Prevention, Y
 
 # Social Sharing
 og_image                 : "/images/profile.png"
+logo                     : "/images/profile.png"
 og_description           : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
 social:
   type                   : "Person"
