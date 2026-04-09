@@ -89,7 +89,7 @@ words_per_minute         : 160
 future                   : true
 read_more                : "disabled"
 talkmap_link             : false
-comments:
+comments                 : false
   provider               :
   disqus:
     shortname            :
@@ -125,7 +125,7 @@ google_site_verification : "eUirYog6LXAZk3IMM--fn8UWSs-XL06dkZGeBuJdxss"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
-
+keywords                 : "Public Health, Lifestyle Medicine, NCD Prevention, Yoga, UHC, India"
 
 # Social Sharing
 og_image                 : "/images/profile.png"
