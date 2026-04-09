@@ -128,13 +128,6 @@ yandex_site_verification :
 
 
 # Social Sharing
-social:
-  links:
-    - "https://twitter.com/Rakesh_Sarwal"
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
 og_image                 : "/images/profile.png"
 og_description           : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
 social:
