@@ -24,9 +24,7 @@ author:
     
   # Academic websites
   academia         :
-  arxiv            :
   googlescholar    : siSnZvMAAAAJ
-  inspire-hep      :
   SciProfiles      : "https://sciprofiles.com/profile/dr-rakesh-sarwal"
   impactstory      :
   orcid            : 0000-0001-8345-2640
@@ -127,7 +125,7 @@ og_description           : "Public health physician and policy leader. Researchi
 social:
   type                   : "Person"
   name                   : "Dr. Rakesh Sarwal"
-  jobTitle                : "Professor, Community Medicine"
+  jobTitle               : "Professor, Community Medicine"
   affiliation            : "ESIC Medical College & Hospital, Faridabad, India"
   links:
     - "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
