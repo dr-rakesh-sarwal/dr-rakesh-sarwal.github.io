@@ -24,14 +24,14 @@ author:
     
   # Academic websites
   academia         :
-  googlescholar    : siSnZvMAAAAJ
+  googlescholar    : "siSnZvMAAAAJ"
   SciProfiles      : "https://sciprofiles.com/profile/dr-rakesh-sarwal"
   impactstory      :
-  orcid            : 0000-0001-8345-2640
+  orcid            : "0000-0001-8345-2640"
   semantic         : "https://www.semanticscholar.org/author/R.-Sarwal/50683270"
   ssrn             :
   pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=Rakesh+Sarwal%5BAuthor%5D&sort=date"
-  researchgate     : Rakesh-Sarwal 
+  researchgate     : "Rakesh-Sarwal" 
   scopus           : "https://www.scopus.com/authid/detail.uri?authorId=8454720000"
   zotero           :
   zenodo           : "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Sarwal%2C%20Rakesh%22&l=list&p=1&s=10&sort=bestmatch"
@@ -64,9 +64,7 @@ author:
   steam            :
   telegram         :
   tumblr           :
-  twitter          : 
-    username: Rakesh_Sarwal
-    card: summary_large_image
+  twitter          : "Rakesh_Sarwal"
   vine             :
   weibo            :
   wikipedia        :
