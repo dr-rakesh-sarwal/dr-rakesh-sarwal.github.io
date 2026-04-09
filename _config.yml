@@ -23,13 +23,13 @@ author:
         - "Public Health Policy"
     
   # Academic websites
-  academia         :
+  academia         : null
   googlescholar    : "siSnZvMAAAAJ"
   SciProfiles      : "https://sciprofiles.com/profile/dr-rakesh-sarwal"
   impactstory      :
   orcid            : "0000-0001-8345-2640"
   semantic         : "https://www.semanticscholar.org/author/R.-Sarwal/50683270"
-  ssrn             :
+  ssrn             : null
   pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=Rakesh+Sarwal%5BAuthor%5D&sort=date"
   researchgate     : "Rakesh-Sarwal" 
   scopus           : "https://www.scopus.com/authid/detail.uri?authorId=8454720000"
@@ -64,7 +64,6 @@ author:
   steam            :
   telegram         :
   tumblr           :
-  twitter          : "Rakesh_Sarwal"
   vine             :
   weibo            :
   wikipedia        :
