@@ -19,7 +19,7 @@ Motivating and guiding lifestyle changes one person at a time, starting with the
 
 [Remission of Irritable Bowel Syndrome Achieved Through Combined Diet, Lifestyle Modification, and Yoga: A Case Report](https://www.preprints.org/manuscript/202603.0183)
 
-[Dietary diversity as a sustainable approach towards micronutrient deficiencies in India](https://ijmr.org.in/dietary-diversity-as-a-sustainable-approach-towards-micronutrient-deficiencies-in-india/)
+[Dietary diversity as a sustainable approach towards micronutrient deficiencies in India](https://pmc.ncbi.nlm.nih.gov/articles/PMC9903373/)
 
 [See all publications →](/publications/)
 
