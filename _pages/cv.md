@@ -12,11 +12,11 @@ redirect_from:
 Education
 ======
     • Certified Therapeutic Yoga Consultant – Yoga Certification Board, India. (2024)
+    • Essentials of Palliative Care Certificate, AIIMS, Delhi (2023)
     • Doctor of Public Health (DrPH), Johns Hopkins University, USA. (2005)
     • Master of Public Health (MPH) , Johns Hopkins University, USA. (2003)
     • MBBS (Bachelor of Medicine & Surgery), India (1986)
-    • Essentials of Palliative Care Certificate, AIIMS, Delhi (2023)
-
+   
 Work experience
 ======
 - Adjunct Professor – Community Medicine & Integrated Health, ESIC Medical College, Faridabad (2023 – Present)
@@ -31,6 +31,11 @@ Work experience
     • Directed national health policy design for AYUSH and preventive health
     • Supervised health promotion strategies across states with focus on wellness and primary care access
     • Led digital health transformation and health system planning for pandemic preparedness
+
+Editorial Roles
+=====
+- Academic Editro, PLOS [https://journals.plos.org/plosone/static/editorial-board?ae_name=Rakesh+Sarwal
+- Reviewer Frontiers in Public Health
 
 Skills
 ======
