@@ -17,12 +17,12 @@ redirect_from:
  • Master of Public Health (MPH) , Johns Hopkins University, USA. (2003)
  
  • MBBS (Bachelor of Medicine & Surgery), India (1986)
+ 
 ## Work Experience
 
 - Adjunct Professor – Community Medicine & Integrated Health, ESIC Medical College, Faridabad (2023 – Present)
     • Teach and develop courses on community-based wellness, health education, and integrative public health
-    • Supervise student projects and mentor in yoga-based interventions and primary care innovation
-  
+    • Supervise student projects and mentor in yoga-based interventions and primary care innovation  
 - Promoter & Consultant, Wellness Program Design, Sutra Health Clinic / EQUAL Society, Faridabad (2022 – Present)
     • Designed integrative wellness education modules for urban and rural populations (www.lifequality.org.in) 
     • Facilitated training on behavior change, pranayama, and lifestyle-based prevention strategies
@@ -33,12 +33,10 @@ redirect_from:
     • Led digital health transformation and health system planning for pandemic preparedness   
 
 ## Editorial Roles
-=====
 - Academic Editor, [PLOS ONE](https://journals.plos.org/plosone/static/editorial-board?ae_name=Rakesh+Sarwal) (2024- Present)
 - Reviewer, [Frontiers in Public Health](https://www.frontiersin.org/journals/public-health#review)
 
 ## Skills
-======
 CORE COMPETENCIES
 - Yoga, diet and lifestyle based Wellness Interventions
 - Community & Integrative Health Programming
