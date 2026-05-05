@@ -35,6 +35,7 @@ redirect_from:
 ## Editorial Roles
 - Academic Editor, [PLOS ONE](https://journals.plos.org/plosone/static/editorial-board?ae_name=Rakesh+Sarwal) (2024- Present)
 - Reviewer, [Frontiers in Public Health](https://www.frontiersin.org/journals/public-health#review)
+  
 -----------
 ## Skills
 CORE COMPETENCIES
