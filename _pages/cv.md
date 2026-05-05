@@ -9,9 +9,13 @@ redirect_from:
 {% include base_path %}
 ## Education
  • Certified Therapeutic Yoga Consultant – Yoga Certification Board, India. (2024)
+ 
  • Essentials of Palliative Care Certificate, AIIMS, Delhi (2023)
+ 
  • Doctor of Public Health (DrPH), Johns Hopkins University, USA. (2005)
+ 
  • Master of Public Health (MPH) , Johns Hopkins University, USA. (2003)
+ 
  • MBBS (Bachelor of Medicine & Surgery), India (1986)
 ## Work Experience
 ## Editorial Roles
