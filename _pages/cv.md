@@ -6,6 +6,7 @@ author_profile: true
 redirect_from:
   - /resume
 ---
+{% include base_path %}
 
 Education
 ======
@@ -32,7 +33,7 @@ Work experience
 
 Editorial Roles
 =====
-- Academic Editro, PLOS [https://journals.plos.org/plosone/static/editorial-board?ae_name=Rakesh+Sarwal
+- Academic Editro, PLOS [https://journals.plos.org/plosone/static/editorial-board?ae_name=Rakesh+Sarwal]
 - Reviewer Frontiers in Public Health
 
 Skills
