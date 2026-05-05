@@ -18,13 +18,7 @@ redirect_from:
  
  • MBBS (Bachelor of Medicine & Surgery), India (1986)
 ## Work Experience
-## Editorial Roles
-## Skills
-## Publications (optional)
-## Awards & Honors (optional)
-   
-Work experience
-======
+
 - Adjunct Professor – Community Medicine & Integrated Health, ESIC Medical College, Faridabad (2023 – Present)
     • Teach and develop courses on community-based wellness, health education, and integrative public health
     • Supervise student projects and mentor in yoga-based interventions and primary care innovation
@@ -36,15 +30,14 @@ Work experience
 - Senior Public Health Leader & Policy Advisor, Govt. of India – Health Ministries / NITI Aayog (2010 – 2022)
     • Directed national health policy design for AYUSH and preventive health
     • Supervised health promotion strategies across states with focus on wellness and primary care access
-    • Led digital health transformation and health system planning for pandemic preparedness
+    • Led digital health transformation and health system planning for pandemic preparedness   
 
-Editorial Roles
+## Editorial Roles
 =====
 - Academic Editor, [PLOS ONE](https://journals.plos.org/plosone/static/editorial-board?ae_name=Rakesh+Sarwal) (2024- Present)
 - Reviewer, [Frontiers in Public Health](https://www.frontiersin.org/journals/public-health#review)
 
-
-Skills
+## Skills
 ======
 CORE COMPETENCIES
 - Yoga, diet and lifestyle based Wellness Interventions
