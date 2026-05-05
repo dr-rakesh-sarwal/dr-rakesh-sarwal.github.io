@@ -7,8 +7,6 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
 Education
 ======
     • Certified Therapeutic Yoga Consultant – Yoga Certification Board, India. (2024)
