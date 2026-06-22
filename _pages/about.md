@@ -24,5 +24,3 @@ Motivating and guiding lifestyle changes one person at a time, starting with the
 [See all publications →](/publications/)
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en)
-
-![Hits](https://hits.sh/dr-rakesh-sarwal.github.io.svg)
