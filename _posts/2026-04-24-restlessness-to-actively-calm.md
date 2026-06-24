@@ -2,7 +2,6 @@
 title: 'From Restlessness to Actively Calm'
 date: 2026-04-24
 permalink: /posts/2026/04/restlessness-to-actively-calm
-redirect_to: 'https://medium.com/@equal.society/from-restlessness-to-actively-calm-c522960fdfdc'
 tags:
   - Mental Health
   - Yoga
