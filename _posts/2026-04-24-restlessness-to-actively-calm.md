@@ -8,6 +8,6 @@ tags:
   - Balance of mind
 ---
 
-A Six-Step Practical Pathway to mental clarity, drawn from Indian Wisdom Traditions
+A Six-Step Practical Pathway to mental clarity, drawn from Indian Wisdom Traditions. [Read the full article here](https://sutra-health.medium.com/from-restlessness-to-actively-calm-c522960fdfdc) 
 
 
