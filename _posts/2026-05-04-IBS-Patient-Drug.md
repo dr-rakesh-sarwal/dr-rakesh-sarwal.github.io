@@ -2,7 +2,6 @@
 title: 'A CT Scan Said IBD. A Colonoscopy Said Otherwise. What Finally Helped This IBS Patient Wasn’t a Drug'
 date: 2026-05-04-IBS-Patient-Drug.md
 permalink: /posts/2026/05/restlessness-to-actively-calm
-redirect_to: 'https://medium.com/@equal.society/health-medicine-734b7a4931d7'
 tags:
   - Gut Health
   - Yoga
