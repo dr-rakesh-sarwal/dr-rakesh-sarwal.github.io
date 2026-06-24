@@ -1,5 +1,5 @@
 ---
-title: "Teaching Yoga by Personal Practice)"
+title: "Teaching Yoga by Personal Practice"
 collection: teaching
 type: "Video-collection"
 permalink: /teaching/2026-Yoga
