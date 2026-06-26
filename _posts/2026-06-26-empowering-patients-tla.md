@@ -2,6 +2,8 @@
 title: "Empowering patients through three Evidence-Based Lifestyle Solutions"
 date: 2026-06-26
 permalink: /posts/2026/06/empowering-patients-tla/
+canonical_url: "https://academic.lifequality.org.in/posts/2026/06/empowering-patients-tla/"
+tags:
 tags:
   - Respect for patients
   - Joint decision making
