@@ -1,7 +1,7 @@
 ---
 title: "Empowering patients through three Evidence-Based Lifestyle Solutions"
 date: 2026-06-26
-permalink: /posts/2026/06/Empowering-patients-tla/
+permalink: /posts/2026/06/empowering-patients-tla/
 tags:
   - Respect for patients
   - Joint decision making
