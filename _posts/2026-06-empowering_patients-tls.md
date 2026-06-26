@@ -10,5 +10,5 @@ tags:
   - Lifestyle choices
 ---
 
-How a lifestyle based approach to chronic diseases not only addresses the root cause, but also empowers patients to take chanrge of their journey to remission and good health. Published on Medium. [Read the full article](https://medium.com/@sutra-health/empowering-patients-to-reverse-disease-advance-health-through-three-pronged-natural-825bcf8152de)
+A lifestyle based approach to chronic diseases not only addresses the root cause, but also empowers patients to take charge of their journey to remission and good health. We present this with a 21-point lifestyle questionnaire in our article on Medium. [Read the full article](https://medium.com/@sutra-health/empowering-patients-to-reverse-disease-advance-health-through-three-pronged-natural-825bcf8152de)
 
