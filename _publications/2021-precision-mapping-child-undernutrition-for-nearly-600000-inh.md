@@ -1,0 +1,10 @@
+---
+title: "Precision mapping child undernutrition for nearly 600,000 inhabited census villages in India"
+collection: publications
+permalink: /publication/2021-precision-mapping-child-undernutrition-for-nearly-600000-inh
+date: 2021-01-01
+venue: "Proceedings of the National Academy of Sciences"
+paperurl: "https://doi.org/10.1073/pnas.2025865118"
+citation: "Sarwal, R. (2021). Precision mapping child undernutrition for nearly 600,000 inhabited census villages in India. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.2025865118"
+---
+<jats:p>There are emerging opportunities to assess health indicators at truly small areas with increasing availability of data geocoded to micro geographic units and advanced modeling techniques. The utility of such fine-grained data can be fully leveraged if linked to local governance units that are accountable for implementation of programs and interventions. We used data from the 2011 Indian Census for village-level demographic and amenities features and the 2016 Indian Demographic and Health Survey in a bias-corrected semisupervised regression framework to predict child anthropometric failures for all villages in India. Of the total geographic variation in predicted child anthropometric failure estimates, 54.2 to 72.3% were attributed to the village level followed by 20.6 to 39.5% to the state level. The mean predicted stunting was 37.9% (SD: 10.1%; IQR: 31.2 to 44.7%), and substantial variation was found across villages ranging from less than 5% for 691 villages to over 70% in 453 villages. Estimates at the village level can potentially shift the paradigm of policy discussion in India by enabling more informed prioritization and precise targeting. The proposed methodology can be adapted and applied to diverse population health indicators, and in other contexts, to reveal spatial heterogeneity at a finer geographic scale and identify local areas with the greatest needs and with direct implications for actions to take place.</jats:p>

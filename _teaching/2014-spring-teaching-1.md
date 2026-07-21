@@ -1,20 +1,16 @@
 ---
-title: "Teaching experience 1"
+title: "Integrated Health Clinic at ESIC, Faridabad (Presentation before Faculty, MD students)"
 collection: teaching
-type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+type: "Postgraduate Seminar"
+permalink: /teaching/2026-teaching-1
+venue: "ESIC Medical College"
+date: 2026-02-01
+location: "Faridabad"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+See the lecutre at:
+<https://www.researchgate.net/publication/401424640_Integrated_Health_Clinic_at_ESIC_Faridabad_Presentation_before_Faculty_MD_students>
 
-Heading 1
-======
+or
 
-Heading 2
-======
-
-Heading 3
-======
+<https://doi.org/10.5281/zenodo.18829172>

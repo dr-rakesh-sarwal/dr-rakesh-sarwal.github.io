@@ -1,0 +1,45 @@
+name: Sync ORCID Publications
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  sync-publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch publications from ORCID
+        run: python scripts/fetch_orcid.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "ORCID Sync Bot"
+          git config --global user.email "actions@github.com"
+          git add _publications/
+          git status
+          git diff --staged --quiet || git commit -m "Auto-sync publications from ORCID"
+          git push
+
+      - name: Trigger GitHub Pages rebuild
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/sarwalr/sarwalr.github.io/pages/builds

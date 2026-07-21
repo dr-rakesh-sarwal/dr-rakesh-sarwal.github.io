@@ -80,5 +80,16 @@
       <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% endif %}
 
+{% if post.collection == 'publications' and post.paperurl %}
+    <div style="margin-top: 0.5em;">
+      <div class="altmetric-embed"
+           data-badge-type="donut"
+           data-badge-popover="right"
+           data-hide-no-mentions="true"
+           data-doi="{{ post.paperurl | remove: 'https://doi.org/' }}">
+      </div>
+    </div>
+    {% endif %}
+
   </article>
 </div>

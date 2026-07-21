@@ -1,0 +1,10 @@
+---
+title: "White paper on Promoting Domestic Manufacturing of Medical Devices"
+collection: publications
+permalink: /publication/2022-white-paper-on-promoting-domestic-manufacturing-of-medical-d
+date: 2022-01-01
+venue: "[]"
+paperurl: "https://doi.org/10.31219/osf.io/6s4ta"
+citation: "Sarwal, R. (2022). White paper on Promoting Domestic Manufacturing of Medical Devices. []. https://doi.org/10.31219/osf.io/6s4ta"
+---
+<p>India’s medical device market is the fourth largest in India and one of the top 20 worldwide; however import dependence to the tunes of about 80 percent of overall sales is an impediment to achieve self-reliance vis-a-vis domestic manufacturing of medical devices and equipments. This high reliance on imports presents a grand opportunity to domestic manufacturers. An enabled ecosystem that promotes indigenous manufacturing of medical devices is crucial for the growth of the health care sector. The current white paper analyses various scenarios for manufacturing capability of different medical technologies and probable recommendations to augment and strengthen production within each scenario.The four scenarios described in the paper includes (1) those medical devices for which there is a high domestic demand that is fulfilled through imports even if domestic manufacturing capacity exists, implying low production in the country (2) relatively low-end technology medical devices for which there is domestic demand with high reliance on imports (3) high-end technology devices which are imported to satisfy domestic need and for which there is no domestic manufacturing capacity (4) medical devices which are being exported to rest of the World. The paper recommends for a comprehensive regulatory overhauls, review of existing taxation structure, calibrated customs duty, fixed term capital subsidy, extended coverage of PLI scheme, strengthening the research and innovation ecosystem, emphasis on technology transfer and building brand India as some of the measures that can potentially favour promotion of domestic manufacturing of medical devices and allow the India Med-Tech sector to grow into global champions.</p>
