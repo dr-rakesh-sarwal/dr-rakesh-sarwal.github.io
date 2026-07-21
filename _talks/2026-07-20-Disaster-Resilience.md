@@ -13,7 +13,8 @@ Underlining the precious and invaluable nature of health, and explaining how it 
 Earlier in the morning, I conducted a wellenss hands-on session covering lifestyle, diet and yoga for the participants. 
 
 [📄 Download the presentation slides (PDF)](/files/Disasters.pdf)
-[DOI](https://zenodo.org/records/21472906)
+
+Also download from Zenodo via [DOI](https://zenodo.org/records/21472906)
 
 ![Morning-Practice](https://raw.githubusercontent.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/master/images/2026-07-20-yoga.jpeg)
 ![Lecture-image](https://raw.githubusercontent.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/master/images/2026-07-20--lecture.jpeg)
