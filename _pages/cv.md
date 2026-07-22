@@ -23,7 +23,7 @@ redirect_from:
   • Supervise student projects and mentor in yoga-based interventions and primary care innovation
 
 - **Promoter & Consultant**, Wellness Program Design, Sutra Health Clinic / EQUAL Society, Faridabad (2022 – Present)  
-  • Designed integrative wellness education modules reaching over 5,000 participants [Sutra Health](www.lifequality.org.in)  
+  • Designed integrative wellness education modules reaching over 5,000 participants [Sutra Health](https://lifequality.org.in)  
   • Facilitated training on behavior change, pranayama, and lifestyle-based prevention strategies
 
 - **Senior Public Health Leader & Policy Advisor**, Govt. of India – Health Ministries / NITI Aayog (2010 – 2022)  
