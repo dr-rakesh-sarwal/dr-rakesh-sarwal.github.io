@@ -1,7 +1,7 @@
 ---
 title: Integrated Health Clinic at ESIC,Faridabad
 type: "Talk"
-permalink: /talks/2012-03-01-talk-1
+permalink: /talks/2012-03-01-MD-lecture
 venue: "Conference Rooms, ESIC Medical College, Faridabad"
 date: 2026-01-02
 location: "Faridabad, India"
