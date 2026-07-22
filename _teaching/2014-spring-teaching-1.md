@@ -8,9 +8,6 @@ date: 2026-02-01
 location: "Faridabad"
 ---
 
-See the lecutre at:
-<https://www.researchgate.net/publication/401424640_Integrated_Health_Clinic_at_ESIC_Faridabad_Presentation_before_Faculty_MD_students>
-
-or
-
+[See the presentation at(PDF)](/files/IHC.pdf) 
+or at:
 <https://doi.org/10.5281/zenodo.18829172>
