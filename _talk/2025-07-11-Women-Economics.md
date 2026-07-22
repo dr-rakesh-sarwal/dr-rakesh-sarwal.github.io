@@ -1,7 +1,7 @@
 ---
 title: Women, Health and Economics
 type: "Talk"
-permalink: /talks/2026-07-11-Women-Economics
+permalink: /talks/2025-07-11-Women-Economics
 venue: LBSNAA, Mussoorie
 date: 2025-07-11
 location: Mussoorie, UK, India
