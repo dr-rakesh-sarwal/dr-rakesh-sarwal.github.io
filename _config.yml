@@ -106,9 +106,10 @@ staticman:
       type               : "date"
       options:
         format           : "iso8601"
+        
 atom_feed:
   hide                   : false
-  path                   : "atom.xml"
+  path                   : "feed.xml"
 
 
 # SEO Related
