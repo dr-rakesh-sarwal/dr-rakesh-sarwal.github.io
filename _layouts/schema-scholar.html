@@ -1,0 +1,40 @@
+{% if page.collection == "publications" %}
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ScholarlyArticle",
+
+  "headline":"{{ page.title | escape }}",
+
+  "url":"{{ page.url | absolute_url }}",
+
+  "mainEntityOfPage":"{{ page.url | absolute_url }}",
+
+  "author":[
+    {
+      "@type":"Person",
+      "name":"{{ site.author.name }}",
+      "identifier":"{{ site.author.orcid }}",
+      "affiliation":{
+        "@type":"Organization",
+        "name":"{{ site.author.institution }}"
+      }
+    }
+  ],
+
+  "datePublished":"{{ page.date | date_to_xmlschema }}",
+  "dateModified":"{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+
+  "description":"{{ page.excerpt | strip_html | strip_newlines | escape }}",
+
+  {% if page.doi %}
+  "sameAs":"https://doi.org/{{ page.doi }}",
+  {% endif %}
+
+  "publisher":{
+    "@type":"Organization",
+    "name":"Academic LifeQuality"
+  }
+}
+</script>
+{% endif %}
