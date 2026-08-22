@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://academic.lifequality.org.in/sitemap.xml
