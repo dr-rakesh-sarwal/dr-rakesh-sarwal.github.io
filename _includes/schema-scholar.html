@@ -1,0 +1,16 @@
+{% if page.collection == "publications" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": {{ page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "author": [{
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "identifier": {{ site.author.orcid | jsonify }}
+  }],
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }}
+}
+</script>
+{% endif %}
