@@ -25,7 +25,7 @@
   "datePublished":"{{ page.date | date_to_xmlschema }}",
   "dateModified":"{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
 
-  "description":"{{ page.content | strip_html | strip_newlines | truncate: 500 | escape }}"
+  "description":"{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | escape }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 500 | escape }}{% endif %}"
 
   {% if page.doi %}
   "sameAs":"https://doi.org/{{ page.doi }}",
