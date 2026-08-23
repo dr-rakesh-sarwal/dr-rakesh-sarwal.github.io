@@ -3,14 +3,49 @@
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
+
   "headline": {{ page.title | jsonify }},
   "url": {{ page.url | absolute_url | jsonify }},
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+
   "author": [{
     "@type": "Person",
     "name": {{ site.author.name | jsonify }},
-    "identifier": {{ site.author.orcid | jsonify }}
+    "identifier": {{ site.author.orcid | jsonify }},
+    "affiliation": {
+      "@type": "Organization",
+      "name": {{ site.author.institution | jsonify }}
+    }
   }],
-  "datePublished": {{ page.date | date_to_xmlschema | jsonify }}
+
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "description": {{ page.excerpt | default: page.content | strip_html | strip_newlines | truncate: 500 | jsonify }},
+
+  {% if page.venue %}
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": {{ page.venue | jsonify }}
+  },
+  {% endif %}
+
+  {% if page.paperurl %}
+  "sameAs": {{ page.paperurl | jsonify }},
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "DOI",
+    "value": {{ page.paperurl | remove: "https://doi.org/" | jsonify }}
+  },
+  {% endif %}
+
+  {% if page.citation %}
+  "citation": {{ page.citation | strip_newlines | jsonify }},
+  {% endif %}
+
+  "publisher": {
+    "@type": "Organization",
+    "name": "Academic LifeQuality"
+  }
 }
 </script>
 {% endif %}
