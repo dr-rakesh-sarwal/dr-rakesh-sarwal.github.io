@@ -25,16 +25,24 @@
   "datePublished":"{{ page.date | date_to_xmlschema }}",
   "dateModified":"{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
 
-  "description":"{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | escape }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 500 | escape }}{% endif %}"
+  "description":"{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | escape }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 500 | escape }}{% endif %}",
 
-  {% if page.doi %}
-  "sameAs":"https://doi.org/{{ page.doi }}",
+  {% if page.venue %}
+  "isPartOf":{
+    "@type":"Periodical",
+    "name":"{{ page.venue }}"
+  },
+  {% endif %}
+
+  {% if page.paperurl %}
+  "sameAs":"{{ page.paperurl }}",
+  "identifier":"{{ page.paperurl }}",
   {% endif %}
 
   "publisher":{
     "@type":"Organization",
     "name":"Academic LifeQuality"
   }
-}
+
 </script>
 {% endif %}
