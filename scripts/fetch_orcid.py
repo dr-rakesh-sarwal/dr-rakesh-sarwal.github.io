@@ -58,10 +58,22 @@ def clean_crossref_abstract(text):
     return text.strip()
 
 
+def clean_text(text):
+    """Convert HTML/JATS into plain text."""
+    if not text:
+        return ""
+
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = text.replace("&amp;", "&")
+    text = re.sub(r"\s+", " ", text)
+
+    return text.strip()
+
+
 def sanitize_filename(title):
     title = title.lower()
-    title = re.sub(r"[^a-z0-9\\s-]", "", title)
-    title = re.sub(r"\\s+", "-", title.strip())
+    title = re.sub(r"[^a-z0-9\s-]", "", title)
+    title = re.sub(r"\s+", "-", title.strip())
     return title[:60]
 
 
@@ -95,7 +107,7 @@ def get_full_date(pub_date):
 
 
 def get_crossref_date(crossref):
-    """Prefer Crossref's publication date if available."""
+    """Prefer Crossref publication date if available."""
     for field in ("published-print", "published-online", "created"):
         if field in crossref:
             parts = crossref[field]["date-parts"][0]
@@ -111,7 +123,6 @@ def create_markdown(work, output_dir):
     """Create one publication markdown file."""
 
     title = "Untitled"
-
     if work.get("title") and work["title"].get("title"):
         title = work["title"]["title"].get("value", "Untitled")
 
@@ -127,24 +138,28 @@ def create_markdown(work, output_dir):
 
     crossref = fetch_crossref_metadata(doi)
 
-    if not venue and crossref.get("container-title"):
-        venue = crossref["container-title"][0]
+    container = crossref.get("container-title")
+    if not venue and isinstance(container, list) and len(container) > 0:
+        venue = container[0]
 
     publisher = crossref.get("publisher", "")
+
+    # Fallback: use publisher as venue (useful for OSF preprints)
+    if not venue:
+        venue = publisher
 
     crossref_date = get_crossref_date(crossref)
     if crossref_date:
         pub_date = crossref_date
 
-    description = work.get("short-description") or clean_crossref_abstract(
-        crossref.get("abstract", "")
+    description = clean_text(
+        work.get("short-description")
+        or clean_crossref_abstract(crossref.get("abstract", ""))
     )
 
     citation = f"Sarwal, R. ({year}). {title}."
-
     if venue:
         citation += f" {venue}."
-
     if doi:
         citation += f" https://doi.org/{doi}"
 
@@ -169,9 +184,9 @@ citation: "{citation.replace('"', "'")}"
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(frontmatter)
-        f.write("\\n")
+        f.write("\n")
         f.write(body)
-        f.write("\\n")
+        f.write("\n")
 
     print(f"Created: {filename}")
 
@@ -181,12 +196,12 @@ def main():
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+    # Remove previously generated publication files
     for f in os.listdir(OUTPUT_DIR):
         if f.endswith(".md"):
             os.remove(os.path.join(OUTPUT_DIR, f))
 
     data = fetch_orcid_publications(ORCID_ID)
-
     groups = data.get("group", [])
 
     print(f"Found {len(groups)} works")
@@ -195,7 +210,6 @@ def main():
 
     for group in groups:
         summaries = group.get("work-summary", [])
-
         if not summaries:
             continue
 

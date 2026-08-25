@@ -2,9 +2,13 @@
 title: "Dietary diversity as a sustainable approach towards micronutrient deficiencies in India."
 collection: publications
 permalink: /publication/2022-dietary-diversity-as-a-sustainable-approach-towards-micronut
-date: 2022-01-01
+date: 2022-07-01
 venue: "The Indian journal of medical research"
+publisher: "Scientific Scholar"
+doi: "10.4103/ijmr.ijmr_3314_21"
 paperurl: "https://doi.org/10.4103/ijmr.ijmr_3314_21"
+excerpt: "The silent epidemic of micronutrient deficiencies (MNDs) continues to be a major public health challenge in the developing world, including India. The prevalence of iron, iodine, zinc, vitamin A and folate deficiencies is alarmingly high worldwide. India is additionally facing a high prevalence of vitamin D and B12 deficiencies. To combat the hidden epidemic of MNDs, various governments around the world have mostly relied on supplementation or fortification-based interventions. India launched sa"
 citation: "Sarwal, R. (2022). Dietary diversity as a sustainable approach towards micronutrient deficiencies in India.. The Indian journal of medical research. https://doi.org/10.4103/ijmr.ijmr_3314_21"
 ---
+
 The silent epidemic of micronutrient deficiencies (MNDs) continues to be a major public health challenge in the developing world, including India. The prevalence of iron, iodine, zinc, vitamin A and folate deficiencies is alarmingly high worldwide. India is additionally facing a high prevalence of vitamin D and B12 deficiencies. To combat the hidden epidemic of MNDs, various governments around the world have mostly relied on supplementation or fortification-based interventions. India launched salt iodization programme in 1962 and vitamin A and iron-folate supplementation programmes in 1970. Yet, even after decades of these programmes, MNDs are still widespread in the country. Due to slow progress in alleviating the burden of most MNDs, the Government of India aims to scale up fortification-based intervention programmes. However, there are safety and effectiveness concerns with such approaches. Hence, overdependence on supplementation and fortification alone may be counterproductive. Instead, food based dietary diversification approach can be the way forward. In this article, we list the common MNDs in India, evaluate major policy interventions, discuss concerns pertaining to fortification and suggest the need for a concurrent food-based approach, in particular dietary diversification, as a long-term and sustainable strategy to address population-based MNDs.
