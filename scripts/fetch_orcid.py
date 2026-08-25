@@ -44,10 +44,15 @@ def get_doi(external_ids):
     return None
 
 def get_year(pub_date):
-    """Extract year from publication date"""
-    if pub_date and pub_date.get("year"):
-        return pub_date["year"].get("value", "2000")
-    return "2000"
+  """Extract full publication date (YYYY-MM-DD)"""
+    year = pub_date.get("year", {}).get("value", "2000") if pub_date else "2000"
+    month = pub_date.get("month", {}).get("value", "01") if pub_date else "01"
+    day = pub_date.get("day", {}).get("value", "01") if pub_date else "01"
+
+    month = str(month).zfill(2)
+    day = str(day).zfill(2)
+
+    return f"{year}-{month}-{day}"
 
 def create_markdown(work, output_dir):
     """Create a markdown file for a publication"""
@@ -84,13 +89,17 @@ def create_markdown(work, output_dir):
     filepath = os.path.join(output_dir, filename)
 
     # Write markdown file
-    content = f"""---
+pub_date = get_full_date(work.get("publication-date"))
+
+content = f"""---
 title: "{title.replace('"', "'")}"
 collection: publications
 permalink: /publication/{year}-{sanitize_filename(title)}
-date: {year}-01-01
-venue: "{venue.replace('"', "'")}"
+date: {pub_date}
+venue: "{veune.replace('"', "'")}"
+doi: "{doi or ''}"
 paperurl: "{paper_url}"
+excerpt: "{description.replace('"', "'")[:500]}"
 citation: "{citation.replace('"', "'")}"
 ---
 {description}
