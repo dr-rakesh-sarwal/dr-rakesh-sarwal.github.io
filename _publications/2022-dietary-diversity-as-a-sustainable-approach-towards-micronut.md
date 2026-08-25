@@ -1,6 +1,7 @@
 ---
 title: "Dietary diversity as a sustainable approach towards micronutrient deficiencies in India."
 collection: publications
+put_code: "125651638"
 permalink: /publication/2022-dietary-diversity-as-a-sustainable-approach-towards-micronut
 date: 2022-07-01
 venue: "The Indian journal of medical research"

@@ -1,6 +1,7 @@
 ---
 title: "Components of Out-of-Pocket Expenditure and Their Relative Contribution to Economic Burden of Diseases in India"
 collection: publications
+put_code: "113345705"
 permalink: /publication/2022-components-of-out-of-pocket-expenditure-and-their-relative-c
 date: 2022-05-13
 venue: "JAMA Network Open"

@@ -1,8 +1,9 @@
 ---
 title: "MITIGATION AND MANAGEMENT OF COVID-19: PRACTICES FROM INDIA’S STATES & UNION TERRITORIES"
 collection: publications
+put_code: "118330368"
 permalink: /publication/2021-mitigation-and-management-of-covid-19-practices-from-indias-
-date: 2021-07-07
+date: 2021-07-06
 venue: "[]"
 publisher: "Center for Open Science"
 doi: "10.31219/osf.io/5uq6c"

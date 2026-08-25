@@ -1,8 +1,9 @@
 ---
 title: "Vision 2035 – Public Health Surviellacne in India. A White Paper"
 collection: publications
+put_code: "107343637"
 permalink: /publication/2021-vision-2035-public-health-surviellacne-in-india-a-white-pape
-date: 2021-07-07
+date: 2021-07-06
 venue: "NITI Aayog"
 publisher: "Center for Open Science"
 doi: "10.31219/osf.io/8bvaq"

@@ -1,6 +1,7 @@
 ---
 title: "Small Area Variations in Dietary Diversity Among Children in India: A Multilevel Analysis of 6–23-Month-Old Children"
 collection: publications
+put_code: "118330598"
 permalink: /publication/2022-small-area-variations-in-dietary-diversity-among-children-in
 date: 2022-02-16
 venue: "Frontiers in Nutrition"

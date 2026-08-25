@@ -1,6 +1,7 @@
 ---
 title: "Can AYUSH Systems help turn the tide in India’s COVID-fight?"
 collection: publications
+put_code: "107343464"
 permalink: /publication/2021-can-ayush-systems-help-turn-the-tide-in-indias-covid-fight
 date: 2021-07-20
 venue: "ET Government"

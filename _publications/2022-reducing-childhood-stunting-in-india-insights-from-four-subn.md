@@ -1,8 +1,9 @@
 ---
 title: "Reducing childhood stunting in India: Insights from four subnational success cases"
 collection: publications
+put_code: "112698183"
 permalink: /publication/2022-reducing-childhood-stunting-in-india-insights-from-four-subn
-date: 2022-08-01
+date: 2022-04-01
 venue: "Food Security"
 publisher: "Springer Science and Business Media LLC"
 doi: "10.1007/s12571-021-01252-x"

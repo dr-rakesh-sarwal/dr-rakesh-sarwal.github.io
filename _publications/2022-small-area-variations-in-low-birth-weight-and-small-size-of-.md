@@ -1,8 +1,9 @@
 ---
 title: "Small area variations in low birth weight and small size of births in India"
 collection: publications
+put_code: "112697955"
 permalink: /publication/2022-small-area-variations-in-low-birth-weight-and-small-size-of-
-date: 2022-07-01
+date: 2022-04-29
 venue: "Maternal & Child Nutrition"
 publisher: "Wiley"
 doi: "10.1111/mcn.13369"

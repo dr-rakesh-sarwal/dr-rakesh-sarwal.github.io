@@ -1,6 +1,7 @@
 ---
 title: "Health Insurance for India's Missing Middle"
 collection: publications
+put_code: "107343227"
 permalink: /publication/2021-health-insurance-for-indias-missing-middle
 date: 2021-10-27
 venue: "NITI Aayog"

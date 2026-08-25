@@ -1,6 +1,7 @@
 ---
 title: "White paper on Promoting Domestic Manufacturing of Medical Devices"
 collection: publications
+put_code: "119382950"
 permalink: /publication/2022-white-paper-on-promoting-domestic-manufacturing-of-medical-d
 date: 2022-01-11
 venue: "[]"

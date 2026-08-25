@@ -1,8 +1,9 @@
 ---
 title: "Precision mapping child undernutrition for nearly 600,000 inhabited census villages in India"
 collection: publications
+put_code: "107344404"
 permalink: /publication/2021-precision-mapping-child-undernutrition-for-nearly-600000-inh
-date: 2021-05-04
+date: 2021-04-26
 venue: "Proceedings of the National Academy of Sciences"
 publisher: "National Academy of Sciences"
 doi: "10.1073/pnas.2025865118"

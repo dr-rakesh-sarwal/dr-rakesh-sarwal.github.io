@@ -1,6 +1,7 @@
 ---
 title: "Lessons from Covid-19: A Plan for Action in  Journal of the Harvard Club of India"
 collection: publications
+put_code: "119382913"
 permalink: /publication/2021-lessons-from-covid-19-a-plan-for-action-in-journal-of-the-ha
 date: 2021-12-18
 venue: "[]"

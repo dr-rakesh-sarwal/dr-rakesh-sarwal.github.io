@@ -1,6 +1,7 @@
 ---
 title: "Best practices in the performance of District Hospitals in India"
 collection: publications
+put_code: "107343273"
 permalink: /publication/2021-best-practices-in-the-performance-of-district-hospitals-in-i
 date: 2021-10-07
 venue: "NITI Aayog"
