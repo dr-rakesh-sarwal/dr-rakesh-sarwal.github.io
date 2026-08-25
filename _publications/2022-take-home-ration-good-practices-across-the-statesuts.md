@@ -1,8 +1,9 @@
 ---
 title: "Take Home Ration-Good Practices Across the States/UTs"
 collection: publications
+put_code: "119382639"
 permalink: /publication/2022-take-home-ration-good-practices-across-the-statesuts
-date: 2022-07-05
+date: 2022-07-04
 venue: "[]"
 publisher: "Center for Open Science"
 doi: "10.31219/osf.io/fhaqr"
