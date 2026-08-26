@@ -27,3 +27,5 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 [See all publications →](/publications/)
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en)
+
+<!-- Last updated: 2026-08-26 -->
