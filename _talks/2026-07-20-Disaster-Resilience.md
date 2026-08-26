@@ -14,7 +14,7 @@ Earlier in the morning, I conducted a wellenss hands-on session covering lifesty
 
 [📄 Download the presentation slides (PDF)](/files/Disasters.pdf)
 
-Also download from Zenodo via [DOI](https://zenodo.org/records/21472906)
+Also download from [Zenodo](https://zenodo.org/records/21472906) or [DOI](10.5281/zenodo.21472905.) 
 
 ![Morning-Practice](https://raw.githubusercontent.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/master/images/2026-07-20-yoga.jpeg)
 ![Lecture-image](https://raw.githubusercontent.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/master/images/2026-07-20--lecture.jpeg)
