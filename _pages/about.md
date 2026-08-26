@@ -13,34 +13,6 @@ Motivating and guiding lifestyle changes one person at a time, starting with the
 Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit organization working since 1997 to improve quality of life.
 
 **My research interests** are in exploring the effectiveness of lifestyle therapies across a spectrum of chronic conditions.
-## Research Impact & Metrics
-
-<div style="display: flex; gap: 20px; align-items: center; margin: 20px 0;">
-  <div>
-    <a href="https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en" target="_blank" style="text-decoration: none;">
-      <img src="https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar&logoColor=white&style=for-the-badge" alt="Google Scholar Profile" />
-    </a>
-  </div>
-  <div>
-    <script type="text/javascript">
-      window.addEventListener('load', function() {
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://cdn.jsdelivr.net/npm/@katsute/google-scholar-badge@1.0.0/google-scholar-badge.min.css';
-        document.head.appendChild(link);
-        var script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/@katsute/google-scholar-badge@1.0.0/google-scholar-badge.min.js';
-        script.async = true;
-        script.onload = function() {
-          googleScholarBadge('siSnZvMAAAAJ');
-        };
-        document.head.appendChild(script);
-      });
-    </script>
-    <div data-scholar-id="siSnZvMAAAAJ" style="display: inline-block;"></div>
-  </div>
-</div>
-
 
  **Latest publications:**
 
