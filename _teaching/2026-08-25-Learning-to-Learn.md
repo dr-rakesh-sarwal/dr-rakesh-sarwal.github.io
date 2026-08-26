@@ -1,7 +1,7 @@
 ---
 title: "Learning to Learn: A Framework for Self-Directed Knowledge Management in Medical and Public Health Education Learning how to Learn: From self-awareness to understanding the World"
 type: "Postgraduate Seminar"
-permalink: /teaching/2026-Learning-How-to-Learn
+permalink: /teaching/2026-Learning-to-Learn
 venue: "ESIC Medical College"
 date: 2026-08-24
 location: "Faridabad"
