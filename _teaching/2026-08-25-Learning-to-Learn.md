@@ -6,8 +6,9 @@ venue: "ESIC Medical College"
 date: 2026-08-24
 location: "Faridabad"
 ---
+Efficient knowledge processing is essential for survival and growth in today’s fast-paced, information-overloaded world. This is particularly important for academics and students. Learning begins with self-awareness and a basic understanding of the world around us.
 
-Efficient knowledge processing is key to survival and growth in today's fast and information overloaded world. This is more so for academics and students alike. Learning starts with self-awareness, and a basic understanding of the world around us. This lecture is a compilation of tools and techniques for building an efficient internal knowledge management and processing ecosystem. It overs bringing clarity in goals of life, self-care, realizing and utilizing the power of timed learning, realizing the power of nature, understanding the macro environment and drivers, basics of foundational learning, meta cognition, and tools to held learn better.
+This lecture presents a collection of tools and techniques for developing an efficient personal knowledge-management and information-processing system. It covers clarifying life goals, practising self-care, understanding and making effective use of time-based learning, recognising the power of nature, understanding the broader environment and its key drivers, learning foundational concepts, developing metacognition, and using practical tools to learn more effectively.
 
 This presentation was used to teach MD(Community Medicine) students.
 
