@@ -14,4 +14,4 @@ This presentation was used to teach MD(Community Medicine) students.
 [See the presentation here (PDF)](/files/learning-how-to-learn.pdf) 
 or on Zenodo at DOI: <https://doi.org/10.5281/zenodo.22107120>
 
-![Lecture](https://github.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/blob/master/images/learning-how-to-learn.jpeg)
+![Lecture](https://github.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/master/images/learning-how-to-learn.jpeg)
