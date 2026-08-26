@@ -12,4 +12,5 @@ I shared the exprience of starating and manageing patients of chronic diseases a
 
 [See the presentation here (PDF)](/files/IHC.pdf) 
 or at:
-<https://doi.org/10.5281/zenodo.18829172>
+[Zenodo](https://doi.org/10.5281/zenodo.18829172)
+[DOI](10.5281/zenodo.18829171.)
