@@ -15,5 +15,6 @@ See presentation at
 
 [See the presentation here (PDF)](/files/Learning.pdf) 
 or at: <https://doi.org/10.5281/zenodo.22107120>
+DOI:<https://doi.org/10.5281/zenodo.22107120>
 
-DOI:https://doi.org/10.5281/zenodo.22107120
+[Lecture](https://github.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/tree/master/files/Learning-MD.jpeg)
