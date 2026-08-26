@@ -1,5 +1,5 @@
 ---
-title: "Learning to Learn: A Framework for Self-Directed Knowledge Management in Medical and Public Health Education
+title: "Learning to Learn: A Framework for Self-Directed Knowledge Management in Medical and Public Health Education"
 type: "Postgraduate Seminar"
 permalink: /teaching/2026-Learning-to-Learn
 venue: "ESIC Medical College"
