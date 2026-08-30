@@ -12,60 +12,16 @@ This lecture presents a collection of tools and techniques for developing an eff
 
 This presentation was used to teach MD(Community Medicine) students.
 --
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cross-Platform PDF Viewer</title>
-  <!-- Load PDF.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <style>
-    .pdf-wrapper {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      overflow-x: auto;
-    }
-    #pdf-render {
-      width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-    }
-  </style>
-</head>
-<body>
+<div style="position: relative; width: 100%; height: 600px; margin: 20px 0;">
+  <iframe 
+    src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf&embedded=true" 
+    style="position: absolute; top:0; left:0; width: 100%; height: 100%; border: 1px solid #ccc;" 
+    frameborder="0">
+  </iframe>
+</div>
 
-  <div class="pdf-wrapper">
-    <canvas id="pdf-render"></canvas>
-  </div>
+<p style="text-align: center;">
+  <a href="https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf" target="_blank">📥 Download / View PDF Directly</a>
+</p>
 
-  <script>
-    // Specify path to worker
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-    const url ="/files/learning-how-to-learn.pdf"; // URL to your PDF file
-
-    // Asynchronously download PDF
-    pdfjsLib.getDocument(url).promise.then(pdf => {
-      // Fetch the first page
-      pdf.getPage(1).then(page => {
-        const canvas = document.getElementById('pdf-render');
-        const ctx = canvas.getContext('2d');
-
-        const viewport = page.getViewport({ scale: 1.5 });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        // Render PDF page into canvas context
-        const renderContext = {
-          canvasContext: ctx,
-          viewport: viewport
-        };
-        page.render(renderContext);
-      });
-    });
-  </script>
-</body>
-</html>
 ![Lecture](/images/learning-how-to-learn.jpeg)
