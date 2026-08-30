@@ -10,7 +10,32 @@ layout: compress
     {% include head.html %}
     {% include head/custom.html %}
   </head>
-
+{% if page.title %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationEvent",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.excerpt | strip_html | strip_newlines | jsonify }},
+  "startDate": {{ page.date | date_to_xmlschema | jsonify }},
+  "location": {
+    "@type": "Place",
+    "name": {{ page.venue | default: "Academic Seminar" | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": {{ page.location | default: "Faridabad" | jsonify }}
+    }
+  },
+  "performer": {
+    "@type": "Person",
+    "name": "Dr. Rakesh Sarwal"
+  }
+  {% if page.permalink %},
+  "url": "{{ site.url }}{{ page.permalink }}"
+  {% endif %}
+}
+</script>
+{% endif %}
   <body>
 
     {% include browser-upgrade.html %}
