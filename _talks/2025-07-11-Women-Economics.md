@@ -10,6 +10,6 @@ Delighted to share my presentation before in-service trainee officers at LBSNAA,
 
 [Presentation](https://zenodo.org/records/15833715)
 
-[Slides](10.5281/zenodo.15833714)
+![Slides](./files/WHE.pdf)
 
 Hope it will add value to the discussion on the issue of reducing gender disparities in India, one of the foremost issues that the country faces today.
