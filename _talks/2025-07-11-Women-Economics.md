@@ -10,6 +10,6 @@ Delighted to share my presentation before in-service trainee officers at LBSNAA,
 
 [Presentation](https://zenodo.org/records/15833715)
 
-[Slides](https://github.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/tree/master/files/WHE.pdf)
+![Slides](https://github.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/tree/master/files/WHE.pdf)
 
 Hope it will add value to the discussion on the issue of reducing gender disparities in India, one of the foremost issues that the country faces today.
