@@ -11,45 +11,48 @@ Efficient knowledge processing is essential for survival and growth in today’s
 This lecture presents a collection of tools and techniques for developing an efficient personal knowledge-management and information-processing system. It covers clarifying life goals, practising self-care, understanding and making effective use of time-based learning, recognising the power of nature, understanding the broader environment and its key drivers, learning foundational concepts, developing metacognition, and using practical tools to learn more effectively.
 
 This presentation was used to teach MD(Community Medicine) students.
-<div class="pdf-viewer">
+
+<div class="pdf-container">
   <iframe
-    src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fdr-rakesh-sarwal%2Fdr-rakesh-sarwal.github.io%2Fmaster%2Ffiles%2Flearning-how-to-learn.pdf"
-    title="Learning to Learn presentation">
+    src="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
+    title="Learning to Learn presentation"
+    type="application/pdf">
   </iframe>
 </div>
 
-<p class="pdf-download">
+<p class="pdf-fallback">
+  If the PDF does not appear, 
   <a
-    href="https://raw.githubusercontent.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/master/files/learning-how-to-learn.pdf"
+    href="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
     target="_blank"
     rel="noopener">
-    Download the presentation here (PDF)
-  </a>
+    open or download it here
+  </a>.
 </p>
 
 <style>
-  .pdf-viewer {
+  .pdf-container {
     width: 100%;
-    height: 80vh;
-    min-height: 450px;
-    margin: 24px 0;
+    height: 85vh;
+    min-height: 600px;
+    margin: 2rem 0;
   }
 
-  .pdf-viewer iframe {
+  .pdf-container iframe {
     display: block;
     width: 100%;
     height: 100%;
-    border: 0;
+    border: 1px solid #ddd;
   }
 
-  .pdf-download {
+  .pdf-fallback {
     text-align: center;
   }
 
   @media (max-width: 600px) {
-    .pdf-viewer {
-      height: 70vh;
-      min-height: 400px;
+    .pdf-container {
+      height: 75vh;
+      min-height: 450px;
     }
   }
 </style>
