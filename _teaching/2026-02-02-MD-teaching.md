@@ -16,6 +16,6 @@ I shared the experience of starting and managing patients of chronic diseases at
 <iframe src="{{ '/files/IHC.pdf' | relative_url }}" width="100%" height="800" style="border:0;"></iframe>
 
 [Download the presentation here (PDF)](/files/IHC.pdf) 
-or froom:
+or from:
 [Zenodo](https://doi.org/10.5281/zenodo.18829172)
 [DOI](10.5281/zenodo.18829171.)
