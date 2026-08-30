@@ -51,9 +51,6 @@ This presentation was used to teach MD(Community Medicine) students.
 </body>
 </html>
 
-
-<iframe src="{{ '/files/learning-how-to-learn.pdf' | relative_url }}" width="100%" height="800" style="border:0;"></iframe>
-
 [Download the presentation here (PDF)](/files/learning-how-to-learn.pdf) 
 or from Zenodo at DOI: <https://doi.org/10.5281/zenodo.22107120>
 
