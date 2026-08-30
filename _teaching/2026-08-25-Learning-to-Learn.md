@@ -26,7 +26,9 @@ src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/
 </div>
 
 <p style="text-align: center;">
-  <a href="https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf" target="_blank">📥 Download / View "Learning to learn" </a>
+  <a href="https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf" target="_blank" rel="noopener noreferrer">
+    <span lang="en">📥 Open / Download "Learning to learn" </span>
+  </a>
 </p>
 
 ![Lecture](/images/learning-how-to-learn.jpeg)
