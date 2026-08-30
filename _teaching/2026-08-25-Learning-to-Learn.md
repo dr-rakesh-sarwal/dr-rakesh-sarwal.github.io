@@ -12,49 +12,34 @@ This lecture presents a collection of tools and techniques for developing an eff
 
 This presentation was used to teach MD(Community Medicine) students.
 
-{% assign pdf_url = '/files/learning-how-to-learn.pdf' | absolute_url %}
+<div class="pdf-preview">
+  <object
+    data="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
+    type="application/pdf">
 
-<div class="pdf-container">
-  <iframe
-    src="https://mozilla.github.io/pdf.js/web/viewer.html?file={{ pdf_url | uri_escape }}"
-    title="Learning to Learn presentation"
-    allow="fullscreen">
-  </iframe>
+    <p>
+      This browser cannot display the PDF inside the page.
+      <a
+        href="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
+        target="_blank"
+        rel="noopener">
+        Open or download the PDF
+      </a>
+    </p>
+  </object>
 </div>
 
-<p class="pdf-download">
-  <a
-    href="{{ '/files/learning-how-to-learn.pdf' | absolute_url }}"
-    target="_blank"
-    rel="noopener">
-    Open or download the PDF
-  </a>
-</p>
-
 <style>
-  .pdf-container {
+  .pdf-preview {
     width: 100%;
     height: 80vh;
-    min-height: 500px;
-    margin: 2rem 0;
+    min-height: 450px;
   }
 
-  .pdf-container iframe {
-    display: block;
+  .pdf-preview object {
     width: 100%;
     height: 100%;
     border: 0;
-  }
-
-  .pdf-download {
-    text-align: center;
-  }
-
-  @media (max-width: 600px) {
-    .pdf-container {
-      height: 75vh;
-      min-height: 420px;
-    }
   }
 </style>
 
