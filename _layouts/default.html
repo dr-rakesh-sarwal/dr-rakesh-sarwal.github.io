@@ -1,20 +1,21 @@
 ---
 layout: compress
 ---
-
 {% include base_path %}
-
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-
-    {% if page.title %}
+    {% assign is_event = false %}
+    {% if page.collection == "teaching" or page.collection == "talks" %}
+      {% assign is_event = true %}
+    {% endif %}
+    {% if page.title and is_event %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": {% if page.collection == "teaching" or page.collection == "talks" %}"EducationEvent"{% else %}"CreativeWork"{% endif %},
+      "@type": "EducationEvent",
       "name": {{ page.title | jsonify }},
       "description": {{ page.excerpt | default: site.description | strip_html | strip_newlines | jsonify }},
       {% if page.date %}"startDate": {{ page.date | date_to_xmlschema | jsonify }},{% endif %}
@@ -38,13 +39,9 @@ layout: compress
     {% endif %}
   </head>
   <body>
-
     {% include browser-upgrade.html %}
     {% include masthead.html %}
-
     {{ content }}
-
     {% include scripts.html %}
-
   </body>
 </html>
