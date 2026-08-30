@@ -3,11 +3,9 @@
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
-
   "headline": {{ page.title | jsonify }},
   "url": {{ page.url | absolute_url | jsonify }},
   "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
-
   "author": [{
     "@type": "Person",
     "name": {{ site.author.name | jsonify }},
@@ -17,18 +15,15 @@
       "name": {{ site.author.institution | jsonify }}
     }
   }],
-
   "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
   "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
   "description": {{ page.excerpt | default: page.content | strip_html | strip_newlines | truncate: 500 | jsonify }},
-
   {% if page.venue %}
   "isPartOf": {
     "@type": "Periodical",
     "name": {{ page.venue | jsonify }}
   },
   {% endif %}
-
   {% if page.paperurl %}
   "sameAs": {{ page.paperurl | jsonify }},
   "identifier": {
@@ -37,14 +32,51 @@
     "value": {{ page.paperurl | remove: "https://doi.org/" | jsonify }}
   },
   {% endif %}
-
   {% if page.citation %}
   "citation": {{ page.citation | strip_newlines | jsonify }},
   {% endif %}
-
   "publisher": {
     "@type": "Organization",
     "name": "Academic LifeQuality"
+  }
+}
+</script>
+
+{% elsif page.collection == "teaching" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": {{ page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "description": {{ page.excerpt | default: page.content | strip_html | strip_newlines | truncate: 500 | jsonify }},
+  "provider": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": "https://academic.lifequality.org.in"
+  }
+}
+</script>
+
+{% elsif page.collection == "talks" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationEvent",
+  "name": {{ page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "description": {{ page.excerpt | default: page.content | strip_html | strip_newlines | truncate: 500 | jsonify }},
+  "startDate": {{ page.date | date_to_xmlschema | jsonify }},
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": {{ page.venue | default: "Academic Seminar" | jsonify }},
+    "address": {{ page.location | default: "India" | jsonify }}
+  },
+  "performer": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }}
   }
 }
 </script>
