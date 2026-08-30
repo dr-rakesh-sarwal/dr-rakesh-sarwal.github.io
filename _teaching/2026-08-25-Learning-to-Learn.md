@@ -17,49 +17,36 @@ This presentation was used to teach MD(Community Medicine) students.
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PDF Viewer</title>
+  <title>PDF.js Viewer</title>
 
   <style>
-    .pdf-container {
-      width: 100%;
-      height: 80vh;
-      min-height: 500px;
-    }
-
-    .pdf-container iframe {
-      width: 100%;
+    html, body {
+      margin: 0;
       height: 100%;
-      border: 0;
     }
 
-    .download-link {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 16px;
-      color: white;
-      background: #1976d2;
-      text-decoration: none;
-      border-radius: 4px;
+    #pdf-viewer {
+      width: 100%;
+      height: 100vh;
+      border: 0;
     }
   </style>
 </head>
 <body>
 
-  <div class="pdf-container">
-    <iframe
-      src="'/files/learning-how-to-learn.pdf#toolbar=1&navpanes=0&view=FitH"
-      title="PDF document">
-      Your browser does not support inline PDF viewing.
-    </iframe>
-  </div>
+  <iframe
+    id="pdf-viewer"
+    title="PDF document">
+  </iframe>
 
-  <a
-    class="download-link"
-    href="https://example.com/files/document.pdf"
-    target="_blank"
-    rel="noopener">
-    Open or download PDF
-  </a>
+  <script>
+    const pdfUrl = encodeURIComponent(
+      '/files/learning-how-to-learn.pdf'
+    );
+
+    document.getElementById("pdf-viewer").src =
+      "https://mozilla.github.io/pdf.js/web/viewer.html?file=" + pdfUrl;
+  </script>
 
 </body>
 </html>
