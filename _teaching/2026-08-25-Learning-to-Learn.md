@@ -14,14 +14,19 @@ This presentation was used to teach MD(Community Medicine) students.
 --
 <div style="position: relative; width: 100%; height: 600px; margin: 20px 0;">
   <iframe 
-    src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf&embedded=true" 
+src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf&embedded=true" 
     style="position: absolute; top:0; left:0; width: 100%; height: 100%; border: 1px solid #ccc;" 
     frameborder="0">
+  title="Learning to Learn Presentation PDF"
+  loading="lazy"
+  allowfullscreen>
+</iframe>
+
   </iframe>
 </div>
 
 <p style="text-align: center;">
-  <a href="https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf" target="_blank">📥 Download / View PDF Directly</a>
+  <a href="https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf" target="_blank">📥 Download / View "Learning to learn" </a>
 </p>
 
 ![Lecture](/images/learning-how-to-learn.jpeg)
