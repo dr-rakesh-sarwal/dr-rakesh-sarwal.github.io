@@ -15,26 +15,24 @@ This presentation was used to teach MD(Community Medicine) students.
 <div class="pdf-container">
   <iframe
     src="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
-    title="Learning to Learn presentation"
-    type="application/pdf">
+    title="Learning to Learn presentation">
   </iframe>
 </div>
 
-<p class="pdf-fallback">
-  If the PDF does not appear, 
+<p>
   <a
     href="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
     target="_blank"
     rel="noopener">
-    open or download it here
-  </a>.
+    Open or download the PDF
+  </a>
 </p>
 
 <style>
   .pdf-container {
     width: 100%;
-    height: 85vh;
-    min-height: 600px;
+    height: 80vh;
+    min-height: 500px;
     margin: 2rem 0;
   }
 
@@ -42,17 +40,13 @@ This presentation was used to teach MD(Community Medicine) students.
     display: block;
     width: 100%;
     height: 100%;
-    border: 1px solid #ddd;
-  }
-
-  .pdf-fallback {
-    text-align: center;
+    border: 1px solid #ccc;
   }
 
   @media (max-width: 600px) {
     .pdf-container {
-      height: 75vh;
-      min-height: 450px;
+      height: 70vh;
+      min-height: 400px;
     }
   }
 </style>
