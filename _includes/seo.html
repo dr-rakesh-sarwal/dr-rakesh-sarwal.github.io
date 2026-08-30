@@ -1,10 +1,11 @@
 <!-- begin SEO -->
 
-{% if page.title and page.url != "/" %}
-  {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
+{% if site.url %}
+  {% assign seo_url = site.url | append: site.baseurl %}
 {% endif %}
+{% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
+{% if page.title and page.url != "/" %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
 {% endif %}
 
