@@ -9,13 +9,13 @@
 <div itemscope itemtype="http://schema.org/Person" class="author-profile">
 
   <!-- Avatar -->
-  <div class="author__avatar">
-    {% if author.avatar contains "://" %}
-      <img src="{{ author.avatar }}" alt="{{ author.name }}" fetchpriority="high" />
-    {% else %}
-      <img src="{{ author.avatar | prepend: "/" | prepend: base_path }}" alt="{{ author.name }}" fetchpriority="high" />
-    {% endif %}
-  </div>
+    <div class="author__avatar">
+  {% if author.avatar contains "://" %}
+    <img src="{{ author.avatar }}" alt="{{ author.name }}" fetchpriority="high" />
+  {% else %}
+    <img src="{{ author.avatar | absolute_url }}" alt="{{ author.name }}" fetchpriority="high" />
+  {% endif %}
+</div>
 
   <!-- Name, Position, Bio -->
   <div class="author__content">
