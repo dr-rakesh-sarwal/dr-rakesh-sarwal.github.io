@@ -18,8 +18,6 @@ Earlier in the morning, I conducted a wellness hands-on session covering lifesty
   height="800"
   style="border: 0;">
   </iframe>   
- 
-[📄 Download the presentation slides (PDF)](/files/Disasters.pdf)
 
 Also download from [Zenodo](https://zenodo.org/records/21472906) or [DOI](10.5281/zenodo.21472905.) 
 
