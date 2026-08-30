@@ -12,36 +12,48 @@ This lecture presents a collection of tools and techniques for developing an eff
 
 This presentation was used to teach MD(Community Medicine) students.
 
-<div class="pdf-preview">
-  <object
-    data="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
-    type="application/pdf">
+{% assign pdf_url = '/files/learning-how-to-learn.pdf' | absolute_url %}
 
-    <p>
-      This browser cannot display the PDF inside the page.
-      <a
-        href="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
-        target="_blank"
-        rel="noopener">
-        Open or download the PDF
-      </a>
-    </p>
-  </object>
+<div class="pdf-viewer">
+  <iframe
+    src="https://docs.google.com/gview?embedded=1&url={{ pdf_url | uri_escape }}"
+    title="Learning to Learn presentation"
+    frameborder="0">
+  </iframe>
 </div>
 
+<p>
+  <a
+    href="{{ pdf_url }}"
+    target="_blank"
+    rel="noopener">
+    Open or download the original PDF
+  </a>
+</p>
+
 <style>
-  .pdf-preview {
+  .pdf-viewer {
     width: 100%;
     height: 80vh;
-    min-height: 450px;
+    min-height: 500px;
+    margin: 1.5rem 0;
   }
 
-  .pdf-preview object {
+  .pdf-viewer iframe {
     width: 100%;
     height: 100%;
     border: 0;
   }
+
+  @media (max-width: 600px) {
+    .pdf-viewer {
+      height: 75vh;
+      min-height: 420px;
+    }
+  }
 </style>
+
+<iframe  src="/files/learning-how-to-learn.pdf"  width="100%"  height="600"  style="border: none;"  title="Learning How to Learn PDF"></iframe>
 
 ![Lecture]({{ '/images/learning-how-to-learn.jpeg' | relative_url }})
 ![Lecture](/images/learning-how-to-learn.jpeg)
