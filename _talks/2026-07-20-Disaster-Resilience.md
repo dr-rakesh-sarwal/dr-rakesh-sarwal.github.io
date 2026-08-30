@@ -12,6 +12,7 @@ Underlining the precious and invaluable nature of health, and explaining how it 
 
 Earlier in the morning, I conducted a wellenss hands-on session covering lifestyle, diet and yoga for the participants. 
 
+ <iframe  src="/files/Diasters.pdf"  width="100%"  height="800px"  style="border: none;"></iframe>
 [📄 Download the presentation slides (PDF)](/files/Disasters.pdf)
 
 Also download from [Zenodo](https://zenodo.org/records/21472906) or [DOI](10.5281/zenodo.21472905.) 
