@@ -12,16 +12,19 @@ This lecture presents a collection of tools and techniques for developing an eff
 
 This presentation was used to teach MD(Community Medicine) students.
 
+{% assign pdf_url = '/files/learning-how-to-learn.pdf' | absolute_url %}
+
 <div class="pdf-container">
   <iframe
-    src="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
-    title="Learning to Learn presentation">
+    src="https://mozilla.github.io/pdf.js/web/viewer.html?file={{ pdf_url | uri_escape }}"
+    title="Learning to Learn presentation"
+    allow="fullscreen">
   </iframe>
 </div>
 
-<p>
+<p class="pdf-download">
   <a
-    href="{{ '/files/learning-how-to-learn.pdf' | relative_url }}"
+    href="{{ '/files/learning-how-to-learn.pdf' | absolute_url }}"
     target="_blank"
     rel="noopener">
     Open or download the PDF
@@ -40,13 +43,17 @@ This presentation was used to teach MD(Community Medicine) students.
     display: block;
     width: 100%;
     height: 100%;
-    border: 1px solid #ccc;
+    border: 0;
+  }
+
+  .pdf-download {
+    text-align: center;
   }
 
   @media (max-width: 600px) {
     .pdf-container {
-      height: 70vh;
-      min-height: 400px;
+      height: 75vh;
+      min-height: 420px;
     }
   }
 </style>
