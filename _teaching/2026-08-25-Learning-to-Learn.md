@@ -12,6 +12,8 @@ This lecture presents a collection of tools and techniques for developing an eff
 
 This presentation was used to teach MD(Community Medicine) students.
 
+<iframe src="{{ '/files/learning-how-to-learn.pdf' | relative_url }}" width="100%" height="800" style="border:0;"></iframe>
+
 [See the presentation here (PDF)](/files/learning-how-to-learn.pdf) 
 or on Zenodo at DOI: <https://doi.org/10.5281/zenodo.22107120>
 
