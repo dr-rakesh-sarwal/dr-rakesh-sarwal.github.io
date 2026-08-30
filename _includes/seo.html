@@ -87,6 +87,17 @@
   "@type":"{{ site.social.type | default: 'Person' }}",
   "name":"{{ site.social.name | default: site.name }}",
   "url":{{ seo_url | jsonify }},
+  "jobTitle": {{ site.author.position | jsonify }},
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": {{ site.author.institution | jsonify }},
+    "url": {{ site.author.institution_url | jsonify }}
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Johns Hopkins Bloomberg School of Public Health"
+  },
+  "knowsAbout": {{ site.author.expertise | jsonify }},
   "sameAs":{{ site.social.links | jsonify }}
 }
 </script>
