@@ -11,47 +11,48 @@ Efficient knowledge processing is essential for survival and growth in today’s
 This lecture presents a collection of tools and techniques for developing an efficient personal knowledge-management and information-processing system. It covers clarifying life goals, practising self-care, understanding and making effective use of time-based learning, recognising the power of nature, understanding the broader environment and its key drivers, learning foundational concepts, developing metacognition, and using practical tools to learn more effectively.
 
 This presentation was used to teach MD(Community Medicine) students.
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PDF.js Viewer</title>
-
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-    }
-
-    #pdf-viewer {
-      width: 100%;
-      height: 100vh;
-      border: 0;
-    }
-  </style>
-</head>
-<body>
-
+<div class="pdf-viewer">
   <iframe
-    id="pdf-viewer"
-    title="PDF document">
+    src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fdr-rakesh-sarwal%2Fdr-rakesh-sarwal.github.io%2Fmaster%2Ffiles%2Flearning-how-to-learn.pdf"
+    title="Learning to Learn presentation">
   </iframe>
+</div>
 
-  <script>
-    const pdfUrl = encodeURIComponent(
-      '/files/learning-how-to-learn.pdf'
-    );
+<p class="pdf-download">
+  <a
+    href="https://raw.githubusercontent.com/dr-rakesh-sarwal/dr-rakesh-sarwal.github.io/master/files/learning-how-to-learn.pdf"
+    target="_blank"
+    rel="noopener">
+    Download the presentation here (PDF)
+  </a>
+</p>
 
-    document.getElementById("pdf-viewer").src =
-      "https://mozilla.github.io/pdf.js/web/viewer.html?file=" + pdfUrl;
-  </script>
+<style>
+  .pdf-viewer {
+    width: 100%;
+    height: 80vh;
+    min-height: 450px;
+    margin: 24px 0;
+  }
 
-</body>
-</html>
+  .pdf-viewer iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 
-[Download the presentation here (PDF)](/files/learning-how-to-learn.pdf) 
-or from Zenodo at DOI: <https://doi.org/10.5281/zenodo.22107120>
+  .pdf-download {
+    text-align: center;
+  }
 
+  @media (max-width: 600px) {
+    .pdf-viewer {
+      height: 70vh;
+      min-height: 400px;
+    }
+  }
+</style>
+
+![Lecture]({{ '/images/learning-how-to-learn.jpeg' | relative_url }})
 ![Lecture](/images/learning-how-to-learn.jpeg)
