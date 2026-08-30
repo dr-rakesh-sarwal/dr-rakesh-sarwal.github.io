@@ -8,7 +8,7 @@ location: Mussoorie, UK, India
 ---
 Delighted to share my presentation before in-service trainee officers at LBSNAA, Mussoorie in a course on "Breaking Barriers, Building Prosperity: Strategies for Women's Economic Inclusion".
 
-[Presentation](https://zenodo.org/records/15833715)
+[See the presentation on Zenodo](https://zenodo.org/records/15833715)
 
 <iframe  src="/files/WHE.pdf"  width="100%"  height="800px"  style="border: none;"></iframe>
 
