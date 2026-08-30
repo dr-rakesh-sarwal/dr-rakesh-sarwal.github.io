@@ -1,6 +1,7 @@
 ---
 layout: single
 permalink: /
+title: "Dr. Rakesh Sarwal"
 redirect_from:
   - /about/
   - /about.html
