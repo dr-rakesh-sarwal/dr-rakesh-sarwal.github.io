@@ -2,76 +2,77 @@
 locale                   : "en-US"
 title                    : "Dr. Rakesh Sarwal"
 name                     : "Dr. Rakesh Sarwal"
-description  : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
+description              : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
 url                      : "https://academic.lifequality.org.in"
 baseurl                  : ""
 repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
 
 # Site Author
 author:
-  name               : "Dr. Rakesh Sarwal"
-  bio                : "MBBS, MPH, DrPH (Johns Hopkins), Therapeutic Yoga Consultant"
-  avatar             : "/images/profile.png"
-  position          : "Professor, Community Medicine, Head, Integrated Health Clinic"
-  institution       : "ESIC Medical College & Hospital, Faridabad, India"
-  institution_url   : "https://mcfaridabad.esic.gov.in/"
-  email             : "sarwalr@gmail.com"
+  name                   : "Dr. Rakesh Sarwal"
+  bio                    : "MBBS, MPH, DrPH (Johns Hopkins), Therapeutic Yoga Consultant"
+  avatar                 : "/images/profile.png"
+  position               : "Professor, Community Medicine, Head, Integrated Health Clinic"
+  institution            : "ESIC Medical College & Hospital, Faridabad, India"
+  institution_url        : "https://mcfaridabad.esic.gov.in/"
+  email                  : "sarwalr@gmail.com"
   expertise:
-   - "Lifestyle Medicine, Nutrition, Yoga"
-   - "Health Systems for UHC"
-   - "Public Health Policy"
+    - "Lifestyle Medicine, Nutrition, Yoga"
+    - "Health Systems for UHC"
+    - "Public Health Policy"
     
   # Academic websites
-  academia         : null
-  googlescholar    : "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
-  SciProfiles      : "https://sciprofiles.com/profile/dr-rakesh-sarwal"
-  impactstory      :
-  orcid            : "https://orcid.org/0000-0001-8345-2640"
-  semantic         : "https://www.semanticscholar.org/author/R.-Sarwal/50683270"
-  ssrn             : null
-  pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=Rakesh+Sarwal%5BAuthor%5D&sort=date"
-  researchgate     : "https://www.researchgate.net/profile/Rakesh-Sarwal" 
-  scopus           : "https://www.scopus.com/authid/detail.uri?authorId=8454720000"
-  zotero           :
-  zenodo           : "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Sarwal%2C%20Rakesh%22&l=list&p=1&s=10&sort=bestmatch"
-  loop             : "https://loop.frontiersin.org/people/1511772"
+  academia               : null
+  googlescholar          : "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
+  SciProfiles            : "https://sciprofiles.com/profile/dr-rakesh-sarwal"
+  impactstory            : null
+  orcid                  : "https://orcid.org/0000-0001-8345-2640"
+  semantic               : "https://www.semanticscholar.org/author/R.-Sarwal/50683270"
+  ssrn                   : null
+  pubmed                 : "https://pubmed.ncbi.nlm.nih.gov/?term=Rakesh+Sarwal%5BAuthor%5D&sort=date"
+  researchgate           : "https://www.researchgate.net/profile/Rakesh-Sarwal"
+  scopus                 : "https://www.scopus.com/authid/detail.uri?authorId=8454720000"
+  zotero                 : null
+  zenodo                 : "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Sarwal%2C%20Rakesh%22&l=list&p=1&s=10&sort=bestmatch"
+  loop                   : "https://loop.frontiersin.org/people/1511772"
+
   # Repositories and software development
-  bitbucket        : null
-  codepen          : null
-  dribbble         : null
-  github           : "dr-rakesh-sarwal"
-  kaggle           : null
-  stackoverflow    : null
-  openalex         : # "https://openalex.org/authors/A5055938207"
+  bitbucket              : null
+  codepen                : null
+  dribbble               : null
+  github                 : "dr-rakesh-sarwal"
+  kaggle                 : null
+  stackoverflow          : null
+  openalex               : "https://openalex.org/authors/A5055938207"
 
   # Social media
-  artstation       : null
-  bluesky          : null
-  facebook         : null
-  flickr           : null
-  foursquare       : null
-  goodreads        : null
-  google_plus      : null
-  keybase          : null
-  instagram        : null
-  lastfm           : null
-  linkedin         : "dr-rakesh-sarwal"
-  twitter          : "Rakesh_Sarwal"
-  mastodon         : null
-  medium           : null
-  pinterest        : null
-  soundcloud       : null
-  steam            : null
-  telegram         : null
-  tumblr           : null
-  vine             : null
-  weibo            : null
-  wikipedia        : null
-  xing             : null
-  youtube          : "https://www.youtube.com/@sutra-health"
-  zhihu            : null
-  zenodo_username  : "dr-rakesh-sarwal"
-  osf              : "https://osf.io/user/329qb"
+  artstation             : null
+  bluesky                : null
+  facebook               : null
+  flickr                 : null
+  foursquare             : null
+  goodreads              : null
+  google_plus            : null
+  keybase                : null
+  instagram              : null
+  lastfm                 : null
+  linkedin               : "dr-rakesh-sarwal"
+  twitter                : "Rakesh_Sarwal"
+  mastodon               : null
+  medium                 : null
+  pinterest              : null
+  soundcloud             : null
+  steam                  : null
+  telegram               : null
+  tumblr                 : null
+  vine                   : null
+  weibo                  : null
+  wikipedia              : null
+  xing                   : null
+  youtube                : "https://www.youtube.com/@sutra-health"
+  zhihu                  : null
+  zenodo_username        : "dr-rakesh-sarwal"
+  osf                    : "https://osf.io/user/329qb"
 
 # Publication Category
 publication_category:
@@ -93,15 +94,14 @@ staticman:
   hide                   : false
   path                   : "feed.xml"
 
-
 # SEO Related
 google_site_verification : "eUirYog6LXAZk3IMM--fn8UWSs-XL06dkZGeBuJdxss"
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
+bing_site_verification   : null
+alexa_site_verification  : null
+yandex_site_verification : null
 keywords                 : "Public Health, Lifestyle Medicine, NCD Prevention, Yoga, UHC, India"
 
-# Social Sharing
+# Social Sharing / Structured Metadata
 og_image                 : "/images/profile.png"
 logo                     : "/images/profile.png"
 og_description           : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
@@ -113,24 +113,25 @@ social:
   links:
     - "https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en"
     - "https://orcid.org/0000-0001-8345-2640"
-    - "https://www.ncbi.nlm.nih.gov/pubmed/?term=Rakesh+Sarwal"
+    - "https://pubmed.ncbi.nlm.nih.gov/?term=Rakesh+Sarwal%5BAuthor%5D&sort=date"
     - "https://www.researchgate.net/profile/Rakesh-Sarwal"
     - "https://sciprofiles.com/profile/dr-rakesh-sarwal"
     - "https://github.com/dr-rakesh-sarwal"
     - "https://linkedin.com/in/dr-rakesh-sarwal"
     - "https://x.com/Rakesh_Sarwal"
     - "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Sarwal%2C%20Rakesh%22&l=list&p=1&s=10&sort=bestmatch"
+
 # Analytics
 analytics:
   provider               : "google-gtag"
-  google                 :
+  google:
     tracking_id          : "G-4HZK86LDQ9"
-
 
 # Reading Files
 include:
   - .htaccess
   - _pages
+  - files
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -165,14 +166,12 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-
 
 # Markdown Processing
 kramdown:
@@ -184,7 +183,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
 
 # Collections
 collections:
@@ -198,10 +196,8 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-
 # Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -212,14 +208,12 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-  # _teaching
   - scope:
       path: ""
       type: teaching
@@ -228,7 +222,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _publications
   - scope:
       path: ""
       type: publications
@@ -237,7 +230,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _talks
   - scope:
       path: ""
       type: talks
@@ -246,17 +238,14 @@ defaults:
       author_profile: true
       share: true
 
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
 
-
 # Outputting
 permalink: /:categories/:title/
 timezone: Etc/UTC
-
 
 # Plugins
 plugins:
@@ -277,7 +266,6 @@ whitelist:
   - jekyll-seo-tag
   - jemoji
 
-
 # Archives
 category_archive:
   type: liquid
@@ -285,7 +273,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
 
 # HTML Compression
 compress_html:
