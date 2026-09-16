@@ -10,6 +10,26 @@ Young doctors need to be sensitized about the rich  history of Indian Medical Sy
 
 This presentation was used to teach fresh MBBS students.
 --
+<div style="position: relative; width: 100%; height: 600px; margin: 20px 0;">
+  <iframe 
+src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/history-medicine.pdf&embedded=true" 
+    style="position: absolute; top:0; left:0; width: 100%; height: 100%; border: 1px solid #ccc;" 
+    frameborder="0">
+  title="ISM-Lifestyle presentation"
+  loading="lazy"
+  allowfullscreen>
+</iframe>
+
+  </iframe>
+</div>
+
+<p style="text-align: center;">
+  <a href="https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf" target="_blank" rel="noopener noreferrer">
+    <span lang="en">📥 Open / Download "Learning to learn" </span>
+  </a>
+</p>
+
+
 Scan this code to take part in the response session for this
 ![Lecture](/images/mentimeter_qr_code.png)
 
