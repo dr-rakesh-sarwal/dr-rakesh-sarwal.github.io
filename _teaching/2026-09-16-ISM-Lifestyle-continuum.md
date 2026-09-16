@@ -38,8 +38,8 @@ src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/
 ![Lecture](/images/2016-09-16-class-7.jpg)
 ![Lecture](/images/2016-09-16-class-8.jpg)
 
-![Lecture](/images/2016-09-16-class-yoga--1.jpg)
-![Lecture](/images/2016-09-16-class-yoga--2.jpg)
+![Lecture](/images/2016-09-16-class-yoga-1.jpg)
+![Lecture](/images/2016-09-16-class-yoga-2.jpg)
 
 ![Lecture](/images/2016-09-16-ISM-Lifestyle.mp4)
 
