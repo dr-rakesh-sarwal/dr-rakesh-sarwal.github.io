@@ -28,9 +28,7 @@ src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/
     <span lang="en">📥 Open / Download "Learning to learn" </span>
   </a>
 </p>
-
-
-Scan this code to take part in the response session for this
+---
 ![Lecture](/images/2016-09-16-class-*.jpg)
 ![Lecture](/images/2016-09-16-class-yoga--*.jpg)
 
