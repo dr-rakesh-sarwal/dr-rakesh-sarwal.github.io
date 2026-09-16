@@ -41,5 +41,5 @@ src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/
 ![Class-Yoga](/images/2016-09-16-class-yoga-1.jpg)
 ![Class-Yoga](/images/2016-09-16-class-yoga-2.jpg)
 
-![View Class-Yoga-Video at](/images/2016-09-16-ISM-Lifestyle.mp4)
+[![Watch the Yoga in Class Video at](https://youtu.be/dYOu4NpN-dY?si=faczuSrGeCIbPWZE)]
 
