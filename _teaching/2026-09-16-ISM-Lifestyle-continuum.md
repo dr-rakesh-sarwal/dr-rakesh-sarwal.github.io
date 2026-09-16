@@ -31,5 +31,6 @@ src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/
 
 
 Scan this code to take part in the response session for this
-![Lecture](/images/mentimeter_qr_code.png)
+![Lecture](/images/2016-09-16-class-*.jpg)
+![Lecture](/images/2016-09-16-class-yoga--*.jpg)
 
