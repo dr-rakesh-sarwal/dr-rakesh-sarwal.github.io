@@ -8,7 +8,7 @@ location: "Faridabad"
 ---
 Young doctors need to be sensitized about the rich  history of Indian Medical Systems. This information has contemporary relevance and applicability as well, both in their personal lives as well as in their  practice as a doctor. This presentation highlights key developments in the history of Medicine in India over past 5000 years, informs them of its foundations on prevention, self-awareness, self-care, control of senses and regular practice of Yoga.  I highlight the convergence between the Eastern and Western thought, reflected in teachings of Hippocrates, and later, William Olser. I then introduce the Lifestyle Medicine clinic and its achievements in relieving a host of chronic metabolic, musculoskeletal, neurological and gastrointestinal functional disorders. Response of the participants on their understanding of lifestyle medicine were also captured and shown in a word-cloud. At the end, a short Yoga asana and Pranayam practice was jointly done.
 
-This presentation was used to teach fresh MBBS students.
+This presentation was used to orient a new class of MBBS students.
 --
 <div style="position: relative; width: 100%; height: 600px; margin: 20px 0;">
   <iframe 
