@@ -10,6 +10,6 @@ Young doctors need to be sensitized about the rich  history of Indian Medical Sy
 
 This presentation was used to teach fresh MBBS students.
 --
-Scan this code to take part in the response session for this class
+Scan this code to take part in the response session for this
 ![Lecture](/images/multimeter_qr_code.png)
 
