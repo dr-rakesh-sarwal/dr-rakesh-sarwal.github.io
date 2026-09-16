@@ -25,10 +25,10 @@ src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/
 
 <p style="text-align: center;">
   <a href="https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf" target="_blank" rel="noopener noreferrer">
-    <span lang="en">📥 Open / Download "Learning to learn" </span>
+    <span lang="en">📥 Open / Download "ISM-Lifestyle presentation" </span>
   </a>
 </p>
 ---
-![Lecture](/images/2016-09-16-class-*.jpg)
-![Lecture](/images/2016-09-16-class-yoga--*.jpg)
+![Lecture](/images/2016-09-16-class-1.jpg)
+![Lecture](/images/2016-09-16-class-yoga--1.jpg)
 
