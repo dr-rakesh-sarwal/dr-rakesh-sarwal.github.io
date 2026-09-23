@@ -36,7 +36,6 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 {% if talk.date %}<small>{{ talk.date | date: "%-d %B %Y" }}{% endif %}{% if talk.venue %} · {{ talk.venue }}{% endif %}{% if talk.location %}, {{ talk.location }}{% endif %}</small>
 
-{{ talk.excerpt | markdownify }}
 {% endfor %}
 
 [See all talks →]({{ "/talks/" | relative_url }})
