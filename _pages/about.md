@@ -39,13 +39,14 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 [See all talks →]({{ "/talks/" | relative_url }})
 
-
-
-  ## Latest publications
+## Latest publications
 
 {% assign recent_publications = site.publications | sort: "date" | reverse %}
 {% for publication in recent_publications limit:3 %}
 ### [{{ publication.title }}]({{ publication.url | relative_url }})
+<small>
+  {{ publication.citation | remove: publication.paperurl | strip }}
+</small>
 {% endfor %}
 
 [See all publications →]({{ "/publications/" | relative_url }})
