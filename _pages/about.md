@@ -41,17 +41,14 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 
 
- **Latest publications:**
+  ## Latest publications
 
-[Empowering patients through three Evidence-Based Lifestyle Practices](https://sutra-health.medium.com/empowering-patients-to-reverse-disease-advance-health-through-three-pronged-natural-825bcf8152de)
+{% assign recent_publications = site.publications | sort: "date" | reverse %}
+{% for publication in recent_publications limit:3 %}
+### [{{ publication.title }}]({{ publication.url | relative_url }})
+{% endfor %}
 
-[A traffic light approach to lifestyle change: Health building guideline for NCD outpatients in India](https://pmc.ncbi.nlm.nih.gov/articles/PMC12975079/)
-
-[Remission of Irritable Bowel Syndrome Achieved Through Combined Diet, Lifestyle Modification, and Yoga: A Case Report](https://www.preprints.org/manuscript/202603.0183)
-
-[Dietary diversity as a sustainable approach towards micronutrient deficiencies in India](https://pmc.ncbi.nlm.nih.gov/articles/PMC9903373/)
-
-[See all publications →](/publications/)
+[See all publications →]({{ "/publications/" | relative_url }})
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en)
 
