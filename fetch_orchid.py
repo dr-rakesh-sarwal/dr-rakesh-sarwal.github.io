@@ -17,7 +17,7 @@ HEADERS = {
 
 
 def fetch_json(url):
-    """Fetch JSON from the ORCID public API."""
+    """Fetch JSON from the ORCID or Crossref public API."""
     response = requests.get(url, headers=HEADERS, timeout=30)
     response.raise_for_status()
     return response.json()
@@ -90,12 +90,12 @@ def initials_from_given_names(given_names):
 
 def format_author_name(name):
     """
-    Convert an ORCID contributor name to an APA-like format.
+    Convert a person's name to APA-like format.
 
-    Handles:
-    - 'Rakesh Sarwal'       -> 'Sarwal, R.'
-    - 'Sarwal, Rakesh'      -> 'Sarwal, R.'
-    - 'Rakesh Kumar Sarwal' -> 'Sarwal, R. K.'
+    Examples:
+      Rakesh Sarwal       -> Sarwal, R.
+      Rakesh Kumar Sarwal -> Sarwal, R. K.
+      Sarwal, Rakesh      -> Sarwal, R.
     """
     name = re.sub(r"\s+", " ", (name or "").strip())
 
@@ -119,43 +119,8 @@ def format_author_name(name):
     return f"{family_name}, {initials}".strip(", ")
 
 
-def get_authors(work):
-    """
-    Extract authors from the ORCID work contributors.
-
-    ORCID normally provides contributor names under:
-    contributors -> contributor -> credit-name -> value
-    """
-    authors = []
-    contributors = work.get("contributors", {}).get("contributor", [])
-
-    for contributor in contributors:
-        credit_name = contributor.get("credit-name", {})
-        name = credit_name.get("value", "").strip()
-
-        if not name:
-            continue
-
-        author = format_author_name(name)
-
-        if author and author not in authors:
-            authors.append(author)
-
-    # Ensure the ORCID record owner appears if ORCID has no contributor data.
-    sarwal_names = {
-        "Sarwal, R.",
-        "Rakesh Sarwal",
-        "Sarwal, Rakesh",
-    }
-
-    if not any(author in sarwal_names for author in authors):
-        authors.insert(0, "Sarwal, R.")
-
-    return authors
-
-
 def format_authors_apa(authors):
-    """Format an author list in a compact APA-style form."""
+    """Format an author list in compact APA style."""
     if not authors:
         return "Sarwal, R."
 
@@ -171,6 +136,89 @@ def format_authors_apa(authors):
     return ", ".join(authors[:19]) + ", ... " + authors[-1]
 
 
+def get_crossref_authors(doi):
+    """Fetch the full author list from Crossref using a DOI."""
+    if not doi:
+        return []
+
+    url = f"https://api.crossref.org/works/{doi}"
+
+    headers = {
+        "User-Agent": (
+            "academic.lifequality.org.in publication sync "
+            "(mailto:sarwalr@gmail.com)"
+        )
+    }
+
+    try:
+        response = requests.get(url, headers=headers, timeout=30)
+        response.raise_for_status()
+        message = response.json().get("message", {})
+    except requests.RequestException as error:
+        print(f"⚠️  Crossref lookup failed for DOI {doi}: {error}")
+        return []
+
+    authors = []
+
+    for author in message.get("author", []):
+        family_name = (author.get("family") or "").strip()
+        given_names = (author.get("given") or "").strip()
+        group_name = (author.get("name") or "").strip()
+
+        if group_name:
+            formatted_name = group_name
+        elif family_name:
+            formatted_name = (
+                f"{family_name}, "
+                f"{initials_from_given_names(given_names)}"
+            ).strip(", ")
+        else:
+            formatted_name = format_author_name(given_names)
+
+        if formatted_name and formatted_name not in authors:
+            authors.append(formatted_name)
+
+    return authors
+
+
+def get_orcid_authors(work):
+    """Extract authors available in the ORCID work record."""
+    authors = []
+    contributors = work.get("contributors", {}).get("contributor", [])
+
+    for contributor in contributors:
+        credit_name = contributor.get("credit-name", {})
+        name = credit_name.get("value", "").strip()
+
+        if not name:
+            continue
+
+        author = format_author_name(name)
+
+        if author and author not in authors:
+            authors.append(author)
+
+    return authors
+
+
+def get_authors(work, doi):
+    """
+    Return the best available author list:
+    Crossref full list first, ORCID next, Sarwal fallback last.
+    """
+    crossref_authors = get_crossref_authors(doi)
+
+    if crossref_authors:
+        return crossref_authors
+
+    orcid_authors = get_orcid_authors(work)
+
+    if orcid_authors:
+        return orcid_authors
+
+    return ["Sarwal, R."]
+
+
 def get_title(work):
     """Extract the publication title."""
     title_data = work.get("title", {}).get("title", {})
@@ -184,7 +232,7 @@ def get_venue(work):
 
 
 def get_description(work):
-    """Extract the ORCID short description or return an empty string."""
+    """Extract a short description from ORCID, if present."""
     return (work.get("short-description") or "").strip()
 
 
@@ -199,7 +247,7 @@ def create_markdown(work, output_dir):
     doi = get_doi(work.get("external-ids"))
     paper_url = f"https://doi.org/{doi}" if doi else ""
 
-    authors = get_authors(work)
+    authors = get_authors(work, doi)
     authors_apa = format_authors_apa(authors)
 
     citation = f"{authors_apa} ({publication_year}). {title}."
@@ -248,8 +296,8 @@ def main():
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # This removes all existing Markdown files in _publications.
-    # Keep this only if _publications contains exclusively ORCID-generated files.
+    # Caution: this removes .md files in _publications. Only do this if that
+    # directory is meant to contain ORCID-generated publication files only.
     for filename in os.listdir(OUTPUT_DIR):
         filepath = os.path.join(OUTPUT_DIR, filename)
 
@@ -270,7 +318,6 @@ def main():
         if not work_summaries:
             continue
 
-        # Select the first/latest summary returned by ORCID.
         summary = work_summaries[0]
         put_code = summary.get("put-code")
 
