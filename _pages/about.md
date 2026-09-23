@@ -15,6 +15,34 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 **My research interests** are in exploring the effectiveness of lifestyle therapies across a spectrum of chronic conditions.
 
+## Recent lectures
+
+{% assign recent_lectures = site.teaching | sort: "date" | reverse %}
+{% for lecture in recent_lectures limit:3 %}
+### [{{ lecture.title }}]({{ lecture.url | relative_url }})
+
+{% if lecture.date %}<small>{{ lecture.date | date: "%-d %B %Y" }}{% endif %}{% if lecture.venue %} · {{ lecture.venue }}{% endif %}{% if lecture.location %}, {{ lecture.location }}{% endif %}</small>
+
+{{ lecture.excerpt | markdownify }}
+{% endfor %}
+
+[See all lectures →]({{ "/teaching/" | relative_url }})
+
+## Recent talks
+
+{% assign recent_talks = site.talks | sort: "date" | reverse %}
+{% for talk in recent_talks limit:3 %}
+### [{{ talk.title }}]({{ talk.url | relative_url }})
+
+{% if talk.date %}<small>{{ talk.date | date: "%-d %B %Y" }}{% endif %}{% if talk.venue %} · {{ talk.venue }}{% endif %}{% if talk.location %}, {{ talk.location }}{% endif %}</small>
+
+{{ talk.excerpt | markdownify }}
+{% endfor %}
+
+[See all talks →]({{ "/talks/" | relative_url }})
+
+
+
  **Latest publications:**
 
 [Empowering patients through three Evidence-Based Lifestyle Practices](https://sutra-health.medium.com/empowering-patients-to-reverse-disease-advance-health-through-three-pronged-natural-825bcf8152de)
