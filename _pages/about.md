@@ -23,7 +23,6 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 {% if lecture.date %}<small>{{ lecture.date | date: "%-d %B %Y" }}{% endif %}{% if lecture.venue %} · {{ lecture.venue }}{% endif %}{% if lecture.location %}, {{ lecture.location }}{% endif %}</small>
 
-{{ lecture.excerpt | markdownify }}
 {% endfor %}
 
 [See all lectures →]({{ "/teaching/" | relative_url }})
