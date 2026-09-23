@@ -50,65 +50,38 @@
 <!-- Google Scholar citation tags -->
 {% if page.collection == 'publications' %}
 
-<meta name="citation_title" content="{{ page.title }}">
-<meta name="citation_author" content="{{ site.author.name }}">
+<meta name="citation_title" content="{{ page.title | escape }}">
+
+{% if page.authors %}
+  {% for author in page.authors %}
+<meta name="citation_author" content="{{ author | escape }}">
+  {% endfor %}
+{% else %}
+<meta name="citation_author" content="{{ site.author.name | escape }}">
+{% endif %}
+
+{% if page.date %}
 <meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+{% endif %}
 
 {% if page.venue %}
-<meta name="citation_journal_title" content="{{ page.venue }}">
+<meta name="citation_journal_title" content="{{ page.venue | escape }}">
 {% endif %}
 
 {% if page.publisher %}
-<meta name="citation_publisher" content="{{ page.publisher }}">
+<meta name="citation_publisher" content="{{ page.publisher | escape }}">
 {% endif %}
 
 {% if page.doi %}
-<meta name="citation_doi" content="{{ page.doi }}">
+<meta name="citation_doi" content="{{ page.doi | escape }}">
 {% endif %}
 
-{% if page.paperurl %}
+<!-- The public article or publication landing page -->
 <meta name="citation_public_url" content="{{ canonical_url }}">
-<meta name="citation_pdf_url" content="{{ page.paperurl }}">
-{% endif %}
 
-{% endif %}
-
-{% if paginator.previous_page %}
-<link rel="prev" href="{{ paginator.previous_page_path | absolute_url }}">
-{% endif %}
-{% if paginator.next_page %}
-<link rel="next" href="{{ paginator.next_page_path | absolute_url }}">
-{% endif %}
-
-{% if site.social %}
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"{{ site.social.type | default: 'Person' }}",
-  "name":"{{ site.social.name | default: site.name }}",
-  "url":{{ seo_url | jsonify }},
-  "jobTitle": {{ site.author.position | jsonify }},
-  "worksFor": {
-    "@type": "CollegeOrUniversity",
-    "name": {{ site.author.institution | jsonify }},
-    "url": {{ site.author.institution_url | jsonify }}
-  },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Johns Hopkins Bloomberg School of Public Health"
-  },
-  "knowsAbout": {{ site.author.expertise | jsonify }},
-  "sameAs":{{ site.social.links | jsonify }}
-}
-</script>
-{% endif %}
-
-{% if site.google_site_verification %}
-<meta name="google-site-verification" content="{{ site.google_site_verification }}">
-{% endif %}
-
-{% if site.bing_site_verification %}
-<meta name="msvalidate.01" content="{{ site.bing_site_verification }}">
+<!-- Include this only when the field is a direct PDF URL -->
+{% if page.pdfurl %}
+<meta name="citation_pdf_url" content="{{ page.pdfurl | absolute_url }}">
 {% endif %}
 
 <!-- end SEO -->
