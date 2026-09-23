@@ -1,8 +1,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 title                    : "Dr. Rakesh Sarwal"
+title_separator: "|"
 name                     : "Dr. Rakesh Sarwal"
-description              : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
+description              : "Public health physician and policy leader working on lifestyle medicine, NCD prevention, nutrition, yoga, health systems, and public health policy in India"
 url                      : "https://academic.lifequality.org.in"
 baseurl                  : ""
 repository               : "dr-rakesh-sarwal/dr-rakesh-sarwal.github.io"
@@ -99,12 +100,11 @@ google_site_verification : "eUirYog6LXAZk3IMM--fn8UWSs-XL06dkZGeBuJdxss"
 bing_site_verification   : null
 alexa_site_verification  : null
 yandex_site_verification : null
-keywords                 : "Public Health, Lifestyle Medicine, NCD Prevention, Yoga, UHC, India"
 
 # Social Sharing / Structured Metadata
 og_image                 : "/images/profile.png"
 logo                     : "/images/profile.png"
-og_description           : "Public health physician and policy leader. Researching lifestyle medicine, NCD prevention, and integrative health."
+og_description           : "Public health physician and policy leader working on lifestyle medicine, NCD prevention, nutrition, yoga, health systems, and public health policy in India"
 social:
   type                   : "Person"
   name                   : "Dr. Rakesh Sarwal"
@@ -237,6 +237,7 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+      related: true
 
 # Sass/SCSS
 sass:
@@ -245,7 +246,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: Etc/UTC
+timezone: Asia/Kolkata
 
 # Plugins
 plugins:
