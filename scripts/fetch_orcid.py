@@ -26,12 +26,6 @@ def fetch_work_details(orcid_id, put_code):
     r.raise_for_status()
     return r.json()
 
-except Exception as e:
-    print(f"Skipped {put_code}: {e}")
-    import traceback
-    traceback.print_exc()  # ← Add this for detailed error info
-
-
 
 # ---------- Crossref ----------
 
@@ -239,6 +233,8 @@ def main():
 
         except Exception as e:
             print(f"Skipped {put_code}: {e}")
+            import traceback
+            traceback.print_exc()
 
     print(f"Created: {created}")
     print(f"Updated: {updated}")
