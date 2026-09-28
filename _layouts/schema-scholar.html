@@ -1,52 +1,64 @@
 {% if page.collection == "publications" %}
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"ScholarlyArticle",
-
-  "headline":"{{ page.title | escape }}",
-
-  "url":"{{ page.url | absolute_url }}",
-
-  "mainEntityOfPage":"{{ page.url | absolute_url }}",
-
-  "author":[
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "{{ page.title | escape }}",
+  "name": "{{ page.title | escape }}",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "description": "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | escape }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 500 | escape }}{% endif %}",
+  "inLanguage": "{{ page.language | default: 'en' }}",
+  {% if page.keywords %}
+  "keywords": "{{ page.keywords | escape }}",
+  {% endif %}
+  "author": [
+    {% assign author_names = page.authors | default: site.author.name %}
+    {% if author_names contains ',' %}
+      {% assign authors = author_names | split: ',' %}
+    {% else %}
+      {% assign authors = author_names | split: ' and ' %}
+    {% endif %}
+    {% for author_name in authors %}
     {
-      "@type":"Person",
-      "name":"{{ site.author.name }}",
-      "identifier":"{{ site.author.orcid }}",
-      "affiliation":{
-        "@type":"Organization",
-        "name":"{{ site.author.institution }}"
-      }
+      "@type": "Person",
+      "name": "{{ author_name | strip | escape }}"
+      {% if site.author.orcid and forloop.first %},
+      "identifier": "{{ site.author.orcid }}"
+      {% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  {% if page.venue %}
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "{{ page.venue | escape }}"
+  },
+  {% endif %}
+  {% if page.publisher %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ page.publisher | escape }}"
+  },
+  {% elsif site.title %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title | escape }}"
+  },
+  {% endif %}
+  {% if page.paperurl or page.doi %}
+  "sameAs": "{{ page.paperurl | default: page.doi | default: page.url | absolute_url }}",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "{{ page.doi | default: page.paperurl | remove: 'https://doi.org/' | escape }}"
     }
   ],
-
-  "datePublished":"{{ page.date | date_to_xmlschema }}",
-  "dateModified":"{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-
-  "description":"{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | escape }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 500 | escape }}{% endif %}",
-
-  {% if page.venue %}
-  "isPartOf":{
-    "@type":"Periodical",
-    "name":"{{ page.venue }}"
-  },
   {% endif %}
-
-  {% if page.paperurl %}
-  "sameAs":"{{ page.paperurl }}",
-  "identifier":{
-    "@type":"PropertyValue",
-    "propertyID":"DOI",
-    "value":"{{ page.paperurl | remove: 'https://doi.org/' }}"
-  },
-  {% endif %}
-
-  "publisher":{
-    "@type":"Organization",
-    "name":"Academic LifeQuality"
-  }
+  "about": "{{ page.title | escape }}"
 }
 </script>
 {% endif %}
