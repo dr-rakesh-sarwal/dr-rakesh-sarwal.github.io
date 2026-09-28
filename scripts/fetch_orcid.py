@@ -206,6 +206,65 @@ def get_work_title(work):
     )
 
 
+def extract_authors_from_crossref(crossref):
+    """
+    Extract author names from Crossref metadata.
+    Returns comma-separated string.
+    """
+    authors = crossref.get("author", [])
+    
+    if not authors:
+        return ""
+    
+    author_names = []
+    for author in authors[:10]:  # Limit to first 10 authors
+        given = author.get("given", "").strip()
+        family = author.get("family", "").strip()
+        
+        if family:
+            if given:
+                author_names.append(f"{given} {family}")
+            else:
+                author_names.append(family)
+    
+    return ", ".join(author_names)
+
+
+def extract_keywords_from_title_and_abstract(title, abstract):
+    """
+    Extract keywords from title and abstract.
+    Returns comma-separated string.
+    """
+    # Common stop words to exclude
+    stop_words = {
+        "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", 
+        "for", "of", "with", "by", "from", "as", "is", "was", "be", "are",
+        "this", "that", "which", "who", "where", "when", "why", "how",
+        "we", "our", "their", "it", "its", "them", "these", "those"
+    }
+    
+    # Combine title and abstract
+    text = f"{title} {abstract if abstract else ''}".lower()
+    
+    # Extract words (split on non-alphanumeric)
+    words = re.findall(r'\b[a-z]{4,}\b', text)
+    
+    # Count word frequency
+    word_freq = {}
+    for word in words:
+        if word not in stop_words:
+            word_freq[word] = word_freq.get(word, 0) + 1
+    
+    # Sort by frequency and take top 8 keywords
+    keywords = sorted(
+        word_freq.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )[:8]
+    
+    return ", ".join([word for word, freq in keywords])
+
+
 # ---------- Generator ----------
 
 def create_markdown(work, output_dir):
@@ -256,6 +315,17 @@ def create_markdown(work, output_dir):
     if doi:
         citation += f" https://doi.org/{doi}"
 
+    # Extract authors from Crossref or use default
+    authors = extract_authors_from_crossref(crossref)
+    if not authors:
+        authors = "Rakesh Sarwal"
+
+    # Extract keywords from title and abstract
+    keywords = extract_keywords_from_title_and_abstract(
+        title,
+        description
+    )
+
     slug = sanitize_filename(title)
     filename = f"{year}-{slug}.md"
     filepath = os.path.join(output_dir, filename)
@@ -265,6 +335,8 @@ def create_markdown(work, output_dir):
     safe_publisher = publisher.replace('"', "'")
     safe_description = description.replace('"', "'")
     safe_citation = citation.replace('"', "'")
+    safe_authors = authors.replace('"', "'")
+    safe_keywords = keywords.replace('"', "'")
 
     content = f"""---
 title: "{safe_title}"
@@ -278,6 +350,9 @@ doi: "{doi or ''}"
 paperurl: "{paper_url}"
 excerpt: "{safe_description[:500]}"
 citation: "{safe_citation}"
+authors: "{safe_authors}"
+keywords: "{safe_keywords}"
+language: "en"
 ---
 
 {description}
