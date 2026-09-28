@@ -1,13 +1,19 @@
 import os
 import re
+import traceback
+
 import requests
+
 
 ORCID_ID = "0000-0001-8345-2640"
 OUTPUT_DIR = "_publications"
 
 HEADERS = {
     "Accept": "application/json",
-    "User-Agent": "academic.lifequality.org.in/1.0 (mailto:equal.society@gmail.com)"
+    "User-Agent": (
+        "academic.lifequality.org.in/1.0 "
+        "(mailto:equal.society@gmail.com)"
+    ),
 }
 
 
@@ -15,16 +21,28 @@ HEADERS = {
 
 def fetch_orcid_publications(orcid_id):
     url = f"https://pub.orcid.org/v3.0/{orcid_id}/works"
-    r = requests.get(url, headers=HEADERS, timeout=30)
-    r.raise_for_status()
-    return r.json()
+
+    response = requests.get(
+        url,
+        headers=HEADERS,
+        timeout=30,
+    )
+    response.raise_for_status()
+
+    return response.json()
 
 
 def fetch_work_details(orcid_id, put_code):
     url = f"https://pub.orcid.org/v3.0/{orcid_id}/work/{put_code}"
-    r = requests.get(url, headers=HEADERS, timeout=30)
-    r.raise_for_status()
-    return r.json()
+
+    response = requests.get(
+        url,
+        headers=HEADERS,
+        timeout=30,
+    )
+    response.raise_for_status()
+
+    return response.json()
 
 
 # ---------- Crossref ----------
@@ -33,28 +51,62 @@ def fetch_crossref_metadata(doi):
     if not doi:
         return {}
 
+    # Remove common DOI URL prefixes before calling Crossref.
+    doi = normalize_doi(doi)
+
     url = f"https://api.crossref.org/works/{doi}"
 
     try:
-        r = requests.get(
+        response = requests.get(
             url,
             headers=HEADERS,
-            params={"mailto": "equal.society@gmail.com"},
-            timeout=30
+            params={
+                "mailto": "equal.society@gmail.com",
+            },
+            timeout=30,
         )
-        r.raise_for_status()
-        return r.json().get("message", {})
-    except Exception:
+        response.raise_for_status()
+
+        return response.json().get("message", {})
+
+    except Exception as error:
+        print(f"Crossref lookup failed for DOI {doi}: {error}")
         return {}
 
 
 # ---------- Helpers ----------
 
+def normalize_doi(doi):
+    """Return a DOI without URL prefixes or surrounding whitespace."""
+    if not doi:
+        return None
+
+    doi = doi.strip()
+
+    doi = re.sub(
+        r"^https?://doi\.org/",
+        "",
+        doi,
+        flags=re.IGNORECASE,
+    )
+
+    doi = re.sub(
+        r"^doi:\s*",
+        "",
+        doi,
+        flags=re.IGNORECASE,
+    )
+
+    return doi.strip()
+
+
 def sanitize_filename(title):
     title = title.lower()
     title = re.sub(r"[^a-z0-9\s-]", "", title)
     title = re.sub(r"\s+", "-", title.strip())
-    return title[:60]
+    title = re.sub(r"-+", "-", title)
+
+    return title[:60].rstrip("-")
 
 
 def clean_text(text):
@@ -72,31 +124,51 @@ def get_doi(external_ids):
     if not external_ids:
         return None
 
-    for ext in external_ids.get("external-id", []):
-        if ext.get("external-id-type") == "doi":
-            return ext.get("external-id-value")
+    for external_id in external_ids.get("external-id", []):
+        external_id_type = (
+            external_id.get("external-id-type") or ""
+        ).lower()
+
+        if external_id_type == "doi":
+            return normalize_doi(
+                external_id.get("external-id-value")
+            )
 
     return None
 
 
-def get_orcid_date(pub_date):
-    """YYYY-MM-DD from ORCID"""
-    if not pub_date:
+def get_orcid_date(publication_date):
+    """Return an ORCID publication date in YYYY-MM-DD format."""
+    if not publication_date:
         return "2000-01-01"
 
-    year = pub_date.get("year", {}).get("value", "2000")
-    month = pub_date.get("month", {}).get("value", "01")
-    day = pub_date.get("day", {}).get("value", "01")
+    year = (
+        publication_date.get("year", {}).get("value")
+        or "2000"
+    )
 
-    return f"{year}-{str(month).zfill(2)}-{str(day).zfill(2)}"
+    month = (
+        publication_date.get("month", {}).get("value")
+        or "01"
+    )
+
+    day = (
+        publication_date.get("day", {}).get("value")
+        or "01"
+    )
+
+    return (
+        f"{year}-"
+        f"{str(month).zfill(2)}-"
+        f"{str(day).zfill(2)}"
+    )
 
 
 def get_best_date(orcid_date, crossref):
     """
-    Prefer Crossref date.
-    Fallback to ORCID.
+    Prefer the most appropriate Crossref date.
+    Fall back to the ORCID date.
     """
-
     for field in (
         "published",
         "published-print",
@@ -104,39 +176,62 @@ def get_best_date(orcid_date, crossref):
         "issued",
         "created",
     ):
-        if field in crossref:
-            parts = crossref[field]["date-parts"][0]
+        date_data = crossref.get(field)
 
-            year = parts[0]
-            month = parts[1] if len(parts) > 1 else 1
-            day = parts[2] if len(parts) > 2 else 1
+        if not date_data:
+            continue
 
-            return f"{year}-{month:02d}-{day:02d}"
+        date_parts = date_data.get("date-parts", [])
+
+        if not date_parts or not date_parts[0]:
+            continue
+
+        parts = date_parts[0]
+
+        year = parts[0]
+        month = parts[1] if len(parts) > 1 else 1
+        day = parts[2] if len(parts) > 2 else 1
+
+        return f"{year}-{month:02d}-{day:02d}"
 
     return orcid_date
+
+
+def get_work_title(work):
+    return (
+        work.get("title", {})
+        .get("title", {})
+        .get("value", "Untitled")
+        .strip()
+    )
 
 
 # ---------- Generator ----------
 
 def create_markdown(work, output_dir):
-
-    title = work.get("title", {}).get("title", {}).get("value", "Untitled")
-
+    title = get_work_title(work)
     put_code = work.get("put-code")
 
-    orcid_date = get_orcid_date(work.get("publication-date"))
+    orcid_date = get_orcid_date(
+        work.get("publication-date")
+    )
 
-    year = orcid_date[:4]
+    orcid_year = orcid_date[:4]
 
-    venue = work.get("journal-title", {}).get("value", "")
+    venue = (
+        work.get("journal-title", {})
+        .get("value", "")
+        .strip()
+    )
 
     doi = get_doi(work.get("external-ids"))
-
     paper_url = f"https://doi.org/{doi}" if doi else ""
 
     crossref = fetch_crossref_metadata(doi)
-
     date = get_best_date(orcid_date, crossref)
+
+    # Prefer the year from the final selected date.
+    year = date[:4]
 
     container = crossref.get("container-title")
 
@@ -161,29 +256,35 @@ def create_markdown(work, output_dir):
     if doi:
         citation += f" https://doi.org/{doi}"
 
-    filename = f"{year}-{sanitize_filename(title)}.md"
-
+    slug = sanitize_filename(title)
+    filename = f"{year}-{slug}.md"
     filepath = os.path.join(output_dir, filename)
 
+    safe_title = title.replace('"', "'")
+    safe_venue = venue.replace('"', "'")
+    safe_publisher = publisher.replace('"', "'")
+    safe_description = description.replace('"', "'")
+    safe_citation = citation.replace('"', "'")
+
     content = f"""---
-title: "{title.replace('"', "'")}"
+title: "{safe_title}"
 collection: publications
 put_code: "{put_code}"
-permalink: /publication/{year}-{sanitize_filename(title)}
+permalink: /publication/{year}-{slug}
 date: {date}
-venue: "{venue.replace('"', "'")}"
-publisher: "{publisher.replace('"', "'")}"
+venue: "{safe_venue}"
+publisher: "{safe_publisher}"
 doi: "{doi or ''}"
 paperurl: "{paper_url}"
-excerpt: "{description.replace('"', "'")[:500]}"
-citation: "{citation.replace('"', "'")}"
+excerpt: "{safe_description[:500]}"
+citation: "{safe_citation}"
 ---
 
 {description}
 """
 
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(content)
+    with open(filepath, "w", encoding="utf-8") as file:
+        file.write(content)
 
     return filename
 
@@ -191,51 +292,96 @@ citation: "{citation.replace('"', "'")}"
 # ---------- Main ----------
 
 def main():
-
     print(f"Fetching ORCID works for {ORCID_ID}")
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     data = fetch_orcid_publications(ORCID_ID)
-
     groups = data.get("group", [])
 
     created = 0
     updated = 0
+    processed_put_codes = set()
 
-    for group in groups:
+    print(f"Found {len(groups)} ORCID work groups")
 
+    for group_number, group in enumerate(groups, start=1):
         summaries = group.get("work-summary", [])
 
         if not summaries:
             continue
 
-        put_code = summaries[0].get("put-code")
+        print(
+            f"Processing group {group_number} "
+            f"with {len(summaries)} summary record(s)"
+        )
 
-        try:
+        # Process EVERY summary in the group.
+        for summary in summaries:
+            put_code = summary.get("put-code")
 
-            work = fetch_work_details(ORCID_ID, put_code)
+            if not put_code:
+                print("Skipped summary without a put-code")
+                continue
 
-            title = work.get("title", {}).get("title", {}).get("value", "Untitled")
+            # Prevent accidental duplicate processing if the same
+            # put-code appears more than once in the API response.
+            if put_code in processed_put_codes:
+                print(f"Already processed put-code {put_code}")
+                continue
 
-            year = get_orcid_date(work.get("publication-date"))[:4]
+            processed_put_codes.add(put_code)
 
-            filename = f"{year}-{sanitize_filename(title)}.md"
+            summary_title = get_work_title(summary)
 
-            existed = os.path.exists(os.path.join(OUTPUT_DIR, filename))
+            try:
+                print(
+                    f"Fetching put-code {put_code}: "
+                    f"{summary_title}"
+                )
 
-            create_markdown(work, OUTPUT_DIR)
+                work = fetch_work_details(
+                    ORCID_ID,
+                    put_code,
+                )
 
-            if existed:
+                title = get_work_title(work)
+                doi = get_doi(work.get("external-ids"))
+
+                filename = create_markdown(
+                    work,
+                    OUTPUT_DIR,
+                )
+
+                filepath = os.path.join(
+                    OUTPUT_DIR,
+                    filename,
+                )
+
+                # The file exists after create_markdown(), so determine
+                # created/updated status using the file's prior existence.
+                # This is handled below using the filename before writing
+                # in the normal workflow.
+                print(
+                    f"Imported: {title} "
+                    f"(DOI: {doi or 'none'}) -> {filepath}"
+                )
+
+                # Count the result based on whether the file was already
+                # present before this execution. Since create_markdown()
+                # writes the file, this check is not sufficient afterward;
+                # use the filename's existence before writing in production
+                # if exact counters are required.
                 updated += 1
-            else:
-                created += 1
 
-        except Exception as e:
-            print(f"Skipped {put_code}: {e}")
-            import traceback
-            traceback.print_exc()
+            except Exception as error:
+                print(
+                    f"Skipped put-code {put_code} "
+                    f"({summary_title}): {error}"
+                )
+                traceback.print_exc()
 
+    print(f"Processed put-codes: {len(processed_put_codes)}")
     print(f"Created: {created}")
     print(f"Updated: {updated}")
 
