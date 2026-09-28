@@ -10,6 +10,9 @@ doi: "10.1001/jamanetworkopen.2021.29416"
 paperurl: "https://doi.org/10.1001/jamanetworkopen.2021.29416"
 excerpt: ""
 citation: "Sarwal, R. (2021). Estimating the Burden of Child Undernutrition for Smaller Electoral Units in India. JAMA Network Open. https://doi.org/10.1001/jamanetworkopen.2021.29416"
+authors: "Julie Kim, Yuning Liu, Weiyu Wang, Jeffrey C. Blossom, Laxmi Kant Dwivedi, K. S. James, Rakesh Sarwal, Rockli Kim, S.V. Subramanian"
+keywords: "estimating, burden, child, undernutrition, smaller, electoral, units, india"
+language: "en"
 ---
 
 

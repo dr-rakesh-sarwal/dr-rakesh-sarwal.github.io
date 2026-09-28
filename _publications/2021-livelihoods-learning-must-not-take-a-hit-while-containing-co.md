@@ -10,6 +10,9 @@ doi: "10.31219/osf.io/6mdgv"
 paperurl: "https://doi.org/10.31219/osf.io/6mdgv"
 excerpt: "ivelihoods &amp; Learning Must Not Take a Hit While Containing COVID-19. Here’s How We Can Do It"
 citation: "Sarwal, R. (2021). Livelihoods & Learning Must Not Take a Hit While Containing COVID-19. Here’s How We Can Do It. News18. https://doi.org/10.31219/osf.io/6mdgv"
+authors: "Rakesh Sarwal, Ajit Pai"
+keywords: "learning, must, take, while, containing, covid, here, livelihoods"
+language: "en"
 ---
 
 ivelihoods &amp; Learning Must Not Take a Hit While Containing COVID-19. Here’s How We Can Do It

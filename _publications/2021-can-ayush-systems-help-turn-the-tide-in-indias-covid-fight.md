@@ -10,6 +10,9 @@ doi: "10.31219/osf.io/erhjt"
 paperurl: "https://doi.org/10.31219/osf.io/erhjt"
 excerpt: "Can AYUSH Systems help turn the tide in India’s COVID-fight?"
 citation: "Sarwal, R. (2021). Can AYUSH Systems help turn the tide in India’s COVID-fight?. ET Government. https://doi.org/10.31219/osf.io/erhjt"
+authors: "Rakesh Sarwal, Bhushan Patwardhan"
+keywords: "ayush, systems, help, turn, tide, india, covid, fight"
+language: "en"
 ---
 
 Can AYUSH Systems help turn the tide in India’s COVID-fight?
