@@ -577,6 +577,7 @@ def main():
     print(f"📚 Found {len(works_group)} ORCID publication groups\n")
 
     created = []
+    processed_put_codes = set()
 
     for group in works_group:
         work_summaries = group.get("work-summary", [])
@@ -584,26 +585,29 @@ def main():
         if not work_summaries:
             continue
 
-        summary = work_summaries[0]
-        put_code = summary.get("put-code")
+        for summary in work_summaries:
+            put_code = summary.get("put-code")
 
-        if not put_code:
-            print("⚠️  Skipped work without a put-code")
-            continue
+            if not put_code or put_code in processed_put_codes:
+                if not put_code:
+                    print("⚠️  Skipped work without a put-code")
+                continue
 
-        try:
-            work = fetch_work_details(ORCID_ID, put_code)
-            filename = create_markdown(work, OUTPUT_DIR)
-            created.append(filename)
+            processed_put_codes.add(put_code)
 
-        except requests.RequestException as error:
-            print(
-                f"⚠️  Request failed for ORCID put-code "
-                f"{put_code}: {error}"
-            )
+            try:
+                work = fetch_work_details(ORCID_ID, put_code)
+                filename = create_markdown(work, OUTPUT_DIR)
+                created.append(filename)
 
-        except Exception as error:
-            print(f"⚠️  Skipped ORCID work {put_code}: {error}")
+            except requests.RequestException as error:
+                print(
+                    f"⚠️  Request failed for ORCID put-code "
+                    f"{put_code}: {error}"
+                )
+
+            except Exception as error:
+                print(f"⚠️  Skipped ORCID work {put_code}: {error}")
 
     print(f"\n🎉 Done! Created {len(created)} publication files.")
 
