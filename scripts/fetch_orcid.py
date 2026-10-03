@@ -19,17 +19,40 @@ HEADERS = {
 
 # ---------- ORCID ----------
 
-def fetch_orcid_publications(orcid_id):
-    url = f"https://pub.orcid.org/v3.0/{orcid_id}/works"
+def fetch_orcid_publications(orcid_id, rows=50):
+    """Fetch all ORCID works, handling pagination."""
+    all_groups = []
+    start = 0
 
-    response = requests.get(
-        url,
-        headers=HEADERS,
-        timeout=30,
-    )
-    response.raise_for_status()
+    while True:
+        url = (
+            f"https://pub.orcid.org/v3.0/{orcid_id}/works"
+            f"?rows={rows}&start={start}"
+        )
 
-    return response.json()
+        response = requests.get(
+            url,
+            headers=HEADERS,
+            timeout=30,
+        )
+        response.raise_for_status()
+
+        data = response.json()
+        groups = data.get("group", [])
+
+        if not groups:
+            break
+
+        all_groups.extend(groups)
+
+        # Stop if this page is shorter than the requested page size,
+        # which means no additional pages remain.
+        if len(groups) < rows:
+            break
+
+        start += rows
+
+    return {"group": all_groups}
 
 
 def fetch_work_details(orcid_id, put_code):
@@ -212,21 +235,21 @@ def extract_authors_from_crossref(crossref):
     Returns comma-separated string.
     """
     authors = crossref.get("author", [])
-    
+
     if not authors:
         return ""
-    
+
     author_names = []
     for author in authors[:10]:  # Limit to first 10 authors
         given = author.get("given", "").strip()
         family = author.get("family", "").strip()
-        
+
         if family:
             if given:
                 author_names.append(f"{given} {family}")
             else:
                 author_names.append(family)
-    
+
     return ", ".join(author_names)
 
 
@@ -237,31 +260,31 @@ def extract_keywords_from_title_and_abstract(title, abstract):
     """
     # Common stop words to exclude
     stop_words = {
-        "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", 
+        "the", "a", "an", "and", "or", "but", "in", "on", "at", "to",
         "for", "of", "with", "by", "from", "as", "is", "was", "be", "are",
         "this", "that", "which", "who", "where", "when", "why", "how",
         "we", "our", "their", "it", "its", "them", "these", "those"
     }
-    
+
     # Combine title and abstract
     text = f"{title} {abstract if abstract else ''}".lower()
-    
+
     # Extract words (split on non-alphanumeric)
     words = re.findall(r'\b[a-z]{4,}\b', text)
-    
+
     # Count word frequency
     word_freq = {}
     for word in words:
         if word not in stop_words:
             word_freq[word] = word_freq.get(word, 0) + 1
-    
+
     # Sort by frequency and take top 8 keywords
     keywords = sorted(
         word_freq.items(),
         key=lambda x: x[1],
         reverse=True
     )[:8]
-    
+
     return ", ".join([word for word, freq in keywords])
 
 
