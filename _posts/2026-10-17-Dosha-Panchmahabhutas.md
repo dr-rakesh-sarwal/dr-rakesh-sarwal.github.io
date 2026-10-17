@@ -7,7 +7,7 @@ tags:
   - Wellness
   - Lifestyle
 ---
-What systems of medicine can do to reinforce the faith and confidence of patients in their own power to influence their own health. In this article, we assess the contrast between the foundations of traditional medicine (Ayurveda) in Panchamahabhiutas and the way its practiced around Dosha.
+What systems of medicine can do to reinforce the faith and confidence of patients in their own power to influence their own health. In this article, we assess the contrast between the foundations of traditional medicine (Ayurveda) in PanchaMahabhutas and the way its practiced around Dosha.
 
 ![image](/images/PanchMahabhutas-Dosha.jpeg)
 
