@@ -1,6 +1,7 @@
 ---
 title: 'From Dosha to Dialogue: Re-centering Patient Agency in Ayurvedic Care'
 date: 2026-10-17
+posts:/posts/2026/10/Dosha-Panchamahabhuitas/
 link:https://medium.com/integrative-wellness-journal-iwj/from-dosha-to-dialogue-re-centering-patient-agency-in-ayurvedic-care-9d23365f5239
 tags:
   - Wellness
