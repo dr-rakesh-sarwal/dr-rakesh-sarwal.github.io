@@ -5,8 +5,10 @@ permalink: /publication/2026-remission-of-irritable-bowel-syndrome-achieved-thro
 date: 2026-03-04
 venue: "MDPI AG"
 publisher: "MDPI AG"
-doi: "10.20944/preprints202603.0183.v1"
-paperurl: "https://doi.org/10.20944/preprints202603.0183.v1"
+doi-1: "10.20944/preprints202603.0183.v1"
+doi-2:"10.21203/rs.3.rs-9014688/v1"
+paperurl-1: "https://doi.org/10.20944/preprints202603.0183.v1"
+paperurl-2: "https://www.researchsquare.com/article/rs-9014688/v1"
 excerpt: "This report describes a 33-year-old male initially suspected of Inflammatory Bowel Disease (IBD) due to radiological findings, but finally diagnosed with Irritable Bowel Syndrome (IBS) based on the Rome IV criteria, normal colonoscopy findings and inflammatory biomarkers. When symptomatic pharmacotherapy for pain, constipation and heartburn alone did not bring lasting relief, he was referred for lifestyle therapy. Dietary, lifestyle advice, and physical activity are mainstay in the current guide"
 citation: "Sarwal, R. (2026). Remission of Irritable Bowel Syndrome Achieved Through Combined Diet, Lifestyle Modification, and Yoga: A Case Report. MDPI AG. https://doi.org/10.20944/preprints202603.0183.v1"
 ---
