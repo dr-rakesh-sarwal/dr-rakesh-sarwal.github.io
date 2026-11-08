@@ -1,7 +1,7 @@
 ---
 title: "Remission of Irritable Bowel Syndrome Achieved Through Combined Diet, Lifestyle Modification, and Yoga: A Case Report"
 collection: publications
-permalink: /publication/2026-remission-of-irritable-bowel-syndrome-achieved-through-combi
+permalink: /publication/2026-remission-IBS
 date: 2026-03-04
 venue: "MDPI AG"
 publisher: "MDPI AG"
