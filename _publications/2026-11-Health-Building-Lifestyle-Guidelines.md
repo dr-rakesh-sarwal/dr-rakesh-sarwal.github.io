@@ -1,7 +1,7 @@
 ---
 title: "Health Building Lifestyle Guidelines (2026 Comprehensive Edition)"
 collection: publications
-permalink: /publication/2026-11-Lifestyle-Guidelines
+permalink: /publication/2026-Lifestyle-Guidelines
 date: 2026-11-10
 venue: "Zenodo"
 publisher: "Zenodo"
