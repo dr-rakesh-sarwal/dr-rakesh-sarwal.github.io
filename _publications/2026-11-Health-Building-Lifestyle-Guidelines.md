@@ -14,7 +14,7 @@ Being added are the he 20-item Yoga asana and pranayama protocol, an elaboration
 --
 <div style="position: relative; width: 100%; height: 600px; margin: 20px 0;">
   <iframe 
-src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/history-medicine.pdf&embedded=true" 
+src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/Health-Building-Lifestyle-Guidelines-2026-Comprehensive-Edition.pdf&embedded=true" 
     style="position: absolute; top:0; left:0; width: 100%; height: 100%; border: 1px solid #ccc;" 
     frameborder="0">
   title="ISM-Lifestyle presentation"
@@ -26,7 +26,7 @@ src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/
 </div>
 
 <p style="text-align: center;">
-  <a href="https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf" target="_blank" rel="noopener noreferrer">
+  <a href="/files/Health-Building-Lifestyle-Guidelines-2026-Comprehensive-Edition.pdf" target="_blank" rel="noopener noreferrer">
     <span lang="en">📥 Open / Download "ISM-Lifestyle presentation" </span>
   </a>
 </p>
