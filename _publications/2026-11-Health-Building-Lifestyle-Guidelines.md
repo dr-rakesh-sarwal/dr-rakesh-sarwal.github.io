@@ -8,7 +8,7 @@ publisher: "Zenodo"
 doi: "10.5281/zenodo.24090390"
 paperurl: "https://zenodo.org/records/24090390"
 ---
-The updated 21-item traffic-light Health Building Lifestyle Guidelines are being made available for open, public use with the clarification that the first seven (red, "avoid") items are reverse-scored / negatively counted; all cross-references use colour-disc group-relative numbering (Red 1-7, Green 1-7, Yellow 1-7); a link to the deposited 21-item-assessment.csv (21 bilingual items, one point each, with a TOTAL column showing the maximum score of 21); and a link to the free public online 21-point assessment at [sutra health web-site])https://www.lifequality.org.in/assessment) (a self-assessment, monitoring and provider-administered tool that anyone can fill).
+The updated 21-item traffic-light Health Building Lifestyle Guidelines are being made available for open, public use with the clarification that the first seven (red, "avoid") items are reverse-scored / negatively counted; all cross-references use colour-disc group-relative numbering (Red 1-7, Green 1-7, Yellow 1-7); a link to the deposited 21-item-assessment.csv (21 bilingual items, one point each, with a TOTAL column showing the maximum score of 21); and a link to the free public online 21-point assessment at [sutra health web-site](https://www.lifequality.org.in/assessment) (a self-assessment, monitoring and provider-administered tool that anyone can fill).
 
 Being added are the 20-item Yoga asana and pranayama protocol, an elaboration of Yellow 1, with two safety sub-points, with a link to https://www.lifequality.org.in/services/therapeutic-yoga/yoga-asana-protocol, an archive video link at https://archive.org/details/surya-yoga-sequence, and references. 
 
