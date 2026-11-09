@@ -1,4 +1,5 @@
 ---
+title: "Remission of Irritable Bowel Syndrome Achieved Through Combined Diet, Lifestyle Modification, and Yoga: A Case Report"
 title: "Health Building Lifestyle Guidelines (2026 Comprehensive Edition)"
 collection: publications
 permalink: /publication/2026-Lifestyle-Guidelines-2026
