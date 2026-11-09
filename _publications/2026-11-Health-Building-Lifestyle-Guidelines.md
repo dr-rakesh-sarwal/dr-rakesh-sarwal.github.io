@@ -24,9 +24,8 @@ src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/
 
   </iframe>
 </div>
-
 <p style="text-align: center;">
-  <a href="/files/Health-Building-Lifestyle-Guidelines-2026-Comprehensive-Edition.pdf" target="_blank" rel="noopener noreferrer">
+  <a href="https://dr-rakesh-sarwal.github.io/files/Health-Building-Lifestyle-Guidelines-2026-Comprehensive-Edition.pdf" target="_blank" rel="noopener noreferrer">
     <span lang="en">📥 Open / Download "ISM-Lifestyle presentation" </span>
   </a>
 </p>
