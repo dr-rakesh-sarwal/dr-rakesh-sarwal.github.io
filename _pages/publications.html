@@ -13,8 +13,9 @@ my Google Scholar profile</a>.</div>
 
 {% assign featured_publication = site.publications | where: "doi", "10.64898/2026.11.10.26367386" | first %}
 {% if featured_publication %}
+  {% assign post = featured_publication %}
+  {% include archive-single.html %}
   {% assign other_publications = site.publications | sort: "date" | reverse %}
-  {% include archive-single.html post=featured_publication %}
   {% for post in other_publications %}
     {% unless post.doi == featured_publication.doi %}
       {% include archive-single.html %}
