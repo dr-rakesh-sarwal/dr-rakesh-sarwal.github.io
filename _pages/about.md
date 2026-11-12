@@ -15,6 +15,14 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 **My research interests** are in exploring the effectiveness of lifestyle therapies across a spectrum of chronic conditions.
 
+## Featured publication
+
+### [Real-World Outcomes of a Traffic-Light Approach to Lifestyle Modification in Chronic Disease: Evidence from an Integrative Health Clinic]({{ "/publication/2026-11-10-real-world-outcomes-traffic-light-approach-lifestyle-modification-chronic-disease" | relative_url }})
+
+**medRxiv preprint · 10 November 2026** · [Read the preprint](https://www.medrxiv.org/content/10.64898/2026.11.10.26367386v1) · [DOI](https://doi.org/10.64898/2026.11.10.26367386)
+
+This preprint examines real-world outcomes associated with a traffic-light approach to lifestyle modification in chronic disease care. The publication page also includes a clearly labeled interpretive perspective, distinct from the manuscript’s findings.
+
 ## Recent lectures
 
 {% assign recent_lectures = site.teaching | sort: "date" | reverse %}
@@ -44,13 +52,15 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 {% assign recent_publications = site.publications | sort: "date" | reverse %}
 {% for publication in recent_publications limit:3 %}
 ### [{{ publication.title }}]({{ publication.url | relative_url }})
-<small>
-  {{ publication.citation | remove: publication.paperurl | strip }}
-</small>
+{% if publication.citation %}
+<small>{{ publication.citation | remove: publication.paperurl | strip }}</small>
+{% elsif publication.venue or publication.date %}
+<small>{% if publication.venue %}{{ publication.venue }}{% endif %}{% if publication.venue and publication.date %} · {% endif %}{% if publication.date %}{{ publication.date | date: "%Y" }}{% endif %}</small>
+{% endif %}
 {% endfor %}
 
 [See all publications →]({{ "/publications/" | relative_url }})
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en)
 
-<!-- Last updated: 2026-08-26 -->
+<!-- Last updated: 2026-11-12 -->
