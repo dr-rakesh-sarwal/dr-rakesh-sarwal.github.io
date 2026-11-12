@@ -11,6 +11,18 @@ my Google Scholar profile</a>.</div>
 
 {% include base_path %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+{% assign featured_publication = site.publications | where: "doi", "10.64898/2026.11.10.26367386" | first %}
+{% if featured_publication %}
+  {% assign other_publications = site.publications | sort: "date" | reverse %}
+  {% include archive-single.html post=featured_publication %}
+  {% for post in other_publications %}
+    {% unless post.doi == featured_publication.doi %}
+      {% include archive-single.html %}
+    {% endunless %}
+  {% endfor %}
+{% else %}
+  {% assign sorted_publications = site.publications | sort: "date" | reverse %}
+  {% for post in sorted_publications %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
