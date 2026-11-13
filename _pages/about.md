@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 author_profile: true
 ---
-Public Health physician, Public Policy and Planning leader with over three decades of experience in governments in India. I combine academic rigour, insight of what works to analyze and develop solutions to problems. Driven by a passion for excellence, and a faith in the unity of existence, I see immense potential of people taking charge of their health through healthy Lifestyle, and a health system based on prevention.
+Public Health physician, Public Policy and Planning leader with over three decades of experience in governments in India. I combine academic rigour, insight of what works to analyze and develop solutions that address both individual and public health concerns.
 
 Motivating and guiding lifestyle changes one person at a time, starting with the clinic, drawing policy lessons, and sharing them through policy briefs. 
 
@@ -18,6 +18,7 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 ## Featured publication
 
 ### [Real-World Outcomes of a Traffic-Light Approach to Lifestyle Modification in Chronic Disease: Evidence from an Integrative Health Clinic]({{ "/publication/2026-11-10-real-world-outcomes-traffic-light-approach-lifestyle-modification-chronic-disease" | relative_url }})
+<span style="display:inline-block;background:#e74c3c;color:#fff;padding:4px 10px;border-radius:999px;font-size:0.72em;font-weight:700;letter-spacing:0.04em;vertical-align:middle;margin-left:8px;">NEW</span>
 
 **medRxiv preprint · 10 November 2026** · [Read the preprint](https://www.medrxiv.org/content/10.64898/2026.11.10.26367386v1) · [DOI](https://doi.org/10.64898/2026.11.10.26367386)
 
