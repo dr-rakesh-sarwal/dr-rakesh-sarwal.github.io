@@ -84,6 +84,17 @@ layout: default
 
         {{ content }}
 
+        {% if page.collection == 'publications' %}
+          <div class="publication-details">
+            {% if page.citation %}
+              <p><strong>Recommended citation:</strong> {{ page.citation }}</p>
+            {% endif %}
+            {% if page.paperurl %}
+              <p><a href="{{ page.paperurl }}" target="_blank" rel="noopener noreferrer">View original publication</a></p>
+            {% endif %}
+          </div>
+        {% endif %}
+
         {% if page.paperurl %}
         <div style="margin-top:1em;">
           <div class="altmetric-embed"
