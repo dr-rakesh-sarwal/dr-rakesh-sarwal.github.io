@@ -8,7 +8,7 @@ venue: "Journal of Family Medicine and Primary Care"
 publisher: "Ovid Technologies (Wolters Kluwer Health)"
 doi: "10.4103/jfmpc.jfmpc_985_23"
 paperurl: "https://doi.org/10.4103/jfmpc.jfmpc_985_23"
-excerpt: "A BSTRACT Introduction: The partition of India on the dissolution of British Raj into two dominions is known to have been violent, polarizing and caused large-scale loss of life (about two million) and an unprecedented migration of 14 million people between the two dominions, India and Pakistan. It is not known how well the then scientific community covered this man-made disaster, and the response of the international community with aid. Methodology: A systematic review was conducted using diffe"
+excerpt: "The partition of India on the dissolution of British Raj into two dominions is known to have been violent, polarizing and caused large-scale loss of life (about two million) and an unprecedented migration of 14 million people between the two dominions, India and Pakistan. It is not known how well the then scientific community covered this man-made disaster, and the response of the international community with aid. Methodology: A systematic review was conducted using diffe"
 citation: "Tuba Tanveer, Nixon Mathur, Rakesh Sarwal (2024). Catastrophic impact of 1947 partition of India on people’s health. Journal of Family Medicine and Primary Care. https://doi.org/10.4103/jfmpc.jfmpc_985_23"
 authors:
   - "Tuba Tanveer"
