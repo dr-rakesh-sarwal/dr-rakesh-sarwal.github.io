@@ -2,17 +2,17 @@
 title: "Health Insurance for India's Missing Middle"
 collection: publications
 put_code: "107343227"
-permalink: /publication/2021-health-insurance-for-indias-missing-middle
+permalink: /publication/2021-10-27-health-insurance-for-india-s-missing-middle
 date: 2021-10-27
 venue: "NITI Aayog"
 publisher: "Center for Open Science"
 doi: "10.31219/osf.io/s2x8r"
 paperurl: "https://doi.org/10.31219/osf.io/s2x8r"
 excerpt: "Policy paper on increasing health insurance coverage for India's missing middle population"
-citation: "Sarwal, R. (2021). Health Insurance for India's Missing Middle. NITI Aayog. https://doi.org/10.31219/osf.io/s2x8r"
-authors: "Rakesh Sarwal, Anurag Kumar"
-keywords: "health, insurance, india, missing, middle, policy, paper, increasing"
+citation: "Rakesh Sarwal (2021). Health Insurance for India's Missing Middle. NITI Aayog. https://doi.org/10.31219/osf.io/s2x8r"
+authors:
+  - "Rakesh Sarwal"
+keywords: ""
 language: "en"
 ---
-
 Policy paper on increasing health insurance coverage for India's missing middle population
