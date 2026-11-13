@@ -17,4 +17,4 @@ authors:
 keywords: ""
 language: "en"
 ---
-
+This article examines how exporting evidence-based healthcare and wellness services, including AYUSH, could help India realize its demographic dividend and contribute to global health needs.
