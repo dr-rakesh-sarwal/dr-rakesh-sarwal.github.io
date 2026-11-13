@@ -56,10 +56,12 @@ def get_title(work):
 
 def get_doi(work):
     external_ids = work.get("external-ids") or {}
-    identifiers = external_ids.get("external-id", [])
+    identifiers = external_ids.get("external-id") or []
     if isinstance(identifiers, dict):
         identifiers = [identifiers]
     for identifier in identifiers:
+        if not isinstance(identifier, dict):
+            continue
         if (identifier.get("external-id-type") or "").lower() == "doi":
             return normalize_doi(identifier.get("external-id-value"))
     return ""
@@ -249,6 +251,9 @@ def main():
         put_code = summary["put-code"]
         try:
             work = fetch_json(f"{ORCID_API}/{ORCID_ID}/work/{put_code}")
+            external_ids = work.get("external-ids") or {}
+            if external_ids.get("external-id") is None:
+                print(f"ORCID work has no external identifiers: put-code {put_code}; title: {get_title(work)}")
             doi = get_doi(work)
             if doi and doi in seen_dois:
                 print(f"Skipping duplicate ORCID work for DOI {doi} (put-code {put_code})")
