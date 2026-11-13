@@ -7,7 +7,7 @@ date: 2015-01-01
 venue: "The National medical journal of India"
 publisher: ""
 doi: ""
-paperurl: ""
+paperurl: "https://pubmed.ncbi.nlm.nih.gov/26219319/"
 excerpt: "Background Universal Health Coverage (UHC) is now recognized as a goal of all health systems, irrespective of income levels. In the absence of a one-size solution, each country has to develop strategies suited to its circumstances. How does the Central Government Health Scheme (CGHS) stand up to the goals and global experience of UHC, and what can be done to make it a model? Methods I relied on publicly available documents to identify key features of UHC, and relate it to the architecture of and"
 citation: "Sarwal, R. (2015). Reforming Central Government Health Scheme into a 'Universal Health Coverage' model.. The National medical journal of India."
 authors: "Rakesh Sarwal"
