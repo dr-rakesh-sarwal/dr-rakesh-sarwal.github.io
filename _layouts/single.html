@@ -82,7 +82,19 @@ layout: default
 
       <section class="page__content" itemprop="text">
 
-        {{ content }}
+        {% if page.collection == 'publications' %}
+          {% capture publication_content %}{{ content }}{% endcapture %}
+          {% assign publication_content = publication_content
+            | replace_first: '<h2>Abstract</h2>', ''
+            | replace_first: '<h3>Abstract</h3>', ''
+            | replace_first: '<p>ABSTRACT ', '<p>'
+            | replace_first: '<p>A BSTRACT ', '<p>'
+            | replace_first: '<p>Abstract ', '<p>' %}
+          <h2>Abstract</h2>
+          {{ publication_content }}
+        {% else %}
+          {{ content }}
+        {% endif %}
 
         {% if page.collection == 'publications' %}
           <div class="publication-details">
