@@ -2,16 +2,21 @@
 title: "Components of Out-of-Pocket Expenditure and Their Relative Contribution to Economic Burden of Diseases in India"
 collection: publications
 put_code: "113345705"
-permalink: /publication/2022-components-of-out-of-pocket-expenditure-and-their-relative-c
+permalink: /publication/2022-05-13-components-of-out-of-pocket-expenditure-and-their-relative-contribution-to-econo
 date: 2022-05-13
 venue: "JAMA Network Open"
 publisher: "American Medical Association (AMA)"
 doi: "10.1001/jamanetworkopen.2022.10040"
 paperurl: "https://doi.org/10.1001/jamanetworkopen.2022.10040"
-excerpt: "This study examines the components of out-of-pocket health spending in India and how they contribute to the economic burden of different diseases, informing efforts to improve financial protection."
-citation: "Sarwal, R. (2022). Components of Out-of-Pocket Expenditure and Their Relative Contribution to Economic Burden of Diseases in India. JAMA Network Open. https://doi.org/10.1001/jamanetworkopen.2022.10040"
-authors: "Mayanka Ambade, Rakesh Sarwal, Nachiket Mor, Rockli Kim, S. V. Subramanian"
-keywords: "components, pocket, expenditure, relative, contribution, economic, burden, diseases"
+excerpt: ""
+citation: "Mayanka Ambade, Rakesh Sarwal, Nachiket Mor, Rockli Kim, S. V. Subramanian (2022). Components of Out-of-Pocket Expenditure and Their Relative Contribution to Economic Burden of Diseases in India. JAMA Network Open. https://doi.org/10.1001/jamanetworkopen.2022.10040"
+authors:
+  - "Mayanka Ambade"
+  - "Rakesh Sarwal"
+  - "Nachiket Mor"
+  - "Rockli Kim"
+  - "S. V. Subramanian"
+keywords: ""
 language: "en"
 ---
 

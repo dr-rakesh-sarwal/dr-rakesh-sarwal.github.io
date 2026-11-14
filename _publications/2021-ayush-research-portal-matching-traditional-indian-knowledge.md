@@ -8,7 +8,7 @@ venue: "Current Science"
 publisher: "Current Science Association"
 doi: "10.18520/cs/v121/i6/747-751"
 paperurl: "https://doi.org/10.18520/cs/v121/i6/747-751"
-excerpt: "Indexing is a mandatory requirement for scientific progress. This article describes the AYUSH Research Portal, developed to make research across traditional Indian medical systems more accessible, searchable, and discoverable while respecting their distinct terminology."
+excerpt: ""
 citation: "Rakesh Sarwal, T. Saketh Ram (2021). AYUSH Research Portal: Matching Traditional Indian Knowledge with Modern Needs. Current Science. https://doi.org/10.18520/cs/v121/i6/747-751"
 authors:
   - "Rakesh Sarwal"
