@@ -24,7 +24,7 @@ src="https://docs.google.com/gview?url=https://dr-rakesh-sarwal.github.io/files/
 </div>
 
 <p style="text-align: center;">
-  <a href="https://dr-rakesh-sarwal.github.io/files/learning-how-to-learn.pdf" target="_blank" rel="noopener noreferrer">
+  <a href="https://dr-rakesh-sarwal.github.io/files/history-medicine.pdf" target="_blank" rel="noopener noreferrer">
     <span lang="en">📥 Open / Download "ISM-Lifestyle presentation" </span>
   </a>
 </p>
