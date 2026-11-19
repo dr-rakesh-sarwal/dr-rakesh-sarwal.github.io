@@ -35,7 +35,7 @@ def normalize_doi(value):
 
 
 def normalize_title(value):
-    """Normalize a title for duplicate checks when a DOI is unavailable."""
+    """Normalize punctuation, spacing, and case for title comparisons."""
     if not value:
         return ""
     return re.sub(r"[^a-z0-9]+", " ", str(value).casefold()).strip()
@@ -58,21 +58,27 @@ def slugify(value):
 
 
 def get_title(work):
-    return clean_text(
-        work.get("title", {}).get("title", {}).get("value")
-    ) or "Untitled"
+    title_data = work.get("title") or {}
+    title = (title_data.get("title") or {}).get("value")
+    return clean_text(title) or "Untitled"
 
 
 def get_doi(work):
     external_ids = work.get("external-ids") or {}
     identifiers = external_ids.get("external-id") or []
+
     if isinstance(identifiers, dict):
         identifiers = [identifiers]
 
     for identifier in identifiers:
         if not isinstance(identifier, dict):
             continue
-        if (identifier.get("external-id-type") or "").casefold() == "doi":
+
+        identifier_type = str(
+            identifier.get("external-id-type") or ""
+        ).casefold()
+
+        if identifier_type == "doi":
             return normalize_doi(identifier.get("external-id-value"))
 
     return ""
@@ -132,21 +138,37 @@ def crossref_date(metadata):
 def get_authors(work, crossref):
     names = []
     contributors = (work.get("contributors") or {}).get("contributor", [])
+
     if isinstance(contributors, dict):
         contributors = [contributors]
 
     for contributor in contributors:
-        credit = clean_text((contributor.get("credit-name") or {}).get("value"))
+        if not isinstance(contributor, dict):
+            continue
+
+        credit = clean_text(
+            (contributor.get("credit-name") or {}).get("value")
+        )
+
         if not credit:
-            given = clean_text((contributor.get("given-names") or {}).get("value"))
-            family = clean_text((contributor.get("family-name") or {}).get("value"))
+            given = clean_text(
+                (contributor.get("given-names") or {}).get("value")
+            )
+            family = clean_text(
+                (contributor.get("family-name") or {}).get("value")
+            )
             credit = " ".join(part for part in (given, family) if part)
 
-        if credit and credit.casefold() not in {name.casefold() for name in names}:
+        if credit and credit.casefold() not in {
+            name.casefold() for name in names
+        }:
             names.append(credit)
 
     if not names:
-        for author in crossref.get("author", []):
+        for author in crossref.get("author", []) or []:
+            if not isinstance(author, dict):
+                continue
+
             name = clean_text(author.get("name")) or " ".join(
                 part
                 for part in (
@@ -155,6 +177,7 @@ def get_authors(work, crossref):
                 )
                 if part
             )
+
             if name:
                 names.append(name)
 
@@ -162,7 +185,7 @@ def get_authors(work, crossref):
 
 
 def read_front_matter_value(metadata, field):
-    """Read a scalar front-matter value, including quoted YAML strings."""
+    """Read a scalar front-matter value, including quoted strings."""
     match = re.search(
         rf"(?m)^{re.escape(field)}:\s*(.*?)\s*$",
         metadata,
@@ -186,227 +209,17 @@ def read_front_matter_value(metadata, field):
     return value
 
 
-def existing_file_for_work(doi, put_code, title):
-    """
-    Return a file already representing this DOI, put-code, or DOI-less title.
+def read_publication_metadata(filepath):
+    """Return parsed scalar metadata for a publication Markdown file."""
+    with open(filepath, encoding="utf-8") as source:
+        parts = source.read().split("---", 2)
 
-    A title match is only used when either the incoming record or existing file
-    has no DOI, so publications with different DOIs are not merged by title.
-    """
-    if not os.path.isdir(OUTPUT_DIR):
-        return None
+    if len(parts) < 3:
+        return {}
 
-    wanted_doi = normalize_doi(doi)
-    wanted_put_code = str(put_code).strip() if put_code is not None else ""
-    wanted_title = normalize_title(title)
-    title_match_without_doi = None
-
-    for filename in sorted(os.listdir(OUTPUT_DIR)):
-        if not filename.lower().endswith(".md"):
-            continue
-
-        filepath = os.path.join(OUTPUT_DIR, filename)
-        try:
-            with open(filepath, encoding="utf-8") as source:
-                parts = source.read().split("---", 2)
-
-            if len(parts) < 3:
-                continue
-
-            metadata = parts[1]
-            file_doi = normalize_doi(read_front_matter_value(metadata, "doi"))
-            file_put_code = read_front_matter_value(metadata, "put_code").strip()
-            file_title = normalize_title(read_front_matter_value(metadata, "title"))
-
-            if wanted_doi and file_doi == wanted_doi:
-                return filepath
-
-            if wanted_put_code and file_put_code == wanted_put_code:
-                return filepath
-
-            if (
-                wanted_title
-                and file_title == wanted_title
-                and (not wanted_doi or not file_doi)
-                and title_match_without_doi is None
-            ):
-                title_match_without_doi = filepath
-
-        except (OSError, UnicodeDecodeError) as error:
-            print(f"Could not inspect {filepath}: {error}")
-
-    return title_match_without_doi
-
-
-def create_markdown(work, put_code):
-    title = get_title(work)
-    doi = get_doi(work)
-    crossref = fetch_crossref(doi)
-
-    publication_date = (
-        date_from_orcid(work.get("publication-date"))
-        or crossref_date(crossref)
-        or "2000-01-01"
-    )
-
-    venue = clean_text((work.get("journal-title") or {}).get("value"))
-    if not venue:
-        container = crossref.get("container-title") or []
-        venue = (
-            clean_text(container[0])
-            if container
-            else clean_text(crossref.get("publisher"))
-        )
-
-    publisher = clean_text(crossref.get("publisher")) or venue
-    description = (
-        clean_text(work.get("short-description"))
-        or clean_text(crossref.get("abstract"))
-    )
-    authors = get_authors(work, crossref)
-    author_text = ", ".join(authors)
-    year = publication_date[:4]
-
-    citation = f"{author_text} ({year}). {title}."
-    if venue:
-        citation += f" {venue}."
-    if doi:
-        citation += f" https://doi.org/{doi}"
-
-    paper_url = f"https://doi.org/{doi}" if doi else ""
-
-    filepath = existing_file_for_work(doi, put_code, title)
-    if not filepath:
-        filename = f"{publication_date}-{slugify(title)}.md"
-        filepath = os.path.join(OUTPUT_DIR, filename)
-        if os.path.exists(filepath):
-            filename = f"{publication_date}-{slugify(title)}-{put_code}.md"
-            filepath = os.path.join(OUTPUT_DIR, filename)
-
-    # Keep any existing hand-edited body while refreshing ORCID-sourced metadata.
-    body = description
-    if os.path.isfile(filepath):
-        try:
-            with open(filepath, encoding="utf-8") as source:
-                parts = source.read().split("---", 2)
-            if len(parts) == 3:
-                body = parts[2].lstrip("\r\n")
-        except (OSError, UnicodeDecodeError) as error:
-            print(f"Could not preserve body from {filepath}: {error}")
-
-    author_lines = "\n".join(
-        f"  - {quote_yaml(author)}" for author in authors
-    )
-    content = f'''---
-title: {quote_yaml(title)}
-collection: publications
-put_code: {quote_yaml(put_code)}
-permalink: /publication/{publication_date}-{slugify(title)}
-date: {publication_date}
-venue: {quote_yaml(venue)}
-publisher: {quote_yaml(publisher)}
-doi: {quote_yaml(doi)}
-paperurl: {quote_yaml(paper_url)}
-excerpt: {quote_yaml(description[:500])}
-citation: {quote_yaml(citation)}
-authors:
-{author_lines}
-keywords: {quote_yaml("")}
-language: "en"
----
-{body.rstrip()}\n'''
-
-    with open(filepath, "w", encoding="utf-8") as target:
-        target.write(content)
-
-    return filepath
-
-
-def iter_work_summaries(data):
-    """Yield each ORCID put-code once."""
-    seen_put_codes = set()
-
-    for group in data.get("group", []):
-        summaries = group.get("work-summary", [])
-        for summary in summaries:
-            put_code = summary.get("put-code")
-            if put_code is None:
-                continue
-
-            put_code_key = str(put_code).strip()
-            if put_code_key in seen_put_codes:
-                continue
-
-            seen_put_codes.add(put_code_key)
-            yield summary
-
-
-def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    print(f"Fetching ORCID works for {ORCID_ID}")
-
-    data = fetch_json(f"{ORCID_API}/{ORCID_ID}/works")
-    summaries = list(iter_work_summaries(data))
-    print(f"Found {len(summaries)} unique ORCID works")
-
-    seen_dois = set()
-    seen_titles_without_doi = set()
-    created = updated = skipped = 0
-
-    for summary in summaries:
-        put_code = summary["put-code"]
-
-        try:
-            work = fetch_json(f"{ORCID_API}/{ORCID_ID}/work/{put_code}")
-            external_ids = work.get("external-ids") or {}
-
-            if external_ids.get("external-id") is None:
-                print(
-                    "ORCID work has no external identifiers: "
-                    f"put-code {put_code}; title: {get_title(work)}"
-                )
-
-            doi = get_doi(work)
-            title = get_title(work)
-            title_key = normalize_title(title)
-
-            if doi:
-                if doi in seen_dois:
-                    print(
-                        f"Skipping duplicate ORCID work for DOI {doi} "
-                        f"(put-code {put_code})"
-                    )
-                    continue
-                seen_dois.add(doi)
-            elif title_key:
-                if title_key in seen_titles_without_doi:
-                    print(
-                        f"Skipping duplicate ORCID work without DOI: "
-                        f"{title} (put-code {put_code})"
-                    )
-                    continue
-                seen_titles_without_doi.add(title_key)
-
-            existing_path = existing_file_for_work(doi, put_code, title)
-            existed = existing_path is not None
-
-            output_path = create_markdown(work, put_code)
-            print(
-                f"{'Updated' if existed else 'Created'}: "
-                f"{os.path.basename(output_path)}"
-            )
-
-            if existed:
-                updated += 1
-            else:
-                created += 1
-
-        except (requests.RequestException, ValueError, KeyError) as error:
-            skipped += 1
-            print(f"Skipped ORCID put-code {put_code}: {error}")
-
-    print(f"Finished: {created} created, {updated} updated, {skipped} skipped")
-
-
-if __name__ == "__main__":
-    main()
+    metadata = parts[1]
+    return {
+        "doi": read_front_matter_value(metadata, "doi"),
+        "put_code": read_front_matter_value(metadata, "put_code").strip(),
+        "title": read_front_matter_value(metadata, "title"),
+        "excerpt": read
