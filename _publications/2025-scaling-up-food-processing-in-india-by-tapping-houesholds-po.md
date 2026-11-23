@@ -6,10 +6,10 @@ permalink: /publication/2025-03-11-scaling-up-food-processing-in-india-by-tappin
 date: 2025-03-11
 venue: "Qeios Ltd"
 publisher: "Qeios Ltd"
-doi: "10.32388/P9GX5K"
-paperurl: "https://doi.org/10.32388/P9GX5K"
+doi: "10.32388/p9gx5k"
+paperurl: "https://doi.org/10.32388/p9gx5k"
 excerpt: "Despite being one of the world’s largest producers of fresh food and a dedicated ministry, the processing level is low in India. While 70% of employment remains in informal, unregistered enterprises, government schemes encourage only formal enterprises. Informal enterprises remain because of the stringent registration procedures. We cite the example of the US Cottage License to suggest the need for a liberal household food processing regime in India. We call for the industry to come forward to m"
-citation: "Rakesh Sarwal (2025). Scaling up Food Processing in India by Tapping Houesholds’ Potential. Qeios Ltd. https://doi.org/10.32388/P9GX5K"
+citation: "Rakesh Sarwal (2025). Scaling up Food Processing in India by Tapping Houesholds’ Potential. Qeios Ltd. https://doi.org/10.32388/p9gx5k"
 authors:
   - "Rakesh Sarwal"
 keywords: ""

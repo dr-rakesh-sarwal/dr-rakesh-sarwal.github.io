@@ -6,10 +6,10 @@ permalink: /publication/2026-01-02-integrated-health-clinic-at-esic-medical-coll
 date: 2026-01-02
 venue: "Zenodo"
 publisher: "Zenodo"
-doi: "10.5281/ZENODO.18829171"
-paperurl: "https://doi.org/10.5281/ZENODO.18829171"
+doi: "10.5281/zenodo.18829171"
+paperurl: "https://doi.org/10.5281/zenodo.18829171"
 excerpt: "I share the motivation and experience of running a lifestyle clinic for patients of chronic diseases at ESIC. There is an increasing evidence of the effectiveness of age old practices and recommendations of living in harmony with nature, which we are experiencing in the transformation that our NCD patients are undergoing after following the 21-point regime. Our practice builds on the Health Building guideline using traffic light approach, which was recently published in an indexed journal. Rakes"
-citation: "Rakesh Sarwal (2026). Integrated Health Clinic at ESIC Medical College, Faridabad. Zenodo. https://doi.org/10.5281/ZENODO.18829171"
+citation: "Rakesh Sarwal (2026). Integrated Health Clinic at ESIC Medical College, Faridabad. Zenodo. https://doi.org/10.5281/zenodo.18829171"
 authors:
   - "Rakesh Sarwal"
 keywords: ""

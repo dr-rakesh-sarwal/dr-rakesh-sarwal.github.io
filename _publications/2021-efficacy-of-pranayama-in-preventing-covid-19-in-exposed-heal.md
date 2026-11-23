@@ -1,9 +1,9 @@
 ---
 title: "Efficacy of Pranayama in Preventing COVID-19 in Exposed Healthcare Professionals: A Randomized Controlled Trial"
 collection: publications
-put_code: "136906834"
-permalink: /publication/2021-04-13-efficacy-of-pranayama-in-preventing-covid-19-in-exposed-healthcare-professionals
-date: 2021-04-13
+put_code: "234181227"
+permalink: /publication/2021-01-01-efficacy-of-pranayama-in-preventing-covid-19-in-exposed-healthcare-professionals
+date: 2021-01-01
 venue: "Center for Open Science"
 publisher: "Center for Open Science"
 doi: "10.31219/osf.io/c3qub"

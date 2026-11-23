@@ -6,10 +6,10 @@ permalink: /publication/2026-08-26-learning-to-learn-a-framework-for-self-direct
 date: 2026-08-26
 venue: "Zenodo"
 publisher: "Zenodo"
-doi: "10.5281/ZENODO.22107119"
-paperurl: "https://doi.org/10.5281/ZENODO.22107119"
+doi: "10.5281/zenodo.22107119"
+paperurl: "https://doi.org/10.5281/zenodo.22107119"
 excerpt: "In the current knowledge economy, characterized by systemic information overload, the ability to gather, process, and apply information efficiently is critical. However, there is a significant gap in guidance on how to transform raw data into actionable knowledge. Students, particularly in high-pressure fields, are often overwhelmed by the volume of facts and struggle to balance the demands of learning and reproduction. This presentation provides a comprehensive pedagogical framework for transit"
-citation: "rakesh sarwal (2026). Learning to Learn: A Framework for Self-Directed Knowledge Management in Medical and Public Health Education. Zenodo. https://doi.org/10.5281/ZENODO.22107119"
+citation: "rakesh sarwal (2026). Learning to Learn: A Framework for Self-Directed Knowledge Management in Medical and Public Health Education. Zenodo. https://doi.org/10.5281/zenodo.22107119"
 authors:
   - "rakesh sarwal"
 keywords: ""

@@ -6,10 +6,10 @@ permalink: /publication/2025-07-08-women-health-and-economics-in-india
 date: 2025-07-08
 venue: "Zenodo"
 publisher: "Zenodo"
-doi: "10.5281/ZENODO.15833714"
-paperurl: "https://doi.org/10.5281/ZENODO.15833714"
+doi: "10.5281/zenodo.15833714"
+paperurl: "https://doi.org/10.5281/zenodo.15833714"
 excerpt: "Women's health, educational status is closely linked to their economic and political empowerment. India attempts to become a developed nation by 2047, for which it needs to bridge the gender gap in development, which is among the highest in the world. The ppt is an analysis of the issue, and provides some food for thought on way forward."
-citation: "Rakesh Sarwal (2025). Women, Health and Economics in India. Zenodo. https://doi.org/10.5281/ZENODO.15833714"
+citation: "Rakesh Sarwal (2025). Women, Health and Economics in India. Zenodo. https://doi.org/10.5281/zenodo.15833714"
 authors:
   - "Rakesh Sarwal"
 keywords: ""

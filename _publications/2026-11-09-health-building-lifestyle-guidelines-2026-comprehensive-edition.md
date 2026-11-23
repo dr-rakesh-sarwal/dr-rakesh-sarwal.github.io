@@ -6,10 +6,10 @@ permalink: /publication/2026-11-09-health-building-lifestyle-guidelines-2026-com
 date: 2026-11-09
 venue: ""
 publisher: ""
-doi: "10.5281/ZENODO.24090389"
-paperurl: "https://doi.org/10.5281/ZENODO.24090389"
+doi: "10.5281/zenodo.24090389"
+paperurl: "https://doi.org/10.5281/zenodo.24090389"
 excerpt: "Health Building Lifestyle Guidelines (2026 Comprehensive Edition) is a practical, referenced, comprehensive guideline for lay readers and health professionals. It BUILDS ON, and does NOT rename, replace or supersede, the 2025 Health Building Lifestyle Guidelines (Zenodo 10.5281/zenodo.15814357, 5 July 2025). The main PDF is a 9-page LANDSCAPE BROCHURE with enlarged body type throughout, one topic per page and clickable links. It reproduces the 2025 guideline IN FULL (English, Hindi and its own r"
-citation: "Rakesh Sarwal (2026). Health Building Lifestyle Guidelines (2026 Comprehensive Edition). https://doi.org/10.5281/ZENODO.24090389"
+citation: "Rakesh Sarwal (2026). Health Building Lifestyle Guidelines (2026 Comprehensive Edition). https://doi.org/10.5281/zenodo.24090389"
 authors:
   - "Rakesh Sarwal"
 keywords: ""

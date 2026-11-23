@@ -6,10 +6,10 @@ permalink: /publication/2026-07-21-from-risk-to-resilience-healthy-people-in-hea
 date: 2026-07-21
 venue: "Zenodo"
 publisher: "Zenodo"
-doi: "10.5281/ZENODO.21472905"
-paperurl: "https://doi.org/10.5281/ZENODO.21472905"
+doi: "10.5281/zenodo.21472905"
+paperurl: "https://doi.org/10.5281/zenodo.21472905"
 excerpt: "Drawing on the commonality between individual and population health — the risks each faces and the choices needed to mitigate them — I spoke about the unrealized potential in advancing health. Underscoring the precious and invaluable nature of health, and explaining how it is measured and created, I shared my perspective on the need to move from risk to resilience by applying the principles of Lifestyle Medicine at both individual and population levels. This presentation was delivered to a batch"
-citation: "Rakesh Sarwal (2026). From Risk to Resilience: Healthy People in Healthy Communities through Lifestyle. Zenodo. https://doi.org/10.5281/ZENODO.21472905"
+citation: "Rakesh Sarwal (2026). From Risk to Resilience: Healthy People in Healthy Communities through Lifestyle. Zenodo. https://doi.org/10.5281/zenodo.21472905"
 authors:
   - "Rakesh Sarwal"
 keywords: ""
