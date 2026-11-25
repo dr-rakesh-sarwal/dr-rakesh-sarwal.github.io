@@ -17,7 +17,7 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 ## Featured publication
 
-### [Real-World Outcomes of a Traffic-Light Approach to Lifestyle Modification in Chronic Disease: Evidence from an Integrative Health Clinic]({{ "/publication/2026-11-10-real-world-outcomes-traffic-light-approach-lifestyle-modification-chronic-disease" | relative_url }})
+### [Real-World Outcomes of a Traffic-Light Approach to Lifestyle Modification in Chronic Disease: Evidence from an Integrative Health Clinic]({{ "/publication/2026-11-11-real-world-outcomes-of-a-traffic-light-approach-to-lifestyle-modification-in-chr" | relative_url }})
 <span style="display:inline-block;background:#e74c3c;color:#fff;padding:4px 10px;border-radius:999px;font-size:0.72em;font-weight:700;letter-spacing:0.04em;vertical-align:middle;margin-left:8px;">NEW</span>
 
 **medRxiv preprint · 10 November 2026** · [Read the preprint](https://www.medrxiv.org/content/10.64898/2026.11.10.26367386v1) · [DOI](https://doi.org/10.64898/2026.11.10.26367386)
