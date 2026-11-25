@@ -4,12 +4,12 @@ collection: publications
 put_code: "127338238"
 permalink: /publication/2023-01-24-catalogue-of-crafts-by-minority-artisans
 date: 2023-01-24
-venue: ""
-publisher: ""
+venue: "Center for Open Science"
+publisher: "Center for Open Science"
 doi: "10.31219/osf.io/vpfzd"
 paperurl: "https://doi.org/10.31219/osf.io/vpfzd"
-excerpt: ""
-citation: "Rakesh Sarwal, Anil Kumar (2023). Catalogue of Crafts by Minority Artisans. https://doi.org/10.31219/osf.io/vpfzd"
+excerpt: "The National Minorities Development and Finance Corporation (NMDFC), a UnionGovt. Company set up under Section 8 of Companies Act 2013, is working to promoteeconomic development of backward sections amongst the Minority Communities, preferencebeing given to the occupational group and women.In order to provide the artisans with ongoing marketing platform, NMDFC has developed a catalogue of the products and contact details of the artisans assisted by it. The Crafts Catalogue encompasses finest &am"
+citation: "Rakesh Sarwal, Anil Kumar (2023). Catalogue of Crafts by Minority Artisans. Center for Open Science. https://doi.org/10.31219/osf.io/vpfzd"
 authors:
   - "Rakesh Sarwal"
   - "Anil Kumar"

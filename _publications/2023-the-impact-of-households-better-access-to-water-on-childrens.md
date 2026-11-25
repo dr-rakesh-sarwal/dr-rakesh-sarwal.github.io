@@ -4,12 +4,12 @@ collection: publications
 put_code: "131807022"
 permalink: /publication/2023-03-29-the-impact-of-household-s-better-access-to-water-on-children-s-health-and-surviv
 date: 2023-03-29
-venue: ""
-publisher: ""
+venue: "Center for Open Science"
+publisher: "Center for Open Science"
 doi: "10.31219/osf.io/s58cj"
 paperurl: "https://doi.org/10.31219/osf.io/s58cj"
-excerpt: ""
-citation: "Rakesh Sarwal (2023). The Impact of Household’s Better Access to Water on Children’s Health and Survival in Rural Rajasthan, India. https://doi.org/10.31219/osf.io/s58cj"
+excerpt: "Malnutrition and lack of access to water and sanitation are responsible for one third of disability Adjusted Life Years lost in developing countries, and 62% of under-five mortality worldwide. Both factors are preventable, but persist as risks largely among the poor, 75% of whom live in rural area and depend on agriculture for livelihood. In the context of water and sanitation, Shuval suggests that a segmental approach for addressing the numerous handicaps that the poor face are unlikely to be s"
+citation: "Rakesh Sarwal (2023). The Impact of Household’s Better Access to Water on Children’s Health and Survival in Rural Rajasthan, India. Center for Open Science. https://doi.org/10.31219/osf.io/s58cj"
 authors:
   - "Rakesh Sarwal"
 keywords: ""
