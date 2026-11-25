@@ -17,12 +17,17 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 ## Featured publication
 
-### [Real-World Outcomes of a Traffic-Light Approach to Lifestyle Modification in Chronic Disease: Evidence from an Integrative Health Clinic]({{ "/publication/2026-11-11-real-world-outcomes-of-a-traffic-light-approach-to-lifestyle-modification-in-chr" | relative_url }})
-<span style="display:inline-block;background:#e74c3c;color:#fff;padding:4px 10px;border-radius:999px;font-size:0.72em;font-weight:700;letter-spacing:0.04em;vertical-align:middle;margin-left:8px;">NEW</span>
+{% assign featured_publication = site.publications | sort: "date" | reverse | first %}
+{% if featured_publication %}
+### [{{ featured_publication.title }}]({{ featured_publication.url | relative_url }})
+{% if featured_publication.venue or featured_publication.date %}
+<small>{% if featured_publication.venue %}{{ featured_publication.venue }}{% endif %}{% if featured_publication.venue and featured_publication.date %} · {% endif %}{% if featured_publication.date %}{{ featured_publication.date | date: "% -d %B %Y" | remove: " " }}{% endif %}</small>
+{% endif %}
+{% if featured_publication.paperurl %}
 
-**medRxiv preprint · 10 November 2026** · [Read the preprint](https://www.medrxiv.org/content/10.64898/2026.11.10.26367386v1) · [DOI](https://doi.org/10.64898/2026.11.10.26367386)
-
-This preprint examines real-world outcomes associated with a traffic-light approach to lifestyle modification in chronic disease care. The publication page also includes a clearly labeled interpretive perspective, distinct from the manuscript’s findings.
+[Read the publication]({{ featured_publication.paperurl }})
+{% endif %}
+{% endif %}
 
 ## Recent lectures
 
