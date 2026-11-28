@@ -19,6 +19,7 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 {% assign featured_publication = site.publications | sort: "date" | reverse | first %}
 {% if featured_publication %}
+### <span style="color: #c62828; font-weight: 700;">New</span>
 ### [{{ featured_publication.title }}]({{ featured_publication.url | relative_url }})
 {% if featured_publication.authors %}
 <small>{{ featured_publication.authors | join: ", " }}</small>
