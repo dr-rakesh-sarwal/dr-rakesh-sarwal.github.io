@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 author_profile: true
 ---
-Public Health physician, Public Policy and Planning leader with over three decades of experience in governments in India. I combine academic rigour, insight of what works to analyze and develop solutions that address both individual and public health concerns.
+Public Health physician, Public Policy and Planning leader with over three decades of experience in governments in India. I combine academic rigour, insight of what works to analyze and develop sustainable solutions for health and policy. 
 
 Motivating and guiding lifestyle changes one person at a time, starting with the clinic, drawing policy lessons, and sharing them through policy briefs. 
 
@@ -20,8 +20,11 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 {% assign featured_publication = site.publications | sort: "date" | reverse | first %}
 {% if featured_publication %}
 ### [{{ featured_publication.title }}]({{ featured_publication.url | relative_url }})
+{% if featured_publication.authors %}
+<small>{{ featured_publication.authors | join: ", " }}</small>
+{% endif %}
 {% if featured_publication.venue or featured_publication.date %}
-<small>{% if featured_publication.venue %}{{ featured_publication.venue }}{% endif %}{% if featured_publication.venue and featured_publication.date %} · {% endif %}{% if featured_publication.date %}{{ featured_publication.date | date: "% -d %B %Y" | remove: " " }}{% endif %}</small>
+<small>{% if featured_publication.venue %}{{ featured_publication.venue }}{% endif %}{% if featured_publication.venue and featured_publication.date %} · {% endif %}{% if featured_publication.date %}{{ featured_publication.date | date: "%Y" }}{% endif %}</small>
 {% endif %}
 {% if featured_publication.paperurl %}
 
@@ -35,7 +38,7 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 {% for lecture in recent_lectures limit:3 %}
 ### [{{ lecture.title }}]({{ lecture.url | relative_url }})
 
-{% if lecture.date %}<small>{{ lecture.date | date: "%-d %B %Y" }}{% endif %}{% if lecture.venue %} · {{ lecture.venue }}{% endif %}{% if lecture.location %}, {{ lecture.location }}{% endif %}</small>
+{% if lecture.date %}<small>{% if lecture.date %}{{ lecture.date | date: "%-d %B %Y" }}{% endif %}{% if lecture.venue %} · {{ lecture.venue }}{% endif %}{% if lecture.location %}, {{ lecture.location }}{% endif %}</small>{% endif %}
 
 {% endfor %}
 
@@ -47,7 +50,7 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 {% for talk in recent_talks limit:3 %}
 ### [{{ talk.title }}]({{ talk.url | relative_url }})
 
-{% if talk.date %}<small>{{ talk.date | date: "%-d %B %Y" }}{% endif %}{% if talk.venue %} · {{ talk.venue }}{% endif %}{% if talk.location %}, {{ talk.location }}{% endif %}</small>
+{% if talk.date %}<small>{% if talk.date %}{{ talk.date | date: "%-d %B %Y" }}{% endif %}{% if talk.venue %} · {{ talk.venue }}{% endif %}{% if talk.location %}, {{ talk.location }}{% endif %}</small>{% endif %}
 
 {% endfor %}
 
@@ -69,4 +72,4 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=siSnZvMAAAAJ&hl=en)
 
-<!-- Last updated: 2026-11-12 -->
+<!-- Last updated: 2026-11-28 -->
