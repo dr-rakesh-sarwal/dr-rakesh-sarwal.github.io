@@ -23,9 +23,6 @@ Do visit **[EQUAL Society](https://lifequality.org.in)**, our not-for-profit org
 {% if featured_publication.authors %}
 <small>{{ featured_publication.authors | join: ", " }}</small>
 {% endif %}
-{% if featured_publication.venue or featured_publication.date %}
-<small>{% if featured_publication.venue %}{{ featured_publication.venue }}{% endif %}{% if featured_publication.venue and featured_publication.date %} · {% endif %}{% if featured_publication.date %}{{ featured_publication.date | date: "%Y" }}{% endif %}</small>
-{% endif %}
 {% if featured_publication.paperurl %}
 
 [Read the publication]({{ featured_publication.paperurl }})
